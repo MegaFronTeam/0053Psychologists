@@ -249,7 +249,7 @@
 		line-height: 1.33;
 		padding: rem(8) rem(11);
 		border-radius: 5px;
-		background-color: $primary;
+		background-color: #0096DC;
 		z-index: 10;
 	}
 	&__more-info {
@@ -257,9 +257,9 @@
 		top: rem(15);
 		right: rem(15);
 		font-weight: 600;
-		line-height: 1;
+		line-height: calc(17/16);
 		color: #fff;
-		background-color: $primary;
+		background-color: #0096DC;
 		border-radius: 50%;
 		width: rem(24);
 		height: rem(24);
