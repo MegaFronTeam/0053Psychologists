@@ -1,9 +1,32 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.row.row
+				.col-12.col-lg-auto.col-xl-4
+					+e.logo(href='/'): +img('img/logo2.png').res-i
+					+e.description Сервис онлайн психотерапии “ДА” С нами психотерапия - это легко! 
+					+e.btn-row.row
+						.col-lg-auto: +e.btn.btn.btn-white(href='#') Войти
+						.col-lg-auto: +e.btn.btn.btn-outline-white(href='#') Подобрать психолога
+				.col-sm-6.col-lg.col-xl-4
+					+e.wrap
+						.h4 Информация
+						ul
+							li: a(href="#") О нас
+							li: a(href="#") Психологи
+							li: a(href="#") Подарочные сертификаты
+							li: a(href="#") Бизнесу
+							li: a(href="#") Специалистам
+							li: a(href="#") Блог
+				.col-sm-6.col-lg.col-xl-4
+					.h4 Контакты
+					+e.link(href='mailto:info@psychologist.ru')
+						+icon('mail')
+						| info@psychologist.ru
+					+e.link(href='tel:88005201475')
+						+icon('phone-call')
+						| 8 800 520-14-75
+					+soc()
+					+e.secondary-text(href='#') Пользовательское соглашение
+					+e.secondary-text(href='#') Политика обработки персональных данны
+					+e.secondary-text © 2023 «Да» онлайн-сервис психотерапии

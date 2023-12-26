@@ -50,3 +50,47 @@ mixin parts(elem)
 	script.
 		addBlock(`#{elem}`)
 	div(id=`${elem}Wrap`)
+
+mixin card(img, title, text, hovered, badge)
+	+b.card()&attributes(attributes)
+		if badge
+			+e.badge!= badge
+		if hovered
+			+e.hovered.custom-scroll
+				+e.more-info i
+				+e.name Андрей
+				p Психолог, сертифицированный гештальт-терапевт
+				+e.item
+					span Опыт работы:
+					p 12 лет
+				+e.item
+					span С чем работает:
+					ul
+						li 
+							+iconC('check')
+							| Сильные эмоции: гнев, агрессия
+						li 
+							+iconC('check')
+							| Панические атаки
+						li 
+							+iconC('check')
+							| Самооценка и уверенность в себе
+						li 
+							+iconC('check')
+							| Травматические события в прошлом
+						li 
+							+iconC('check')
+							| Панические атаки
+						li 
+							+iconC('check')
+							| Сильные эмоции: гнев, агрессия
+						li 
+							+iconC('check')
+							| Травматические события в прошлом
+						li 
+							+iconC('check')
+							| Панические атаки
+		+e.img-wrap: +img(`img/${img}`, 'bg')
+		+e.content
+			+e.title!= title
+			+e.text!= text

@@ -22,13 +22,15 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			+e.row.row
-				.col-4
-				.col.order-lg-0.order-last
+				.col-auto
+					+e.logo(href='/'): +img('img/logo.png').res-i
+				+e.col.col-auto.col-lg.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							+menu-toggle()
 							+mnu()
-					
-				.col-auto.d-lg-none
+							+e.btn.d-lg-none.btn.btn-primary(href='#') Войти
+				.col-auto.d-none.d-lg-block: +e.btn.btn.btn-primary(href='#') Войти
+				.col-auto.ms-auto.d-lg-none
 					+menu-toggle()
 	// end top-nav

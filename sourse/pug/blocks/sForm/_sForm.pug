@@ -7,8 +7,9 @@ mixin sForm()
 				
 			+e.row.row
 			+form-wrap
-				+input("",'')
-				+input("",'')
+				+input("123",'text', 123)
+				+input("123",'text').is-invalid
+					.invalid-feedback Поле обязательно для заполнения
 				+input("",'')
 				+input("",'')
 				+e.btn.btn.btn-primary(type="submit") Войти

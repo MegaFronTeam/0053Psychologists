@@ -7,8 +7,28 @@
 	fill: currentColor;
 }
 
+.iconC-check {
+	$h: 24;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
+}
+.iconC-fb {
+	$h: 40;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(40 / #{$h} *1em );
+}
+.iconC-instagram {
+	$h: 40;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(40 / #{$h} *1em );
+}
 .iconC-telegram {
 	$h: 16;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(16 / #{$h} *1em );
+}
+.iconC-vk {
+	$h: 40;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(40 / #{$h} *1em );
 }
