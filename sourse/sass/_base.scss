@@ -545,3 +545,44 @@ iframe {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.btn {
+	&-primary {
+		--bs-btn-color: #fff;
+    --bs-btn-bg: #3b8cc3;
+    --bs-btn-border-color: #3b8cc3;
+		
+		--bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #{$blue-900};
+    --bs-btn-hover-border-color: #{$blue-900};
+		
+		--bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #{$blue-900};
+    --bs-btn-active-border-color: #{$blue-900};
+		
+		--bs-btn-disabled-color: #fff;
+	}
+	&-outline-primary {
+
+		--bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #{$blue-900};
+    --bs-btn-hover-border-color: #{$blue-900};
+
+		--bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #{$blue-900};
+    --bs-btn-active-border-color: #{$blue-900};
+	}
+	&-outline-secondary {
+
+		--bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #{$blue-900};
+    --bs-btn-hover-border-color: #{$blue-900};
+
+		--bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #{$blue-900};
+    --bs-btn-active-border-color: #{$blue-900};
+	}
+	// &.disabled, &:disabled {
+	// 	--bs-btn-color: #fff;
+	// }
+}
