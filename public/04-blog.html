@@ -42,10 +42,10 @@
 						</ol>
 					</nav>
 					<div class="page-head__row row">
-						<div class="col-12 col-lg-6">
+						<div class="col-lg-6">
 							<h1>Блог</h1>
 						</div>
-						<div class="col-auto col-lg-6">
+						<div class="col-lg-6">
 							<p>Здесь мы собрали полезные и интересные статьи о психологии. Записи носят информативный характер и постоянно обновляются. Мы предоставляем Вам самую актуальную информацию.</p>
 						</div>
 					</div>
@@ -55,18 +55,40 @@
 				<!-- start sBlog-->
 				<div class="sBlog section">
 					<div class="container">
-						<div class="sBlog__input-wrap form-group">
-							<label>
-								<select class="sBlog__input form-select" name="select">
-									<option value="Сначала новые">Сначала новые</option>
-									<option value=" placeholder 1">placeholder 1</option>
-									<option value=" placeholder 2">placeholder 2</option>
-									<option value=" placeholder 3">placeholder 3</option>
-									<option value=" placeholder 4">placeholder 4</option>
-								</select><span class="sBlog__input-title">Сначала новые</span>
-							</label>
+						<div class="sBlog__input-wrap">Сортировка:
+							<select class="floating-select form-select" data-tags="true">
+								<option>Сначала новые</option>
+								<option>Сначала старые</option>
+								<option>Популярные</option>
+								<option>Еще какие-то</option>
+							</select>
 						</div>
-						<!-- +e.input-wrap-->
+						<div class="sBlog__row row sorting-row">
+							<div class="col-auto">
+								<a class="sBlog__btn select-btn" href="#">ВСЕ
+								</a>
+							</div>
+							<div class="col-auto">
+								<a class="sBlog__btn select-btn" href="#">ОТНОШЕНИЯ
+								</a>
+							</div>
+							<div class="col-auto">
+								<a class="sBlog__btn select-btn" href="#">КАРЬЕРА
+								</a>
+							</div>
+							<div class="col-auto">
+								<a class="sBlog__btn select-btn" href="#">САМООЦЕНКА
+								</a>
+							</div>
+							<div class="col-auto">
+								<a class="sBlog__btn select-btn active" href="#">ДИАГНОСТИКА
+								</a>
+							</div>
+							<div class="col-auto">
+								<a class="sBlog__btn select-btn" href="#">ДРУГОЕ
+								</a>
+							</div>
+						</div>
 						<div class="sBlog__row row">
 							<div class="sBlog__col col-12 col-sm-6 col-md-4 col-lg-3">
 								<a class="card" href="#">
@@ -164,6 +186,11 @@
 									</div>
 								</a>
 							</div>
+						</div>
+						<div class="sBlog__btn-wrapper"><a class="btn btn-link" href="#">
+								<svg class="icon icon-arrow-load-more ">
+									<use xlink:href="img/svg/sprite.svg#arrow-load-more"></use>
+								</svg>Показать ещё</a>
 						</div>
 					</div>
 				</div>

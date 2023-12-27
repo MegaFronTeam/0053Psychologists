@@ -44,15 +44,19 @@ mixin page-head(t,descr,...items)
 		.container
 			+breadcrumb('Главная',...items)
 			+e.row.row
-				.col-12.col-lg-6
+				.col-lg-6
 					h1= t
-				.col-auto.col-lg-6
+				.col-lg-6
 					p= descr
 
 mixin parts(elem)
 	script.
 		addBlock(`#{elem}`)
 	div(id=`${elem}Wrap`)
+
+mixin sortingItem(t)
+	.col-auto
+		+e.btn.select-btn(href="#")&attributes(attributes)!= t
 
 mixin card(img, title, text, hovered, badge)
 	+b.card()&attributes(attributes)

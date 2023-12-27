@@ -1,12 +1,24 @@
+
+
 mixin sBlog(data)
 	// start sBlog
 	+b.sBlog.section&attributes(attributes)
 		.container
-			+input('Сначала новые',  'select')
-			//- +b.section-title.text-center
-			//- 	h2 sBlog
-			//- 	p Выкупаем проблемные автомобили в день обращения
-
+			//- +input('Сначала новые', 'select')
+			+e.input-wrap
+				| Сортировка:
+				select(data-tags="true").floating-select.form-select
+					option Сначала новые
+					option Сначала старые
+					option Популярные
+					option Еще какие-то
+			+e.row.row.sorting-row
+				+sortingItem(`ВСЕ`)
+				+sortingItem(`ОТНОШЕНИЯ`)
+				+sortingItem(`КАРЬЕРА`)
+				+sortingItem(`САМООЦЕНКА`)
+				+sortingItem(`ДИАГНОСТИКА`).active
+				+sortingItem(`ДРУГОЕ`)
 			+e.row.row
 				- const wrapClass="col-12 col-sm-6 col-md-4 col-lg-3"
 				+e.col(class= wrapClass)
@@ -25,6 +37,10 @@ mixin sBlog(data)
 					+card('blog-1.png', 'Зачем психологи обращаются к психологам', 'Посмотрим, откуда растут ноги у мысли, что себя нужно заставить')(href='#')
 				+e.col(class= wrapClass)
 					+card('blog-2.png', 'Синдром отложенной жизни с точки зрения психолога', 'Группа жизненных сценариев, заключающихся в том, что')(href='#')
+			+e.btn-wrapper
+				a(href='#').btn.btn-link
+					+icon(`arrow-load-more`)
+					| Показать ещё
 
 
 	// end sBlog

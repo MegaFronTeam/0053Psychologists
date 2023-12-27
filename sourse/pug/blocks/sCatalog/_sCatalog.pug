@@ -2,11 +2,20 @@ mixin sCatalog(data)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
 		.container
-			//- +b.section-title.text-center
-			//- 	h2 sCatalog
-			//- 	p Выкупаем проблемные автомобили в день обращения
-
-			+e.row.row
+			+e.input-wrap
+				| Сортировка:
+				select(data-tags="true").floating-select.form-select
+					option По возрасту
+					option Сначала старые
+					option Популярные
+					option Еще какие-то
+			+e.row.row.sorting-row
+				+sortingItem(`ВСЕ`).active
+				+sortingItem(`БАЗОВАЯ КАТЕГОРИЯ`)
+				+sortingItem(`I КАТЕГОРИЯ`)
+				+sortingItem(`II КАТЕГОРИЯ`)
+				+sortingItem(`КАТЕГОРИЯ ПРЕМИУМ`)
+			+e.card-row.row
 				- const wrapClass="col-12 col-sm-6 col-md-4 col-lg-3"
 				+e.col(class= wrapClass)
 					+card('prod-1.png', 'Андрей', 'Профессор психологии, психоаналитик, супервизор', true, 'Премиум').--hovered

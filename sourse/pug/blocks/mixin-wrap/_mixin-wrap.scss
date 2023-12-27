@@ -119,7 +119,7 @@
 		width: auto;
 		margin-right: rem(32);
 		a{
-			color: $gray-600;
+			color: $secondary;
 		}
 		&:last-child a{
 			color: $black;
@@ -136,6 +136,30 @@
 	text-transform: uppercase;
 }
 
+.sorting-row {
+	--bs-gutter-x: #{rem(40)};
+	--bs-gutter-y: #{rem(10)};
+	margin-bottom: rem(40);
+	justify-content: center;
+	.select-btn {
+		color: $secondary;
+		font-size: rem(18);
+	}
+	.active {
+		color: $blue-900;
+		position: relative;
+		padding-bottom: rem(4);
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 1px;
+			background-color: $blue-900;
+		}
+	}
+}
 
 .card {
 	@include mt;

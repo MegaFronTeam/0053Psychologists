@@ -6,19 +6,51 @@
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
+    margin-bottom: rem(20);
 
 	}
 	.section-title{
 		
 	}
-	&__col{
+  &__input-wrap {
+    margin-bottom: rem(40);
+  }
+  .floating-select {
+    max-width: rem(220);
+    margin-left: rem(16);
+    padding-left: 0;
+    padding-right: 0;
+    font-size: rem(14);
+    display: inline-block;
+    border: 0;
+    border-radius:0;
+    border-bottom: solid 1px $secondary;
+  }
 
-	}
 	&__item{
 
 	}
 	&__slide{
 		height: auto;
+	}
+  &__btn-wrapper {
+		height: rem(60);
+		text-align: center;
+		box-shadow: 0px 15px 20px 0px rgba(72, 102, 172, 0.05), 0px -5px 20px 0px rgba(72, 102, 172, 0.05);
+		border-radius: rem(10);
+		.btn-link {
+			width: 100%;
+			color: $black;
+			transform: translateY(rem(4));
+			font-size: rem(16);
+		}
+		.icon {
+			fill: none;
+			stroke-width: rem(1);
+			stroke: $primary;
+			margin-right: rem(20);
+			transform: translateY(rem(-2));
+		}
 	}
 
 	@include media-breakpoint-up(xl) {}
