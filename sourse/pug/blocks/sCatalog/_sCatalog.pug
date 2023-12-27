@@ -1,41 +1,31 @@
-mixin product-item(i, t, p ,pr)
-	+b.ARTICLE.product-item
-		+e.img-wrap(href="#")
-			//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
-			.img-wrap-center 
-				+img(`img/prod-${i}.jpg`)
-		+e.caption
-			+e.title!= t
-			+e.text!= p
-			+e.price!= pr
-			+e.btn(href='#')
-	// /.product-item
-
 mixin sCatalog(data)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sCatalog
-				p Выкупаем проблемные автомобили в день обращения
+			//- +b.section-title.text-center
+			//- 	h2 sCatalog
+			//- 	p Выкупаем проблемные автомобили в день обращения
 
 			+e.row.row
-				- const wrapClass="col-3"
+				- const wrapClass="col-12 col-sm-6 col-md-4 col-lg-3"
 				+e.col(class= wrapClass)
-					+product-item(`1`,``,``,``) 
+					+card('prod-1.png', 'Андрей', 'Профессор психологии, психоаналитик, супервизор', true, 'Премиум').--hovered
 				+e.col(class= wrapClass)
-					+product-item(`2`,``,``,``) 
+					+card('prod-3.png', 'Татьяна', 'Магистр психологии, супервизор, аккредитованный гештальт-терапевт', true, 'I категория').--hovered
 				+e.col(class= wrapClass)
-					+product-item(`3`,``,``,``) 
+					+card('prod-2.png', 'Николай', 'Психолог, учащийся второго года обучения второй ступени в МИКТИК, психоаналитик', true, 'Премиум').--hovered
 				+e.col(class= wrapClass)
-					+product-item(`4`,``,``,``) 
+					+card('prod-4.png', 'Анна', 'Психолог, сертифицированный гештальт-терапевт', true, 'II категория').--hovered
 				+e.col(class= wrapClass)
-					+product-item(`5`,``,``,``) 
+					+card('prod-2.png', 'Николай', 'Психолог, учащийся второго года обучения второй ступени в МИКТИК, психоаналитик', true, 'Базовая').--hovered
 				+e.col(class= wrapClass)
-					+product-item(`6`,``,``,``) 
+					+card('prod-4.png', 'Анна', 'Психолог, сертифицированный гештальт-терапевт', true, 'Базовая').--hovered
 				+e.col(class= wrapClass)
-					+product-item(`7`,``,``,``) 
+					+card('prod-1.png', 'Андрей', 'Профессор психологии, психоаналитик, супервизор', true, 'Премиум').--hovered
 				+e.col(class= wrapClass)
-					+product-item(`8`,``,``,``) 
-
+					+card('prod-3.png', 'Татьяна', 'Магистр психологии, супервизор, аккредитованный гештальт-терапевт', true, 'I категория').--hovered
+			+e.btn-wrapper
+				a(href='#').btn.btn-link
+					+icon(`arrow-load-more`)
+					| Показать ещё
 	// end sCatalog

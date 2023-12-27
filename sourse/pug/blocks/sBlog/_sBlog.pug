@@ -1,0 +1,30 @@
+mixin sBlog(data)
+	// start sBlog
+	+b.sBlog.section&attributes(attributes)
+		.container
+			+input('Сначала новые',  'select')
+			//- +b.section-title.text-center
+			//- 	h2 sBlog
+			//- 	p Выкупаем проблемные автомобили в день обращения
+
+			+e.row.row
+				- const wrapClass="col-12 col-sm-6 col-md-4 col-lg-3"
+				+e.col(class= wrapClass)
+					+card('blog-1.png', 'Зачем психологи обращаются к психологам', 'Посмотрим, откуда растут ноги у мысли, что себя нужно заставить')(href='#')
+				+e.col(class= wrapClass)
+					+card('blog-2.png', 'Синдром отложенной жизни с точки зрения психолога', 'Группа жизненных сценариев, заключающихся в том, что')(href='#')
+				+e.col(class= wrapClass)
+					+card('blog-3.png', 'Когнитивные искажения', 'Это ловушки сознания, с помощью которых мозг убеждает')(href='#')
+				+e.col(class= wrapClass)
+					+card('blog-4.png', 'Чему меня научила психотерапия', 'Я поняла, что то, как мы реагируем на ситуации, в')(href='#')
+				+e.col(class= wrapClass)
+					+card('blog-3.png', 'Когнитивные искажения', 'Это ловушки сознания, с помощью которых мозг убеждает')(href='#')
+				+e.col(class= wrapClass)
+					+card('blog-4.png', 'Чему меня научила психотерапия', 'Я поняла, что то, как мы реагируем на ситуации, в')(href='#')
+				+e.col(class= wrapClass)
+					+card('blog-1.png', 'Зачем психологи обращаются к психологам', 'Посмотрим, откуда растут ноги у мысли, что себя нужно заставить')(href='#')
+				+e.col(class= wrapClass)
+					+card('blog-2.png', 'Синдром отложенной жизни с точки зрения психолога', 'Группа жизненных сценариев, заключающихся в том, что')(href='#')
+
+
+	// end sBlog

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Каталог</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="main-page">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<div class="page-head">
+				<div class="container">
+					<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+						<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+									<meta itemprop="position" content="1"/></a></li>
+							<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Психологи «ДА»</span>
+									<meta itemprop="position" content="2"/></a></li>
+						</ol>
+					</nav>
+					<div class="page-head__row row">
+						<div class="col-12 col-lg-6">
+							<h1>Психологи «ДА»</h1>
+						</div>
+						<div class="col-auto col-lg-6">
+							<p>У нас представлено несколько категорий специалистов — от начинающих психологов, проходящих обучение и психологов, закончивших профильное и дополнительное образование, имеющих релевантный опыт, до профессионалов с безупречной репутацией, большим опытом работы, имеющих регалии и звания, научные публикации и достижения в сфере психологии и психотерапии</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<main>
+				<!-- start sCatalog-->
+				<div class="sCatalog section">
+					<div class="container">
+						<div class="sCatalog__row row">
+							<div class="sCatalog__col col-12 col-sm-6 col-md-4 col-lg-3">
+								<div class="card card--hovered">
+									<div class="card__badge">Премиум
+									</div>
+									<div class="card__hovered custom-scroll">
+										<div class="card__more-info">i
+										</div>
+										<div class="card__name">Андрей
+										</div>
+										<p>Психолог, сертифицированный гештальт-терапевт</p>
+										<div class="card__item"><span>Опыт работы:</span>
+											<p>12 лет</p>
+										</div>
+										<div class="card__item"><span>С чем работает:</span>
+											<ul>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Сильные эмоции: гнев, агрессия
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Самооценка и уверенность в себе
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Травматические события в прошлом
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Сильные эмоции: гнев, агрессия
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Травматические события в прошлом
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="card__img-wrap"><img class="object-fit-js" src="img/prod-1.png" alt="" loading="lazy"/>
+									</div>
+									<div class="card__content">
+										<div class="card__title">Андрей
+										</div>
+										<div class="card__text">Профессор психологии, психоаналитик, супервизор
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sCatalog__col col-12 col-sm-6 col-md-4 col-lg-3">
+								<div class="card card--hovered">
+									<div class="card__badge">I категория
+									</div>
+									<div class="card__hovered custom-scroll">
+										<div class="card__more-info">i
+										</div>
+										<div class="card__name">Татьяна
+										</div>
+										<p>Психолог, сертифицированный гештальт-терапевт</p>
+										<div class="card__item"><span>Опыт работы:</span>
+											<p>12 лет</p>
+										</div>
+										<div class="card__item"><span>С чем работает:</span>
+											<ul>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Сильные эмоции: гнев, агрессия
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Самооценка и уверенность в себе
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Травматические события в прошлом
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Сильные эмоции: гнев, агрессия
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Травматические события в прошлом
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="card__img-wrap"><img class="object-fit-js" src="img/prod-3.png" alt="" loading="lazy"/>
+									</div>
+									<div class="card__content">
+										<div class="card__title">Татьяна
+										</div>
+										<div class="card__text">Магистр психологии, супервизор, аккредитованный гештальт-терапевт
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sCatalog__col col-12 col-sm-6 col-md-4 col-lg-3">
+								<div class="card card--hovered">
+									<div class="card__badge">Премиум
+									</div>
+									<div class="card__hovered custom-scroll">
+										<div class="card__more-info">i
+										</div>
+										<div class="card__name">Николай
+										</div>
+										<p>Психолог, сертифицированный гештальт-терапевт</p>
+										<div class="card__item"><span>Опыт работы:</span>
+											<p>12 лет</p>
+										</div>
+										<div class="card__item"><span>С чем работает:</span>
+											<ul>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Сильные эмоции: гнев, агрессия
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Самооценка и уверенность в себе
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Травматические события в прошлом
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Сильные эмоции: гнев, агрессия
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Травматические события в прошлом
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="card__img-wrap"><img class="object-fit-js" src="img/prod-2.png" alt="" loading="lazy"/>
+									</div>
+									<div class="card__content">
+										<div class="card__title">Николай
+										</div>
+										<div class="card__text">Психолог, учащийся второго года обучения второй ступени в МИКТИК, психоаналитик
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sCatalog__col col-12 col-sm-6 col-md-4 col-lg-3">
+								<div class="card card--hovered">
+									<div class="card__badge">II категория
+									</div>
+									<div class="card__hovered custom-scroll">
+										<div class="card__more-info">i
+										</div>
+										<div class="card__name">Анна
+										</div>
+										<p>Психолог, сертифицированный гештальт-терапевт</p>
+										<div class="card__item"><span>Опыт работы:</span>
+											<p>12 лет</p>
+										</div>
+										<div class="card__item"><span>С чем работает:</span>
+											<ul>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Сильные эмоции: гнев, агрессия
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Самооценка и уверенность в себе
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Травматические события в прошлом
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Сильные эмоции: гнев, агрессия
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Травматические события в прошлом
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="card__img-wrap"><img class="object-fit-js" src="img/prod-4.png" alt="" loading="lazy"/>
+									</div>
+									<div class="card__content">
+										<div class="card__title">Анна
+										</div>
+										<div class="card__text">Психолог, сертифицированный гештальт-терапевт
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sCatalog__col col-12 col-sm-6 col-md-4 col-lg-3">
+								<div class="card card--hovered">
+									<div class="card__badge">Базовая
+									</div>
+									<div class="card__hovered custom-scroll">
+										<div class="card__more-info">i
+										</div>
+										<div class="card__name">Николай
+										</div>
+										<p>Психолог, сертифицированный гештальт-терапевт</p>
+										<div class="card__item"><span>Опыт работы:</span>
+											<p>12 лет</p>
+										</div>
+										<div class="card__item"><span>С чем работает:</span>
+											<ul>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Сильные эмоции: гнев, агрессия
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Самооценка и уверенность в себе
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Травматические события в прошлом
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Сильные эмоции: гнев, агрессия
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Травматические события в прошлом
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="card__img-wrap"><img class="object-fit-js" src="img/prod-2.png" alt="" loading="lazy"/>
+									</div>
+									<div class="card__content">
+										<div class="card__title">Николай
+										</div>
+										<div class="card__text">Психолог, учащийся второго года обучения второй ступени в МИКТИК, психоаналитик
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sCatalog__col col-12 col-sm-6 col-md-4 col-lg-3">
+								<div class="card card--hovered">
+									<div class="card__badge">Базовая
+									</div>
+									<div class="card__hovered custom-scroll">
+										<div class="card__more-info">i
+										</div>
+										<div class="card__name">Анна
+										</div>
+										<p>Психолог, сертифицированный гештальт-терапевт</p>
+										<div class="card__item"><span>Опыт работы:</span>
+											<p>12 лет</p>
+										</div>
+										<div class="card__item"><span>С чем работает:</span>
+											<ul>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Сильные эмоции: гнев, агрессия
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Самооценка и уверенность в себе
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Травматические события в прошлом
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Сильные эмоции: гнев, агрессия
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Травматические события в прошлом
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="card__img-wrap"><img class="object-fit-js" src="img/prod-4.png" alt="" loading="lazy"/>
+									</div>
+									<div class="card__content">
+										<div class="card__title">Анна
+										</div>
+										<div class="card__text">Психолог, сертифицированный гештальт-терапевт
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sCatalog__col col-12 col-sm-6 col-md-4 col-lg-3">
+								<div class="card card--hovered">
+									<div class="card__badge">Премиум
+									</div>
+									<div class="card__hovered custom-scroll">
+										<div class="card__more-info">i
+										</div>
+										<div class="card__name">Андрей
+										</div>
+										<p>Психолог, сертифицированный гештальт-терапевт</p>
+										<div class="card__item"><span>Опыт работы:</span>
+											<p>12 лет</p>
+										</div>
+										<div class="card__item"><span>С чем работает:</span>
+											<ul>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Сильные эмоции: гнев, агрессия
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Самооценка и уверенность в себе
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Травматические события в прошлом
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Сильные эмоции: гнев, агрессия
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Травматические события в прошлом
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="card__img-wrap"><img class="object-fit-js" src="img/prod-1.png" alt="" loading="lazy"/>
+									</div>
+									<div class="card__content">
+										<div class="card__title">Андрей
+										</div>
+										<div class="card__text">Профессор психологии, психоаналитик, супервизор
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sCatalog__col col-12 col-sm-6 col-md-4 col-lg-3">
+								<div class="card card--hovered">
+									<div class="card__badge">I категория
+									</div>
+									<div class="card__hovered custom-scroll">
+										<div class="card__more-info">i
+										</div>
+										<div class="card__name">Татьяна
+										</div>
+										<p>Психолог, сертифицированный гештальт-терапевт</p>
+										<div class="card__item"><span>Опыт работы:</span>
+											<p>12 лет</p>
+										</div>
+										<div class="card__item"><span>С чем работает:</span>
+											<ul>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Сильные эмоции: гнев, агрессия
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Самооценка и уверенность в себе
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Травматические события в прошлом
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Сильные эмоции: гнев, агрессия
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Травматические события в прошлом
+												</li>
+												<li> 
+													<svg class="iconC iconC-check ">
+														<use xlink:href="img/svg/spriteC.svg#check"></use>
+													</svg>Панические атаки
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="card__img-wrap"><img class="object-fit-js" src="img/prod-3.png" alt="" loading="lazy"/>
+									</div>
+									<div class="card__content">
+										<div class="card__title">Татьяна
+										</div>
+										<div class="card__text">Магистр психологии, супервизор, аккредитованный гештальт-терапевт
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sCatalog__btn-wrapper"><a class="btn btn-link" href="#">
+								<svg class="icon icon-arrow-load-more ">
+									<use xlink:href="img/svg/sprite.svg#arrow-load-more"></use>
+								</svg>Показать ещё</a>
+						</div>
+					</div>
+				</div>
+				<!-- end sCatalog-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

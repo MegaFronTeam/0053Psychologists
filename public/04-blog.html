@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Блог</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="main-page">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<div class="page-head">
+				<div class="container">
+					<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+						<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+									<meta itemprop="position" content="1"/></a></li>
+							<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Блог</span>
+									<meta itemprop="position" content="2"/></a></li>
+						</ol>
+					</nav>
+					<div class="page-head__row row">
+						<div class="col-12 col-lg-6">
+							<h1>Блог</h1>
+						</div>
+						<div class="col-auto col-lg-6">
+							<p>Здесь мы собрали полезные и интересные статьи о психологии. Записи носят информативный характер и постоянно обновляются. Мы предоставляем Вам самую актуальную информацию.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<main>
+				<!-- start sBlog-->
+				<div class="sBlog section">
+					<div class="container">
+						<div class="sBlog__input-wrap form-group">
+							<label>
+								<select class="sBlog__input form-select" name="select">
+									<option value="Сначала новые">Сначала новые</option>
+									<option value=" placeholder 1">placeholder 1</option>
+									<option value=" placeholder 2">placeholder 2</option>
+									<option value=" placeholder 3">placeholder 3</option>
+									<option value=" placeholder 4">placeholder 4</option>
+								</select><span class="sBlog__input-title">Сначала новые</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="sBlog__row row">
+							<div class="sBlog__col col-12 col-sm-6 col-md-4 col-lg-3">
+								<a class="card" href="#">
+									<div class="card__img-wrap"><img class="object-fit-js" src="img/blog-1.png" alt="" loading="lazy"/>
+									</div>
+									<div class="card__content">
+										<div class="card__title">Зачем психологи обращаются к психологам
+										</div>
+										<div class="card__text">Посмотрим, откуда растут ноги у мысли, что себя нужно заставить
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="sBlog__col col-12 col-sm-6 col-md-4 col-lg-3">
+								<a class="card" href="#">
+									<div class="card__img-wrap"><img class="object-fit-js" src="img/blog-2.png" alt="" loading="lazy"/>
+									</div>
+									<div class="card__content">
+										<div class="card__title">Синдром отложенной жизни с точки зрения психолога
+										</div>
+										<div class="card__text">Группа жизненных сценариев, заключающихся в том, что
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="sBlog__col col-12 col-sm-6 col-md-4 col-lg-3">
+								<a class="card" href="#">
+									<div class="card__img-wrap"><img class="object-fit-js" src="img/blog-3.png" alt="" loading="lazy"/>
+									</div>
+									<div class="card__content">
+										<div class="card__title">Когнитивные искажения
+										</div>
+										<div class="card__text">Это ловушки сознания, с помощью которых мозг убеждает
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="sBlog__col col-12 col-sm-6 col-md-4 col-lg-3">
+								<a class="card" href="#">
+									<div class="card__img-wrap"><img class="object-fit-js" src="img/blog-4.png" alt="" loading="lazy"/>
+									</div>
+									<div class="card__content">
+										<div class="card__title">Чему меня научила психотерапия
+										</div>
+										<div class="card__text">Я поняла, что то, как мы реагируем на ситуации, в
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="sBlog__col col-12 col-sm-6 col-md-4 col-lg-3">
+								<a class="card" href="#">
+									<div class="card__img-wrap"><img class="object-fit-js" src="img/blog-3.png" alt="" loading="lazy"/>
+									</div>
+									<div class="card__content">
+										<div class="card__title">Когнитивные искажения
+										</div>
+										<div class="card__text">Это ловушки сознания, с помощью которых мозг убеждает
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="sBlog__col col-12 col-sm-6 col-md-4 col-lg-3">
+								<a class="card" href="#">
+									<div class="card__img-wrap"><img class="object-fit-js" src="img/blog-4.png" alt="" loading="lazy"/>
+									</div>
+									<div class="card__content">
+										<div class="card__title">Чему меня научила психотерапия
+										</div>
+										<div class="card__text">Я поняла, что то, как мы реагируем на ситуации, в
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="sBlog__col col-12 col-sm-6 col-md-4 col-lg-3">
+								<a class="card" href="#">
+									<div class="card__img-wrap"><img class="object-fit-js" src="img/blog-1.png" alt="" loading="lazy"/>
+									</div>
+									<div class="card__content">
+										<div class="card__title">Зачем психологи обращаются к психологам
+										</div>
+										<div class="card__text">Посмотрим, откуда растут ноги у мысли, что себя нужно заставить
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="sBlog__col col-12 col-sm-6 col-md-4 col-lg-3">
+								<a class="card" href="#">
+									<div class="card__img-wrap"><img class="object-fit-js" src="img/blog-2.png" alt="" loading="lazy"/>
+									</div>
+									<div class="card__content">
+										<div class="card__title">Синдром отложенной жизни с точки зрения психолога
+										</div>
+										<div class="card__text">Группа жизненных сценариев, заключающихся в том, что
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end sBlog-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

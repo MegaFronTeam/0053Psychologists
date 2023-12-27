@@ -1,24 +1,37 @@
 // start .sCatalog
 .sCatalog {
-	// --sPT: #{rem()};
+	--sPT: #{rem(40)};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
-
+		margin-bottom: rem(20);
 	}
 	.section-title{
 		
 	}
-	&__col{
-
-	}
-	&__item{
-
-	}
 	&__slide{
 		height: auto;
+	}
+	&__btn-wrapper {
+		height: rem(60);
+		text-align: center;
+		box-shadow: 0px 15px 20px 0px rgba(72, 102, 172, 0.05), 0px -5px 20px 0px rgba(72, 102, 172, 0.05);
+		border-radius: rem(10);
+		.btn-link {
+			width: 100%;
+			color: $black;
+			transform: translateY(rem(4));
+			font-size: rem(16);
+		}
+		.icon {
+			fill: none;
+			stroke-width: rem(1);
+			stroke: $blue;
+			margin-right: rem(20);
+			transform: translateY(rem(-2));
+		}
 	}
 
 	@include media-breakpoint-up(xl) {}
@@ -29,25 +42,3 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sCatalog
-
-
-
-.product-item{
-	display: flex;
-	flex-direction: column;
-	min-height: 100%;
-	background: #FFFFFF; 
-	border: 1px solid #E2E2E2;
-	border-radius: 15px;
-	overflow: hidden;
-	position: relative;
-	&__img-wrap{
-		@include block(298, 190);
-	}
-	&__caption{
-		flex-grow: 1;
-		display: flex;
-		flex-direction: column;
-		padding: rem(20);
-	}
-}
