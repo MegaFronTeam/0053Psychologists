@@ -2,10 +2,20 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-				+icon('telegram')
-				+iconC('telegram')
-			.row
-						
+			+e.slider--js.swiper
+				.swiper-wrapper
+					+e.slide.swiper-slide
+			+e.item-row.row
+				+e.col.col-lg
+					+e.item
+						span Всегда выгодные предложения
+						p Скидка 30% на третий визит
+				+e.col.col-lg
+					+e.item
+						span Высокий профессионализм
+						p Выбери своего наставника
+				+e.col.col-lg
+					+e.item
+						span Специальное предложение для бизнеса
+						p Абонемент для сотрудников
 	// end headerBlock
