@@ -73,7 +73,7 @@
 		&::after{
 			content: '';
 			width: 10px;
-			height: 2px; 
+			height: 2px;
 			background-color: currentColor;
 			@include a-cent;
 			position: absolute;
@@ -116,6 +116,7 @@
 .breadcrumb-slider--js {
 	margin-bottom: rem(40);
 	.breadcrumb-item{
+		font-size: rem(14);
 		width: auto;
 		margin-right: rem(32);
 		a{

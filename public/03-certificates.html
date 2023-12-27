@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Подарочные сертификаты</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="main-page">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<div class="page-head">
+				<div class="container">
+					<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+						<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+									<meta itemprop="position" content="1"/></a></li>
+							<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Подарочные сертификаты</span>
+									<meta itemprop="position" content="2"/></a></li>
+						</ol>
+					</nav>
+					<div class="page-head__row row">
+						<div class="col-lg-5">
+							<h1>Подарочные сертификаты</h1>
+						</div>
+						<div class="col-lg-7">
+							<p>Данный сертификат даёт Вам право получить любую услугу на нашей платформе на указанную сумму. Срок действия сертификата — 6 месяцев с даты получения</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<main>
+				<!-- start sCertificates-->
+				<div class="sCertificates section">
+					<div class="container">
+						<div class="sCertificates__input-wrap">
+							<p>Сортировка:</p>
+							<select class="floating-select form-select" data-tags="true">
+								<option>Сумма сертификата</option>
+								<option>Сначала старые</option>
+								<option>Популярные</option>
+								<option>Еще какие-то</option>
+							</select>
+						</div>
+						<div class="sCertificates__card-row row">
+							<div class="sCertificates__col col-12 col-sm-6 col-md-4 col-lg-3">
+								<a class="card" href="#">
+									<div class="card__img-wrap"><img class="object-fit-js" src="img/Certificates-1.png" alt="" loading="lazy"/>
+									</div>
+									<div class="card__content">
+										<div class="card__title">Зачем психологи обращаются к психологам
+										</div>
+										<div class="card__text">Посмотрим, откуда растут ноги у мысли, что себя нужно заставить
+										</div>
+									</div>
+								</a>
+							</div>
+						</div><a class="btn btn-link" href="#">
+							<svg class="icon icon-arrow-load-more ">
+								<use xlink:href="img/svg/sprite.svg#arrow-load-more"></use>
+							</svg>Показать ещё</a>
+					</div>
+				</div>
+				<!-- end sCertificates-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

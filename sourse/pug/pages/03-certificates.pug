@@ -1,0 +1,28 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sCertificates/_sCertificates.pug
+include ../blocks/sBlog/_sBlog.pug
+
+
+block variables
+	- let  mainPage= 'main-page'
+	- let  bg= null
+
+block title
+	- let  title= 'Подарочные сертификаты'
+	title= title
+block pagecontent
+
+	+parts('header')
+	+page-head(`Подарочные сертификаты`, 'Данный сертификат даёт Вам право получить любую услугу на нашей платформе на указанную сумму. Срок действия сертификата — 6 месяцев с даты получения',[`Подарочные сертификаты`])
+	main
+		+sCertificates
+	+parts('footer')
+

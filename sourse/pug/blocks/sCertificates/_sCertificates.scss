@@ -1,12 +1,12 @@
-// start .sCatalog
-.sCatalog {
-	--sPT: #{rem(13)};
+// start .sCertificates
+.sCertificates {
+	--sPT: #{rem(15)};
 	--sPB: #{rem(110)};
 	// --sTPB: #{rem()};
 	&__card-row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
-		margin-bottom: rem(20);
+		// margin-bottom: rem(20);
 	}
 	.section-title{
 		
@@ -59,4 +59,4 @@
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
-} // end.sCatalog
+} // end.sCertificates
