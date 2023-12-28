@@ -2,32 +2,45 @@
 	border-radius: rem(10);
 	overflow: hidden;
 	position: relative;
+	display: flex;
+	height: 100%;
+	padding: rem(20);
+	@include media-breakpoint-up(sm) {
+		padding: rem(30);
+	}
 	&__img {
 		width: 100%;
 	}
 	&__content {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		height: calc(100% - rem(30)*2);
-		width: calc(100% - rem(30)*2);
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
 		background: $white;
 		opacity: .8;
 		border-radius: rem(5);
-		padding-top: rem(40);
+		padding: rem(30);
+		@include media-breakpoint-up(sm) {
+			padding: rem(40);
+		}
 		& > * {
 			text-align: center;
 		}
 	}
 	&__title {
-		font-size: rem(32);
+		font-size: rem(26);
 		font-weight: 300;
 		line-height: 125%;
+		@include media-breakpoint-up(sm) {
+			font-size: rem(32);
+		}
 	}
 	&__sub-title {
-		font-size: rem(18);
+		font-size: rem(14);
 		font-weight: 500;
+		@include media-breakpoint-up(sm) {
+			font-size: rem(18);
+		}
 	}
 	p {
 		font-size: rem(12);
@@ -45,8 +58,8 @@
 		font-size: rem(12);
 		color: $gray-700;
 		@include media-breakpoint-up(xxl) {
-			padding-left: 20%;
-			padding-right: 20%;
+			padding-left: 15%;
+			padding-right: 15%;
 		}
 		// max-width: rem(370);
 	}
@@ -54,12 +67,39 @@
 		@include block(27, 85);
 		width: rem(85);
 		position: absolute;
-		right: rem(10);
-		bottom: rem(10);
+		right: rem(25);
+		bottom: rem(20);
+		@include media-breakpoint-up(sm) {
+			right: rem(40);
+			bottom: rem(40);
+		}
 		img {
 			width: 100%;
 			object-fit: cover;
 		}
+	}
+	&__hovered {
+		box-shadow: 0px 15px 20px 0px rgba(72, 102, 172, 0.05), 0px -5px 20px 0px rgba(72, 102, 172, 0.05);
+		position: absolute;
+		bottom:0;
+		display: flex;
+    justify-content: center;
+		left: 0;
+		z-index: 5;
+		background: $white;
+		gap: rem(20);
+		width: 100%;
+		padding: rem(40) rem(10);
+		opacity: 0;
+		pointer-events: none;
+		@include mt;
+		.btn {
+			--bs-btn-padding-x: #{rem(30)};
+		}
+	} //&:hover
+	&:hover .certif-card__hovered {
+		opacity: 1;
+		pointer-events: all;
 	}
 }
 
@@ -71,7 +111,7 @@
 	// --sTPB: #{rem()};
 	&__card-row{
 		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
+		--bs-gutter-y: #{rem(17)};
 		margin-bottom: rem(20);
 	}
 	.section-title{

@@ -1,14 +1,16 @@
 mixin certificate-card(price)
-	+b.certif-card()&attributes(attributes)
-		+e.img.img(src="img/certificate.png", alt="")
+	+b.certif-card()&attributes(attributes).bg-wrap
+		+img("img/certificate.png",'bg').img.picture-bg
 		+e.content
 			+e.title СЕРТИФИКАТ
 			+e.sub-title НА ПОЛУЧЕНИЕ УСЛУГИ
 			p на сумму
 			+e.price!= `${price} ₽`
 			+e.descr Данный сертификат даёт Вам право получить любую услугу на нащей платформе на указанную сумму. Срок действия сертификата — 6 месяцев с даты получения
-			+e.img-wrap
-				+img.img(src="img/logo.png", alt="")
+			+e.img-wrap: +img("img/logo.png")
+		+e.hovered
+			+e.btn.btn.btn-primary(href='#') Купить
+			+e.btn.btn.btn-white(href='#') Подарить
 
 
 mixin sCertificates(data)
@@ -28,6 +30,26 @@ mixin sCertificates(data)
 					+certificate-card(`1 990`)
 				+e.col(class= wrapClass)
 					+certificate-card(`1 990`)
+				+e.col(class= wrapClass)
+					+certificate-card(`1 990`)
+				+e.col(class= wrapClass)
+					+certificate-card(`1 990`)
+				+e.col(class= wrapClass)
+					+certificate-card(`1 990`)
+				+e.col(class= wrapClass)
+					+certificate-card(`2 990`)
+				+e.col(class= wrapClass)
+					+certificate-card(`2 990`)
+				+e.col(class= wrapClass)
+					+certificate-card(`2 990`)
+				+e.col(class= wrapClass)
+					+certificate-card(`2 990`)
+				+e.col(class= wrapClass)
+					+certificate-card(`2 990`)
+				+e.col(class= wrapClass)
+					+certificate-card(`4 990`)
+				+e.col(class= wrapClass)
+					+certificate-card(`4 990`)
 
 
 			a(href='#').btn.btn-link
