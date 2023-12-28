@@ -1,0 +1,11 @@
+mixin s404(data)
+	// start s404
+	+b.SECTION.s404.section#s404&attributes(attributes).bg-wrap
+		+img("img/404.jpg",'bg').img.picture-bg
+		.container
+			h1 К СОЖАЛЕНИЮ, СТРАНИЦА НЕДОСТУПНА
+			p Но мы обязательно всё починим, а пока попробуйте:
+			+e.btn.btn.btn-primary(href="#") Вернуться на главную
+			span 404
+
+	// end s404
