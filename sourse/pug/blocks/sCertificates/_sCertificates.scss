@@ -87,26 +87,44 @@
 		left: 0;
 		z-index: 5;
 		background: $white;
-		gap: rem(20);
+		gap: rem(10);
 		width: 100%;
-		padding: rem(40) rem(10);
+		padding: rem(44) rem(10);
 		opacity: 0;
 		pointer-events: none;
 		@include mt;
+		@include media-breakpoint-up(sm) {
+			gap: rem(20);
+		}
 		.btn {
 			--bs-btn-padding-x: #{rem(30)};
+			font-size: rem(16);
+		}
+		.btn-outline-light {
+			--bs-btn-border-color: #{$primary};
+			&:hover {
+				color: $white;
+				background-color: $blue-900;
+				// --bs-btn-hover-color: #{$white};
+				// --bs-btn-hover-color: #{$secondary};
+			}
+			
 		}
 	} //&:hover
-	&:hover .certif-card__hovered {
-		opacity: 1;
-		pointer-events: all;
+	&:hover {
+		box-shadow: 0px 15px 20px 0px rgba(72, 102, 172, 0.05), 0px -5px 20px 0px rgba(72, 102, 172, 0.05);
+		.certif-card__hovered {
+			opacity: 1;
+			pointer-events: all;
+		}
 	}
+
 }
 
 
 // start .sCertificates
 .sCertificates {
-	--sPT: #{rem(15)};
+	--sPT: #{rem(20)};
 	--sPB: #{rem(110)};
 	// --sTPB: #{rem()};
 	&__card-row{

@@ -1,15 +1,12 @@
 // start .sCatalog
 .sCatalog {
-	--sPT: #{rem(13)};
+	--sPT: #{rem(20)};
 	--sPB: #{rem(110)};
 	// --sTPB: #{rem()};
 	&__card-row{
 		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
+		--bs-gutter-y: #{rem(18)};
 		margin-bottom: rem(20);
-	}
-	.section-title{
-		
 	}
 	&__input-wrap {
     margin-bottom: rem(35);

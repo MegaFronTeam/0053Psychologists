@@ -8,12 +8,12 @@
   }
 }
 .sBlog {
-	--sPT: #{rem(15)};
+	--sPT: #{rem(20)};
 	--sPB: #{rem(110)};
 	// --sTPB: #{rem()};
 	&__card-row{
 		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
+		--bs-gutter-y: #{rem(18)};
     margin-bottom: rem(20);
 	}
   &__input-wrap {
