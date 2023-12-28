@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Каталог</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="main-page">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<!-- start sSpecialists-->
+				<div class="sSpecialists section">
+					<div class="container">
+						<div class="sSpecialists__section-title">
+							<h1>РАДЫ ПРИВЕТСТВОВАТЬ ВАС НА НАШЕЙ ПЛАТФОРМЕ</h1>
+							<p>Пожалуйста, начните регистрацию на нашем сайте, только если Вы соответствуете этим требованиям или проконсультируйтесь с нашим специалистом в чате поддержки</p>
+						</div>
+						<div class="sSpecialists__row row">
+							<div class="col-lg-6 col-xxl-7">
+								<div class="card-requirement">
+									<div class="card-requirement__title">МИНИМАЛЬНЫЕ ТРЕБОВАНИЯ К СПЕЦИАЛИСТУ
+									</div>
+									<ul>
+										<li>
+											<svg class="iconC iconC-check ">
+												<use xlink:href="img/svg/spriteC.svg#check"></use>
+											</svg>Законченное высшее психологическое образование или законченное дополнительное высшее образование в области психологии
+										</li>
+										<li>
+											<svg class="iconC iconC-check ">
+												<use xlink:href="img/svg/spriteC.svg#check"></use>
+											</svg>Обучение на второй ступени (втором году обучения) одного из психотерапевтических направлений в аккредитованном учебном заведении
+										</li>
+										<li>
+											<svg class="iconC iconC-check ">
+												<use xlink:href="img/svg/spriteC.svg#check"></use>
+											</svg>Опыт практической платной работы — от 1 года (студенческая практика в зачёт не идёт)
+										</li>
+										<li>
+											<svg class="iconC iconC-check ">
+												<use xlink:href="img/svg/spriteC.svg#check"></use>
+											</svg>Обязательно наличие регулярной индивидуальной личной психотерапии, а также, регулярной супервизии
+										</li>
+										<li>
+											<svg class="iconC iconC-check ">
+												<use xlink:href="img/svg/spriteC.svg#check"></use>
+											</svg>Также, могут потребоваться рекомендации от преподавателей и тренеров ваших программ и коллег
+										</li>
+										<li>
+											<svg class="iconC iconC-check ">
+												<use xlink:href="img/svg/spriteC.svg#check"></use>
+											</svg>Согласие на прохождение психиатрического освидетельствования у психиатра сервиса
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-6 col-xxl-5">
+								<div class="card-requirement">
+									<div class="card-requirement__title">ПРЕИМУЩЕСТВА РАБОТЫ С СЕРВИСОМ ОНЛАЙН-ТЕРАПИИ «ДА»
+									</div>
+									<ul>
+										<li>
+											<svg class="iconC iconC-check ">
+												<use xlink:href="img/svg/spriteC.svg#check"></use>
+											</svg>Мы полностью возьмём на себя ваше продвижение и поиск клиентов для вас — мы будем заниматься маркетингом, а вы тем, что любите и хорошо умеете — психотерапией
+										</li>
+										<li>
+											<svg class="iconC iconC-check ">
+												<use xlink:href="img/svg/spriteC.svg#check"></use>
+											</svg>У нас на сервисе удобные инструменты для планирования и ведения работы. К примеру, у нас вы можете выбрать время работы с клиентом с точностью до пяти минут
+										</li>
+										<li>
+											<svg class="iconC iconC-check ">
+												<use xlink:href="img/svg/spriteC.svg#check"></use>
+											</svg>У нас вы получаете доступ в поддерживающее профессиональное сообщество, а это супервизии, семинары, онлайн встречи.
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="sSpecialists__btn-wrap">
+							<a class="sSpecialists__btn btn btn-primary" href="#">Регистрация как психолог
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- end sSpecialists-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>
