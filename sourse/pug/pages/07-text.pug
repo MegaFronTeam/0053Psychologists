@@ -9,7 +9,7 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/sBlog/_sBlog.pug
 
-include ../blocks/sSpecialists/_sSpecialists.pug
+include ../blocks/sText/_sText.pug
 
 
 block variables
@@ -17,13 +17,14 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= 'Специалистам'
+	- let  title= 'Текстовая'
 	title= title
 block pagecontent
 
 
 
 	+parts('header')
+	+page-head-text('Текстовая страница', [`Текстовая страница`])
 	main
-		+sSpecialists
+		+sText
 	+parts('footer')
