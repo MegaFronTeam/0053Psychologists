@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Бизнесу</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="main-page">
+		<div class="main-wrapper">
+			<div class="business-page">
+				<script>addBlock(`header`)</script>
+				<div id="headerWrap"></div>
+				<div class="page-head">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Бизнесу</span>
+										<meta itemprop="position" content="2"/></a></li>
+							</ol>
+						</nav>
+						<div class="page-head__row row">
+							<div class="col-lg-5">
+								<h1>Бизнесу</h1>
+							</div>
+							<div class="col-lg-7">
+								<p>У нас есть ряд готовых предложений для Вашего бизнеса, которые Вы можете посмотреть на данной странице, а также, мы готовы разработать отдельное предложение под Ваш конкретный запрос. Чтобы его получить, напишите, пожалуйста, нам.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<main>
+					<!-- start sBusiness-->
+					<div class="sBusiness section">
+						<div class="container">
+							<div class="sBusiness__input-wrap">
+								<p>Сортировка:</p>
+								<select class="floating-select form-select" data-tags="true">
+									<option>Сначала новые</option>
+									<option>Сначала старые</option>
+									<option>Популярные</option>
+									<option>Еще какие-то</option>
+								</select>
+							</div>
+							<div class="sBusiness__row row sorting-row">
+								<div class="col-auto">
+									<a class="sBusiness__btn select-btn active" href="#">ВСЕ
+									</a>
+								</div>
+								<div class="col-auto">
+									<a class="sBusiness__btn select-btn" href="#">СКИДКИ
+									</a>
+								</div>
+								<div class="col-auto">
+									<a class="sBusiness__btn select-btn" href="#">ТРЕНИНГИ
+									</a>
+								</div>
+								<div class="col-auto">
+									<a class="sBusiness__btn select-btn" href="#">ИССЛЕДОВАНИЯ
+									</a>
+								</div>
+							</div>
+							<div class="sBusiness__card-row row">
+								<div class="sBusiness__col col-12 col-lg-6">
+									<div class="business-card">
+										<div class="business-card__title-wrap">
+											<div class="business-card__title">СКИДКА НА УСЛУГУ СЕРВИСА ПРИ ПОКУПКЕ «АБОНЕМЕНТА» ДЛЯ СВОИХ СОТРУДНИКОВ
+											</div>
+											<div class="business-card__descr">Оставьте свои контакты для получения предложения. В ближайшее время с Вами свяжется наш менеджер
+											</div>
+										</div>
+										<div class="business-card__input-wrapper">
+											<div class="form-wrap">
+												<form>
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Название Вашей организации"/><span class="form-wrap__input-title">Название Вашей организации</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Телефон"/><span class="form-wrap__input-title">Телефон</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</form>
+											</div>
+											<button class="business-card__btn btn btn-primary" type="submit">Отправить
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="sBusiness__col col-12 col-lg-6">
+									<div class="business-card">
+										<div class="business-card__title-wrap">
+											<div class="business-card__title">УЛУЧШЕНИЕ КОММУНИКАЦИИ ВНУТРИ КОМПАНИИ
+											</div>
+											<div class="business-card__descr">Оставьте свои контакты для получения предложения. В ближайшее время с Вами свяжется наш менеджер
+											</div>
+										</div>
+										<div class="business-card__input-wrapper">
+											<div class="form-wrap">
+												<form>
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Название Вашей организации"/><span class="form-wrap__input-title">Название Вашей организации</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Телефон"/><span class="form-wrap__input-title">Телефон</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</form>
+											</div>
+											<button class="business-card__btn btn btn-primary" type="submit">Отправить
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="sBusiness__col col-12 col-lg-6">
+									<div class="business-card">
+										<div class="business-card__title-wrap">
+											<div class="business-card__title">ОПРЕДЕЛЕНИЕ УРОВНЯ СТРЕССА СОТРУДНИКОВ КОМПАНИИ
+											</div>
+											<div class="business-card__descr">Оставьте свои контакты для получения предложения. В ближайшее время с Вами свяжется наш менеджер
+											</div>
+										</div>
+										<div class="business-card__input-wrapper">
+											<div class="form-wrap">
+												<form>
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Название Вашей организации"/><span class="form-wrap__input-title">Название Вашей организации</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Телефон"/><span class="form-wrap__input-title">Телефон</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</form>
+											</div>
+											<button class="business-card__btn btn btn-primary" type="submit">Отправить
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="sBusiness__col col-12 col-lg-6">
+									<div class="business-card">
+										<div class="business-card__title-wrap">
+											<div class="business-card__title">ОПРЕДЕЛЕНИЕ КОММУНИКАТИВНЫХ БАРЬЕРОВ ВНУТРИ КОМПАНИИ
+											</div>
+											<div class="business-card__descr">Оставьте свои контакты для получения предложения. В ближайшее время с Вами свяжется наш менеджер
+											</div>
+										</div>
+										<div class="business-card__input-wrapper">
+											<div class="form-wrap">
+												<form>
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Название Вашей организации"/><span class="form-wrap__input-title">Название Вашей организации</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Телефон"/><span class="form-wrap__input-title">Телефон</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</form>
+											</div>
+											<button class="business-card__btn btn btn-primary" type="submit">Отправить
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="sBusiness__col col-12 col-lg-6">
+									<div class="business-card">
+										<div class="business-card__title-wrap">
+											<div class="business-card__title">СКИДКА НА УСЛУГУ СЕРВИСА ПРИ ПОКУПКЕ «АБОНЕМЕНТА» ДЛЯ СВОИХ СОТРУДНИКОВ
+											</div>
+											<div class="business-card__descr">Оставьте свои контакты для получения предложения. В ближайшее время с Вами свяжется наш менеджер
+											</div>
+										</div>
+										<div class="business-card__input-wrapper">
+											<div class="form-wrap">
+												<form>
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Название Вашей организации"/><span class="form-wrap__input-title">Название Вашей организации</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Телефон"/><span class="form-wrap__input-title">Телефон</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</form>
+											</div>
+											<button class="business-card__btn btn btn-primary" type="submit">Отправить
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="sBusiness__col col-12 col-lg-6">
+									<div class="business-card">
+										<div class="business-card__title-wrap">
+											<div class="business-card__title">УЛУЧШЕНИЕ КОММУНИКАЦИИ ВНУТРИ КОМПАНИИ
+											</div>
+											<div class="business-card__descr">Оставьте свои контакты для получения предложения. В ближайшее время с Вами свяжется наш менеджер
+											</div>
+										</div>
+										<div class="business-card__input-wrapper">
+											<div class="form-wrap">
+												<form>
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Название Вашей организации"/><span class="form-wrap__input-title">Название Вашей организации</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Телефон"/><span class="form-wrap__input-title">Телефон</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</form>
+											</div>
+											<button class="business-card__btn btn btn-primary" type="submit">Отправить
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="sBusiness__col col-12 col-lg-6">
+									<div class="business-card">
+										<div class="business-card__title-wrap">
+											<div class="business-card__title">ОПРЕДЕЛЕНИЕ УРОВНЯ СТРЕССА СОТРУДНИКОВ КОМПАНИИ
+											</div>
+											<div class="business-card__descr">Оставьте свои контакты для получения предложения. В ближайшее время с Вами свяжется наш менеджер
+											</div>
+										</div>
+										<div class="business-card__input-wrapper">
+											<div class="form-wrap">
+												<form>
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Название Вашей организации"/><span class="form-wrap__input-title">Название Вашей организации</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Телефон"/><span class="form-wrap__input-title">Телефон</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</form>
+											</div>
+											<button class="business-card__btn btn btn-primary" type="submit">Отправить
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="sBusiness__col col-12 col-lg-6">
+									<div class="business-card">
+										<div class="business-card__title-wrap">
+											<div class="business-card__title">ОПРЕДЕЛЕНИЕ КОММУНИКАТИВНЫХ БАРЬЕРОВ ВНУТРИ КОМПАНИИ
+											</div>
+											<div class="business-card__descr">Оставьте свои контакты для получения предложения. В ближайшее время с Вами свяжется наш менеджер
+											</div>
+										</div>
+										<div class="business-card__input-wrapper">
+											<div class="form-wrap">
+												<form>
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Название Вашей организации"/><span class="form-wrap__input-title">Название Вашей организации</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Телефон"/><span class="form-wrap__input-title">Телефон</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</form>
+											</div>
+											<button class="business-card__btn btn btn-primary" type="submit">Отправить
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="sBusiness__col col-12 col-lg-6">
+									<div class="business-card">
+										<div class="business-card__title-wrap">
+											<div class="business-card__title">ОПРЕДЕЛЕНИЕ УРОВНЯ СТРЕССА СОТРУДНИКОВ КОМПАНИИ
+											</div>
+											<div class="business-card__descr">Оставьте свои контакты для получения предложения. В ближайшее время с Вами свяжется наш менеджер
+											</div>
+										</div>
+										<div class="business-card__input-wrapper">
+											<div class="form-wrap">
+												<form>
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Название Вашей организации"/><span class="form-wrap__input-title">Название Вашей организации</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Телефон"/><span class="form-wrap__input-title">Телефон</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</form>
+											</div>
+											<button class="business-card__btn btn btn-primary" type="submit">Отправить
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="sBusiness__col col-12 col-lg-6">
+									<div class="business-card">
+										<div class="business-card__title-wrap">
+											<div class="business-card__title">ОПРЕДЕЛЕНИЕ КОММУНИКАТИВНЫХ БАРЬЕРОВ ВНУТРИ КОМПАНИИ
+											</div>
+											<div class="business-card__descr">Оставьте свои контакты для получения предложения. В ближайшее время с Вами свяжется наш менеджер
+											</div>
+										</div>
+										<div class="business-card__input-wrapper">
+											<div class="form-wrap">
+												<form>
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Название Вашей организации"/><span class="form-wrap__input-title">Название Вашей организации</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Телефон"/><span class="form-wrap__input-title">Телефон</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</form>
+											</div>
+											<button class="business-card__btn btn btn-primary" type="submit">Отправить
+											</button>
+										</div>
+									</div>
+								</div>
+							</div><a class="btn btn-link" href="#">
+								<svg class="icon icon-arrow-load-more ">
+									<use xlink:href="img/svg/sprite.svg#arrow-load-more"></use>
+								</svg>Показать ещё</a>
+						</div>
+					</div>
+					<!-- end sBusiness-->
+				</main>
+				<script>addBlock(`footer`)</script>
+				<div id="footerWrap"></div>
+			</div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>
