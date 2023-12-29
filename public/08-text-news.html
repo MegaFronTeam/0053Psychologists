@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Детальная новости</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="main-page">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<div class="page-head">
+				<div class="container">
+					<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+						<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+									<meta itemprop="position" content="1"/></a></li>
+							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Блог</span>
+									<meta itemprop="position" content="2"/></a></li>
+							<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Синдром отложенной жизни с точки зрения психолога</span>
+									<meta itemprop="position" content="3"/></a></li>
+						</ol>
+					</nav>
+					<div class="page-head__row row">
+						<div class="col-lg-8">
+							<h1>СИНДРОМ ОТЛОЖЕННОЙ ЖИЗНИ С ТОЧКИ ЗРЕНИЯ ПСИХОЛОГА</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+			<main>
+				<!-- start sText-news-->
+				<section class="sText-news section" id="sText-news">
+					<div class="container">
+						<div class="sText-news__block">
+							<div class="sText-news__row row">
+								<div class="col-lg">
+									<p>Синдром отложенной жизни — это набор жизненных сценариев, когда человек считает, что сейчас он ещё не живёт настоящей жизнью, а только готовится к ней, создаёт для неё условия.</p>
+									<p>Свою текущую жизнь он воспринимает лишь как набросок, черновик чего‑то более значимого. А настоящая жизнь начнётся «потом», после наступления знакового для него события: после развода, когда похудеет, когда заработает много денег, после переезда, когда выплатит кредит, когда выйдет замуж/женится и так далее.</p>
+									<p>Термин «синдром отложенной жизни» придуман в России в конце 90-х — ввёл его профессор, доктор психологических наук Владимир Серкин. Он изучал психологические механизмы, обуславливающие миграцию жителей северо-восточных регионов России в центральные районы страны.</p>
+								</div>
+								<div class="col-lg">
+									<div class="sText-news__bg picture-wrap"><img class="object-fit-js" src="img/text-1.png" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sText-news__block">
+							<p>Онлайн — гипермаркет товаров для дома, дачи, строительства и ремонта проанализировал спрос на аккумуляторные, ручные и электроинструменты в октябре 2021 и сравнил эти цифры с аналогичным периодом 2020 года. Этой осенью товары данной категории россияне покупали чаще на 38%.</p>
+							<p>«На рост спроса в категории инструментов могли повлиять несколько факторов. В 2021 году в России выросли объёмы ввода жилья почти на 30%, что привело к увеличению количества ремонтов в новых квартирах. Также в этом году россияне признались, что стали экономить на ремонте и по возможности проводить его самостоятельно. В связи с этим многим из них потребовался свой инструмент», — комментирует руководитель пресс-службы «Инструменты.ру» Сергей Денисенко</p>
+							<p>Онлайн — гипермаркет товаров для дома, дачи, строительства и ремонта проанализировал спрос на аккумуляторные, ручные и электроинструменты в октябре 2021 и сравнил эти цифры с аналогичным периодом 2020 года. Этой осенью товары данной категории россияне покупали чаще на 38%.</p>
+							<p>«На рост спроса в категории инструментов могли повлиять несколько факторов. В 2021 году в России выросли объёмы ввода жилья почти на 30%, что привело к увеличению количества ремонтов в новых квартирах. Также в этом году россияне признались, что стали экономить на ремонте и по возможности проводить его самостоятельно. В связи с этим многим из них потребовался свой инструмент», — комментирует руководитель пресс-службы «Инструменты.ру» Сергей Денисенко</p>
+						</div>
+					</div>
+					<div class="sText-news__bg-wrap"><img class="object-fit-js picture-bg" src="img/text-2.png" alt="" loading="lazy"/>
+					</div>
+					<div class="sText-news__block container qout-box">
+						<div class="sText-news__row row">
+							<div class="col-lg-7">
+								<p>Онлайн — гипермаркет товаров для дома, дачи, строительства и ремонта проанализировал спрос на аккумуляторные, ручные и электроинструменты в октябре 2021 и сравнил эти цифры с аналогичным периодом 2020 года. Этой осенью товары данной категории россияне покупали чаще на 38%.</p>
+								<p>«На рост спроса в категории инструментов могли повлиять несколько факторов. В 2021 году в России выросли объёмы ввода жилья почти на 30%, что привело к увеличению количества ремонтов в новых квартирах. Также в этом году россияне признались, что стали экономить на ремонте и по возможности проводить его самостоятельно. В связи с этим многим из них потребовался свой инструмент», — комментирует руководитель пресс-службы «Инструменты.ру» Сергей Денисенко</p>
+								<p>Онлайн — гипермаркет товаров для дома, дачи, строительства и ремонта проанализировал спрос на аккумуляторные, ручные и электроинструменты в октябре 2021 и сравнил эти цифры с аналогичным периодом 2020 года. Этой осенью товары данной категории россияне покупали чаще на 38%.</p>
+								<p>«На рост спроса в категории инструментов могли повлиять несколько факторов. В 2021 году в России выросли объёмы ввода жилья почти на 30%, что привело к увеличению количества ремонтов в новых квартирах. Также в этом году россияне признались, что стали экономить на ремонте и по возможности проводить его самостоятельно. В связи с этим многим из них потребовался свой инструмент», — комментирует руководитель пресс-службы «Инструменты.ру» Сергей Денисенко</p>
+							</div>
+							<div class="col-lg">
+								<blockquote>«Накопление вещей, денег до лучших времён или „на чёрный день“ — тоже признак синдрома отложенной жизни»</blockquote>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sText-news-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>
