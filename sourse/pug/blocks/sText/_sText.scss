@@ -21,7 +21,7 @@
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem(40)};
     align-items: center;
-    .col-lg-auto {
+    .col-lg:first-child {
       max-width: var(--asideW);
       @include media-breakpoint-up(lg) {
         padding-top: rem(45);
