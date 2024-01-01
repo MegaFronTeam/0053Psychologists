@@ -1,0 +1,54 @@
+mixin sReg(data)
+	// start sReg
+	+b.SECTION.sReg.section#sReg&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h1 РЕГИСТРАЦИЯ КЛИЕНТА
+				p РАССКАЖИТЕ О ВАС
+				
+			+e.inner
+				+b.ball-nav
+					+e.item(href="#").btn.btn-outline-secondary.active 1
+					+e.item(href="#").btn.btn-outline-secondary.active 2
+					+e.item(href="#").btn.btn-outline-secondary 3
+					+e.item(href="#").btn.btn-outline-secondary 4
+					+e.item(href="#").btn.btn-outline-secondary 5
+					+e.item(href="#").btn.btn-outline-secondary 6
+			+b.form-wrap--reg
+				+e.row.row.justify-content-between
+					+e.col
+						+input("Имя и фамилия (или псевдоним)*",'text','Имя и фамилия (или псевдоним)*') 
+
+						+input("Телефон*",'tel','Телефон*') 
+
+						+input("Был ли опыт в терапии?",'text',' ') 
+
+						+e.input-wrap.form-group
+							+e.SPAN.input-title Пол
+							.row
+								.col-auto
+									+in-c('radio','Женщина')
+								.col-auto
+									+in-c('radio','Мужчина')
+						+e.input-wrap.form-group
+							+e.SPAN.input-title Фото на аватар
+							.smallest.text-primary Фото можно загрузить в формате jpeg, jpg, png или выбрать аватар из готовых
+					+e.col
+						+input("17: 31: 51 (мск+0)",'select','Часовой пояс*') 
+						
+						+input("Электронная почта*",'email',' ') 
+
+						+input("Дата рождения",'text',' ').custom-datepicker-js
+							.smallest.text-primary Регистрация доступна только совершеннолетним
+						+input("Дата рождения",'text',' ').custom-datepicker-js
+							.smallest.text-primary Регистрация доступна только совершеннолетним
+						+input("Пароль",'password')
+							+b.btn-toggle-type-input
+								+icon("eye")
+							.smallest.text-primary Пароль должен содержать большие и маленькие буквы на английском языке, цифры и символы (не менее 10 знаков)
+						+input("Подтверждение пароля*",'password')
+							+b.btn-toggle-type-input
+								+icon("eye-off")
+				.text-center
+					+e.btn.BUTTON.btn.btn-primary Далее
+	// end sReg

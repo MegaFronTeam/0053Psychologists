@@ -1,0 +1,24 @@
+extends ../layout/main.pug
+
+include ../blocks/sReg/_sReg.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+
+block title
+	- let  title= 'РЕГИСТРАЦИЯ КЛИЕНТА 09'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+
+		+sReg
+	+parts('footer')
+      
+
+
+

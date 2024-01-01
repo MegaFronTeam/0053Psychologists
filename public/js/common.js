@@ -62,6 +62,14 @@ function eventHandler() {
 
 	});
 
+
+	$(".custom-select-wrap").each(function () {
+    const self = $(this);
+    self.find(".custom-select-js").select2({
+      allowClear: false,
+      dropdownParent: self,
+    });
+  });
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -2,6 +2,7 @@
   &__input-wrap {
     // @extend .form-group;
     position: relative;
+    padding-top: calc(var(--input-sp-top) - #{$input-padding-y});
   }
   textarea {
     min-height: 144px;
@@ -48,11 +49,10 @@
     display: none;
   }
   &__input {
-    @include mt;
-    padding: var(--input-sp-top) rem(0) rem(3) rem(0);
-    border: none;
-    border-bottom: 1px solid $gray-600;
-    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    // border-bottom: 1px solid $gray-600; 
     &:-webkit-autofill,
     &:focus,
     &:not(:placeholder-shown) {
