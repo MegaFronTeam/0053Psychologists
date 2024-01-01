@@ -1,5 +1,6 @@
 extends ../layout/main.pug
 
+include ../blocks/sCabinet/_sCabinet.pug
 include ../blocks/sReg/_sReg.pug
 
 block variables
@@ -7,7 +8,7 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= 'РЕГИСТРАЦИЯ КЛИЕНТА 09 1'
+	- let  title= 'ЛК КЛИЕНТА 11 01'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -15,8 +16,8 @@ block pagecontent
 	
 	+parts('header')
 	main
-
-		+sReg
+		+page-head('','','Личный кабинет')
+		+sCabinet
 	+parts('footer')
       
 

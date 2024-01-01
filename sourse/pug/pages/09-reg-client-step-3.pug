@@ -1,0 +1,27 @@
+extends ../layout/main.pug
+
+include ../blocks/sReg/_sReg.pug
+include ../blocks/sCatalog/_sCatalog.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+
+block title
+	- let  title= 'РЕГИСТРАЦИЯ КЛИЕНТА 09 3'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+
+		+sReg("",'ВЫБЕРИТЕ ПСИХОЛОГА','На основании заполненной Вами анкеты мы подобрали Вам специалистов с наилучшим совпадением.')
+			+sCatalog09()
+				
+	+parts('footer')
+      
+
+
+

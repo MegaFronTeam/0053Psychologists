@@ -1,12 +1,14 @@
 
-mixin sReg(title, subtitle)
+mixin sReg(title, subtitle, text)
 	// start sReg
 	+b.SECTION.sReg.section#sReg&attributes(attributes)
 		.container
 			+b.section-title.text-center
 				h1= title ||  'РЕГИСТРАЦИЯ КЛИЕНТА'
 				p= subtitle || ' РАССКАЖИТЕ О ВАС'
-				
+
+				if text
+					+e.sub-text= text
 			+e.inner
 				+b.ball-nav
 					+e.item(href="#").btn.btn-outline-secondary.active
@@ -16,48 +18,51 @@ mixin sReg(title, subtitle)
 					+e.item(href="#").btn.btn-outline-secondary 4
 					+e.item(href="#").btn.btn-outline-secondary 5
 					+e.item(href="#").btn.btn-outline-secondary 6
-			+b.form-wrap--reg
-				+e.row.row.justify-content-between
-					+e.col
-						+input("Имя и фамилия (или псевдоним)*",'text','Имя и фамилия (или псевдоним)*') 
+			if block
+				block
+			else
+				+b.form-wrap--reg
+					+e.row.row.justify-content-between
+						+e.col
+							+input("Имя и фамилия (или псевдоним)*",'text','Имя и фамилия (или псевдоним)*') 
 
-						+input("Телефон*",'tel','Телефон*').is-invalid
-						+input("Был ли опыт в терапии?",'text') 
+							+input("Телефон*",'tel','Телефон*').is-invalid
+							+input("Был ли опыт в терапии?",'text') 
 
-						+e.input-wrap.form-group
-							+e.SPAN.input-title.smallest.d-block.position-static Пол
-							.row
-								.col-auto
-									+in-c('radio','Женщина')
-								.col-auto
-									+in-c('radio','Мужчина')
-						+e.input-wrap.form-group
-							+e.SPAN.input-title.smallest.d-block.position-static Фото на аватар
+							+e.input-wrap.form-group
+								+e.SPAN.input-title.smallest.d-block.position-static Пол
+								.row
+									.col-auto
+										+in-c('radio','Женщина')
+									.col-auto
+										+in-c('radio','Мужчина')
+							+e.input-wrap.form-group
+								+e.SPAN.input-title.smallest.d-block.position-static Фото на аватар
 
-							+b.avatar-block-wrap
-								+e.btn-delete.photo-file-delete-js.d-none
-									+icon("trash-can")
-								+b.LABEL.avatar-block.add-photo
-									input(type="file", name="" onchange="loadFile(event)")
-									+e.img-wrap.bg-wrap
-										img(src="", alt="").img-bg.img-preview
-										+icon("avatar")
-								.smallest.text-primary Фото можно загрузить в формате jpeg, jpg, png или выбрать аватар из готовых
-					+e.col
-						+input("17: 31: 51 (мск+0)",'select','Часовой пояс*') 
-						
-						+input("Электронная почта*",'email') 
-						.data-picker-wrap
-							+input("Дата рождения",'text')(required readonly autocomplete="off"  class="date-input").data-picker--js
-								+icon('calendar')
-								.smallest.text-primary Регистрация доступна только совершеннолетним 
-						+input("Пароль",'password')
-							+b.btn-toggle-type-input--js
-								+icon("eye")
-							.smallest.text-primary Пароль должен содержать большие и маленькие буквы на английском языке, цифры и символы (не менее 10 знаков)
-						+input("Подтверждение пароля*",'text').is-invalid
-							+b.btn-toggle-type-input--js
-								+icon("eye-off")
-				.text-center
-					+e.btn.BUTTON.btn.btn-primary Далее
+								+b.avatar-block-wrap
+									+e.btn-delete.photo-file-delete-js.d-none
+										+icon("trash-can")
+									+b.LABEL.avatar-block.add-photo
+										input(type="file", name="" onchange="loadFile(event)")
+										+e.img-wrap.bg-wrap
+											img(src="", alt="").img-bg.img-preview
+											+icon("avatar")
+									.smallest.text-primary Фото можно загрузить в формате jpeg, jpg, png или выбрать аватар из готовых
+						+e.col
+							+input("17: 31: 51 (мск+0)",'select','Часовой пояс*') 
+							
+							+input("Электронная почта*",'email') 
+							.data-picker-wrap
+								+input("Дата рождения",'text')(required readonly autocomplete="off"  class="date-input").data-picker--js
+									+icon('calendar')
+									.smallest.text-primary Регистрация доступна только совершеннолетним 
+							+input("Пароль",'password')
+								+b.btn-toggle-type-input--js
+									+icon("eye")
+								.smallest.text-primary Пароль должен содержать большие и маленькие буквы на английском языке, цифры и символы (не менее 10 знаков)
+							+input("Подтверждение пароля*",'text').is-invalid
+								+b.btn-toggle-type-input--js
+									+icon("eye-off")
+			.text-center
+				+e.btn.BUTTON.btn.btn-primary Далее
 	// end sReg

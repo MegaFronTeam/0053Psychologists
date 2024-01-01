@@ -43,11 +43,12 @@ mixin page-head(t,descr,...items)
 		- let l = items.length
 		.container
 			+breadcrumb('Главная',...items)
-			+e.row.row
-				.col-lg-5
-					h1= t
-				.col-lg-7
-					p= descr
+			if t
+				+e.row.row
+					.col-lg-5
+						h1= t
+					.col-lg-7
+						p= descr
 
 mixin parts(elem)
 	script.
@@ -58,46 +59,54 @@ mixin sortingItem(t)
 	.col-auto
 		+e.btn.select-btn(href="#")&attributes(attributes)!= t
 
+mixin cardBody(img, title, text, hovered, badge)
+	if badge
+		+e.badge!= badge
+	if hovered
+		+e.hovered.custom-scroll
+			+e.more-info i
+			+e.name!= title
+			p Психолог, сертифицированный гештальт-терапевт
+			+e.item
+				span Опыт работы:
+				p 12 лет
+			+e.item
+				span С чем работает:
+				ul
+					li 
+						+iconC('check')
+						| Сильные эмоции: гнев, агрессия
+					li 
+						+iconC('check')
+						| Панические атаки
+					li 
+						+iconC('check')
+						| Самооценка и уверенность в себе
+					li 
+						+iconC('check')
+						| Травматические события в прошлом
+					li 
+						+iconC('check')
+						| Панические атаки
+					li 
+						+iconC('check')
+						| Сильные эмоции: гнев, агрессия
+					li 
+						+iconC('check')
+						| Травматические события в прошлом
+					li 
+						+iconC('check')
+						| Панические атаки
+	+e.img-wrap: +img(`img/${img}`, 'bg')
+	+e.content
+		+e.title!= title
+		+e.text!= text
 mixin card(img, title, text, hovered, badge)
-	+b.card()&attributes(attributes)
-		if badge
-			+e.badge!= badge
-		if hovered
-			+e.hovered.custom-scroll
-				+e.more-info i
-				+e.name!= title
-				p Психолог, сертифицированный гештальт-терапевт
-				+e.item
-					span Опыт работы:
-					p 12 лет
-				+e.item
-					span С чем работает:
-					ul
-						li 
-							+iconC('check')
-							| Сильные эмоции: гнев, агрессия
-						li 
-							+iconC('check')
-							| Панические атаки
-						li 
-							+iconC('check')
-							| Самооценка и уверенность в себе
-						li 
-							+iconC('check')
-							| Травматические события в прошлом
-						li 
-							+iconC('check')
-							| Панические атаки
-						li 
-							+iconC('check')
-							| Сильные эмоции: гнев, агрессия
-						li 
-							+iconC('check')
-							| Травматические события в прошлом
-						li 
-							+iconC('check')
-							| Панические атаки
-		+e.img-wrap: +img(`img/${img}`, 'bg')
-		+e.content
-			+e.title!= title
-			+e.text!= text
+	+b.card(href="#")&attributes(attributes)
+		+cardBody(img, title, text, hovered, badge)
+
+mixin cardInput(img, title, text, hovered, badge)
+	label
+		input(type="radio", name="psi")
+		+b.card()&attributes(attributes)
+			+cardBody(img, title, text, hovered, badge)

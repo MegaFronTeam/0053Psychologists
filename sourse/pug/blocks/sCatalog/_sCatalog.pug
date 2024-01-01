@@ -71,3 +71,19 @@ mixin sCatalog(data)
 				+icon(`arrow-load-more`)
 				| Показать ещё
 	// end sCatalog
+
+mixin sCatalog09(data)
+	// start sCatalog
+	+b.sCatalog.section&attributes(attributes)
+		.container
+			+e.card-row.row
+				- const wrapClass="col-12 col-sm-6 col-md-4 col-lg-3"
+				+e.col(class= wrapClass)
+					+cardInput('prod-1.png', 'Андрей', 'Профессор психологии, психоаналитик, супервизор', true, 'Премиум').--hovered
+				+e.col(class= wrapClass)
+					+cardInput('prod-3.png', 'Татьяна', 'Магистр психологии, супервизор, аккредитованный гештальт-терапевт', true, 'I категория').--hovered
+				+e.col(class= wrapClass)
+					+cardInput('prod-2.png', 'Николай', 'Психолог, учащийся второго года обучения второй ступени в МИКТИК, психоаналитик', true, 'Премиум').--hovered
+				+e.col(class= wrapClass)
+					+cardInput('prod-4.png', 'Анна', 'Психолог, сертифицированный гештальт-терапевт', true, 'II категория').--hovered
+	// end sCatalog
