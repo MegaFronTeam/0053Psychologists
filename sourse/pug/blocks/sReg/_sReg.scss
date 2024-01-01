@@ -1,7 +1,10 @@
 // start .sReg
 .sReg {
-	--sPT: #{rem(60)};
-	--sPB: #{rem(60)};
+	@include media-breakpoint-up(md) {
+
+		--sPT: #{rem(60)};
+		--sPB: #{rem(60)};
+	}
 	// --sTPB: #{rem()};
 	
 	&__row{
@@ -45,13 +48,23 @@
 	margin-bottom: rem(60);
 	&__item{ 
 		font-size: 1rem;
+		padding: 0;
+		.icon{
+			font-size: rem(24);
+			fill: none;
+			stroke: currentColor;
+		}
 		--bs-btn-bg: #{#fff};
 		--bs-btn-hover-bg: #{$primary};
 		--bs-btn-hover-border-color: #{$primary}; 
 		--bs-btn-active-bg: #{$primary};
 		--bs-btn-active-border-color: #{$primary};
-		width: rem(50);
-		height: rem(50);
+		@include media-breakpoint-up(md) {
+			width: rem(50);
+			
+		}
+		width: calc(28px + 4vw);
+		aspect-ratio: 1;
 		border-radius: 50%;
 		display: flex;
 		justify-content: center;
@@ -93,11 +106,51 @@
 		max-width: rem(843);
 	.form-wrap{
 		&__col{
-			max-width: rem(310);
+			@include media-breakpoint-up(md) {
+				max-width: rem(310);
+			}
 		}
 		&__btn{
 			padding-inline: rem(32);
 			font-weight: 400;
+		}
+	}
+}
+.avatar-block-wrap{
+	max-width: 205px;
+}
+.avatar-block{
+	position: relative;
+	margin-top: 1rem;
+	margin-bottom: 8px;
+	input{
+		@include a-cent;
+		opacity: 0;
+	}
+	&__img-wrap{
+		width: 80px;
+		height: 80px;border-radius: 50%;
+		border:1px solid var(--Gray-light, #AFB9D2);
+		display: block;
+		overflow: hidden;
+		cursor: pointer;
+		img{
+			position: relative;
+			z-index: 2;
+		}
+		img[src=""] {
+			display: none;
+		}
+		&::before,
+		&::after{
+			content: '';
+			@include a-cent1;
+			width: 20px;
+			height: 1px;
+			background-color: #AFB9D2;
+		}
+		&::after{
+			rotate: 90deg;
 		}
 	}
 }

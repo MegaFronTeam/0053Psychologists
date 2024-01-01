@@ -12,4 +12,4 @@
 1. <https://megafronteam.github.io/0053Psychologists/404>
 
 ### РЕГИСТРАЦИЯ КЛИЕНТА
-1. <>
+1. <https://megafronteam.github.io/0053Psychologists/09-reg-client>

@@ -26,7 +26,6 @@
 }
 
 // обсалютное центрирование
-
 @mixin a-cent($xy:xy) {
   position: absolute;
 
@@ -57,25 +56,23 @@
     top: 50%;
     bottom: auto;
     right: auto;
-    transform: translate3d(-50%, -50%, 0);
+    translate: -50% -50%;
   }
 
   @else if $xy==x {
     position: absolute;
     left: 50%;
     right: auto;
-    transform: translateX(-50%);
+    translate:  -50% 0; 
   }
-
+  
   @else if $xy==y {
     position: absolute;
     top: 50%;
     bottom: auto;
-    transform: translateY(-50%);
+    translate: 0 -50%;
   }
 }
-
-
 @mixin gut($a:$grid-gutter-width,$b:0) {
   --bs-gutter-x: #{$a};
   --bs-gutter-y: #{$b};
@@ -277,5 +274,31 @@
   }
   & > .swiper-slide{
     height: auto;
+  }
+}
+
+@mixin custom-scroll(){
+  	/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+	// --bs-primary: #DEDEDE;
+ 
+  & {
+    scrollbar-width: auto;
+    scrollbar-color: var(--bs-primary) transparent;
+  }
+
+  /* Chrome, Edge, and Safari */
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--bs-primary);
+    border-radius: 16px;
+    border: 0px solid transparent;
   }
 }

@@ -2,7 +2,9 @@
   &__input-wrap {
     // @extend .form-group;
     position: relative;
+    position: relative;
     padding-top: calc(var(--input-sp-top) - #{$input-padding-y});
+    margin-bottom: rem(10);
   }
   textarea {
     min-height: 144px;
@@ -44,6 +46,9 @@
     pointer-events: none;
     @include mt;
     max-width: 100%;
+    &.smallest{
+      font-size: 12px;
+    }
   }
   textarea + &__input-title {
     display: none;
@@ -95,6 +100,44 @@
     font-size: rem(12);
     line-height: 1.33;
   }
+
+
+  .icon-calendar {
+		@include mt;
+    fill: none;
+    stroke: currentColor;
+    color: $secondary;
+    font-size: rem(24);
+    position: absolute;
+    right: 0;
+    top: calc(var(--input-sp-top) - #{$input-padding-y});
+    pointer-events: none;
+	}
+	.icon-calendar.active {
+		color: var(--bs-primary);
+	}
+
+	.data-picker-wrap .air-datepicker {
+		@include media-breakpoint-up(sm) {
+      width: 100%;
+			// width: calc(100% - #{rem(100)} * 2);
+		}
+	}
+}
+
+.btn-toggle-type-input{
+  cursor: pointer;
+  color: $secondary;
+  position: absolute;
+  right: 0;
+  top: calc(var(--input-sp-top) - #{$input-padding-y});
+  @include mt;
+  .icon{
+    font-size: rem(24); 
+  }
+  &:hover{
+    color: var(--bs-primary);
+  }
 }
 //
 @include media-breakpoint-up(xl) {
@@ -135,4 +178,75 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
   /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+
+.data-picker-wrap{
+  position: relative;
+  
+  .air-datepicker{
+    --adp-font-family: var(--bs-body-font-family);
+    border-radius: 10px;
+    border: 1px solid var(--line, #E6E9F8);
+    background: var(--White, #FFF);
+    // font-size: 12px;
+  
+    /* shadow */
+    box-shadow: 0px 15px 20px 0px rgba(72, 102, 172, 0.05), 0px -5px 20px 0px rgba(72, 102, 172, 0.05);
+    --adp-accent-color: var(--bs-primary);
+    --adp-cell-background-color-selected: var(--adp-accent-color);
+    --adp-cell-background-color-selected-hover: var(--adp-accent-color);
+    --adp-btn-color: var(--adp-accent-color);
+    --adp-background-color-hover:  var(--bs-light);
+    --adp-background-color-active:  var(--adp-accent-color);
+    --adp-cell-background-color-selected:  var(--adp-accent-color);
+    --adp-cell-background-color-selected-hover: 
+    --adp-day-name-color var(--adp-accent-color);
+    --adp-cell-color-selected-hover:  var(--Black, #000);
+    --adp-day-name-color: #000;
+  }
+
+  .air-datepicker-cell.-selected- {
+    color: #fff !important; 
+    background: var(--adp-cell-background-color-selected)  !important; 
+  }
+  .air-datepicker-nav--title{
+    color: var(--Black, #000);
+    // font-size: 10px;
+    i{
+      color: var(--Black, #000);
+      // font-size: 10px;
+      order: -1;
+      margin-right: 5px;
+    }
+  }
+  .air-datepicker-nav--action:hover{
+    background-color: transparent;
+    svg{
+      --adp-nav-arrow-color: #{$primary};
+    }
+  }
+
+
+  .air-datepicker-body--day-name{
+    text-transform: none;
+  }
+  .air-datepicker-body--day-name.-weekend-{
+
+    --adp-day-name-color: #{$secondary};
+  }
+  .air-datepicker-cell{
+    --adp-cell-border-radius: 50%;
+    aspect-ratio: 1;
+    @include mt;
+    &:hover{
+      // color: #fff;
+    }
+  }
+  .air-datepicker-body--cells.-days-{
+    grid-auto-rows: auto;
+  }
+  // --adp-day-cell-height: auto;
+
+
 }

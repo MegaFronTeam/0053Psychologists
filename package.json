@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.28",
+    "air-datepicker": "^3.4.0",
     "inputmask": "^5.0.8",
     "jquery": "^3.7.1",
     "select2": "^4.1.0-rc.0",

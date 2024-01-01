@@ -1,14 +1,16 @@
-mixin sReg(data)
+
+mixin sReg(title, subtitle)
 	// start sReg
 	+b.SECTION.sReg.section#sReg&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h1 РЕГИСТРАЦИЯ КЛИЕНТА
-				p РАССКАЖИТЕ О ВАС
+				h1= title ||  'РЕГИСТРАЦИЯ КЛИЕНТА'
+				p= subtitle || ' РАССКАЖИТЕ О ВАС'
 				
 			+e.inner
 				+b.ball-nav
-					+e.item(href="#").btn.btn-outline-secondary.active 1
+					+e.item(href="#").btn.btn-outline-secondary.active
+						+icon("check")
 					+e.item(href="#").btn.btn-outline-secondary.active 2
 					+e.item(href="#").btn.btn-outline-secondary 3
 					+e.item(href="#").btn.btn-outline-secondary 4
@@ -19,35 +21,42 @@ mixin sReg(data)
 					+e.col
 						+input("Имя и фамилия (или псевдоним)*",'text','Имя и фамилия (или псевдоним)*') 
 
-						+input("Телефон*",'tel','Телефон*') 
-
-						+input("Был ли опыт в терапии?",'text',' ') 
+						+input("Телефон*",'tel','Телефон*').is-invalid
+						+input("Был ли опыт в терапии?",'text') 
 
 						+e.input-wrap.form-group
-							+e.SPAN.input-title Пол
+							+e.SPAN.input-title.smallest.d-block.position-static Пол
 							.row
 								.col-auto
 									+in-c('radio','Женщина')
 								.col-auto
 									+in-c('radio','Мужчина')
 						+e.input-wrap.form-group
-							+e.SPAN.input-title Фото на аватар
-							.smallest.text-primary Фото можно загрузить в формате jpeg, jpg, png или выбрать аватар из готовых
+							+e.SPAN.input-title.smallest.d-block.position-static Фото на аватар
+
+							+b.avatar-block-wrap
+								+e.btn-delete.photo-file-delete-js.d-none
+									+icon("trash-can")
+								+b.LABEL.avatar-block.add-photo
+									input(type="file", name="" onchange="loadFile(event)")
+									+e.img-wrap.bg-wrap
+										img(src="", alt="").img-bg.img-preview
+										+icon("avatar")
+								.smallest.text-primary Фото можно загрузить в формате jpeg, jpg, png или выбрать аватар из готовых
 					+e.col
 						+input("17: 31: 51 (мск+0)",'select','Часовой пояс*') 
 						
-						+input("Электронная почта*",'email',' ') 
-
-						+input("Дата рождения",'text',' ').custom-datepicker-js
-							.smallest.text-primary Регистрация доступна только совершеннолетним
-						+input("Дата рождения",'text',' ').custom-datepicker-js
-							.smallest.text-primary Регистрация доступна только совершеннолетним
+						+input("Электронная почта*",'email') 
+						.data-picker-wrap
+							+input("Дата рождения",'text')(required readonly autocomplete="off"  class="date-input").data-picker--js
+								+icon('calendar')
+								.smallest.text-primary Регистрация доступна только совершеннолетним 
 						+input("Пароль",'password')
-							+b.btn-toggle-type-input
+							+b.btn-toggle-type-input--js
 								+icon("eye")
 							.smallest.text-primary Пароль должен содержать большие и маленькие буквы на английском языке, цифры и символы (не менее 10 знаков)
-						+input("Подтверждение пароля*",'password')
-							+b.btn-toggle-type-input
+						+input("Подтверждение пароля*",'text').is-invalid
+							+b.btn-toggle-type-input--js
 								+icon("eye-off")
 				.text-center
 					+e.btn.BUTTON.btn.btn-primary Далее

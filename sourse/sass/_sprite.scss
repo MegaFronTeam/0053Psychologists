@@ -17,10 +17,15 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(22 / #{$h} *1em );
 }
-.icon-check {
-	$h: 27;
+.icon-calendar {
+	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
-	width: calc(27 / #{$h} *1em );
+	width: calc(24 / #{$h} *1em );
+}
+.icon-check {
+	$h: 24;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
 }
 .icon-eye {
 	$h: 24;
