@@ -4,11 +4,12 @@ mixin sCatalog(data)
 		.container
 			+e.input-wrap
 				p Сортировка:
-				select(data-tags="true").floating-select.form-select
-					option По возрасту
-					option Сначала старые
-					option Популярные
-					option Еще какие-то
+				+input("По-возрасту",'select','')
+				//- select(data-tags="true").floating-select.form-select
+				//- 	option По возрасту
+				//- 	option Сначала старые
+				//- 	option Популярные
+				//- 	option Еще какие-то
 			+e.row.row.sorting-row
 				+sortingItem(`ВСЕ`).active
 				+sortingItem(`БАЗОВАЯ КАТЕГОРИЯ`)

@@ -130,24 +130,21 @@
 		
 	}
 	&__input-wrap {
-    margin-bottom: rem(35);
+    margin-bottom: rem(20);
 		p {
 			margin-right: rem(16);
 			display: inline-block;
 			margin-bottom: 0;
 		}
   }
-  .floating-select {
-    max-width: rem(220);
-    padding-left: 0;
-    padding-right: 0;
-    font-size: rem(14);
-    display: inline-block;
-    border: 0;
-    border-radius:0;
-    border-bottom: solid rem(1) $secondary;
-		
-  }
+  .form-group {
+    width: rem(220);
+		display: inline-block;
+    span {
+			font-size: rem(14);
+			color: $black !important;
+		}
+	}
 	&__slide{
 		height: auto;
 	}
