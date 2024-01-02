@@ -1,0 +1,49 @@
+
+mixin sCardsBlock-1(data)
+	// start sCardsBlock-1
+	+b.sCardsBlock.section#sCardsBlock-1&attributes(attributes)
+		.container
+			+b.title-wrap.text-center
+				+e.container
+					h2 ПСИХОЛОГИ
+					+img("img/logo-small.png")
+				+e.link.A(href="#") Все психологи
+				p У нас представлено несколько категорий специалистов — от начинающих психологов, проходящих обучение и психологов, закончивших профильное и дополнительное образование, имеющих релевантный опыт, до профессионалов с безупречной репутацией, большим опытом работы, имеющих регалии и звания, научные публикации и достижения в сфере психологии и психотерапии.
+			+e.card-row.swiper.mobile-swiper--js
+				.swiper-wrapper
+					.swiper-slide
+						+card('prod-4.png', 'Анна', 'Психолог, сертифицированный гештальт-терапевт', true, 'II категория').--hovered
+					.swiper-slide
+						+card('prod-2.png', 'Николай', 'Психолог, учащийся второго года обучения второй ступени в МИКТИК, психоаналитик', true, 'Базовая').--hovered
+					.swiper-slide
+						+card('prod-3.png', 'Татьяна', 'Магистр психологии, супервизор, аккредитованный гештальт-терапевт', true, 'I категория').--hovered
+					.swiper-slide
+						+card('prod-1.png', 'Андрей', 'Профессор психологии, психоаналитик, супервизор', true, 'Премиум').--hovered
+					.swiper-slide
+						+card('prod-4.png', 'Анна', 'Психолог, сертифицированный гештальт-терапевт', true, 'II категория').--hovered
+					.swiper-slide
+						+card('prod-2.png', 'Николай', 'Психолог, учащийся второго года обучения второй ступени в МИКТИК, психоаналитик', true, 'Базовая').--hovered
+				+arrow
+			+e.btn-wrap
+				+e.btn.btn.btn-primary(href='#') Подобрать психолога
+	// end sCardsBlock-2
+
+mixin sCardsBlock-2(data)
+	// start sCardsBlock-2
+	+b.sCardsBlock.section#sCardsBlock-2&attributes(attributes)
+		.container
+			+b.title-wrap.text-center
+				h2 БЛОГ
+				p Это будет полезно знать каждому
+				+e.link.A(href="#") В блог
+			+e.card-row.row
+				- const wrapClass="col-12 col-sm-6 col-md-4 col-lg-3"
+				+e.col(class= wrapClass)
+					+card('blog-4.png', 'Зачем психологи обращаются к психологам', 'Посмотрим, откуда растут ноги у мысли, что себя нужно заставить')(href='#')
+				+e.col(class= wrapClass)
+					+card('blog-3.png', 'Синдром отложенной жизни с точки зрения психолога', 'Группа жизненных сценариев, заключающихся в том, что')(href='#')
+				+e.col(class= wrapClass)
+					+card('blog-1.png', 'Когнитивные искажения', 'Это ловушки сознания, с помощью которых мозг убеждает')(href='#')
+				+e.col(class= wrapClass)
+					+card('blog-2.png', 'Чему меня научила психотерапия', 'Я поняла, что то, как мы реагируем на ситуации, в')(href='#')
+	// end sCardsBlock-2

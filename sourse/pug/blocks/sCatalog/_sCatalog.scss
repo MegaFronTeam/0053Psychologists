@@ -9,23 +9,20 @@
 		margin-bottom: rem(20);
 	}
 	&__input-wrap {
-    margin-bottom: rem(35);
+    margin-bottom: rem(18);
 		p {
 			margin-right: rem(16);
 			display: inline-block;
 			margin-bottom: 0;
 		}
   }
-  .floating-select {
-    max-width: rem(220);
-    padding-left: 0;
-    padding-right: 0;
-    font-size: rem(14);
-    display: inline-block;
-    border: 0;
-    border-radius:0;
-    border-bottom: solid rem(1) $secondary;
-		
+  .form-group {
+    width: rem(220);
+		display: inline-block;
+    span {
+			font-size: rem(14);
+			color: $black !important;
+		}
   }
 	&__slide{
 		height: auto;
@@ -47,61 +44,6 @@
 		}
   }
 
-	label{position: relative;
-		// display: block;
-		display: flex;
-		flex-direction: column;
-		min-height: 100%;
-		input{
-			@extend .invisible;
-		}
-		.card{
-			--op: 0;
-			&__name{
-				display: flex;
-				&::after{
-					order: 1;
-					margin-left: rem(8);
-					content: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='20' height='20' fill='white'/%3E%3Cpath d='M4.16602 10.833L7.49935 14.1663L15.8327 5.83301' stroke='%233B8CC3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-					position: relative;
-					top: rem(-2);
-				}
-				&::before{
-					order: 2;
-					content: var(--check-text, 'выбрать');
-					color: $primary;
-					font-size: rem(14);
-					font-weight: 400;
-					// margin-left: rem(4);
-				}
-			}
-			&__img-wrap{
-				&::before{
-					content: '';
-					background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='20' height='20' fill='#{$primary}'/%3E%3Cpath d='M4.16602 10.833L7.49935 14.1663L15.8327 5.83301' stroke='#{white}' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-					background-position: center;
-					background-size: 20px;
-					background-repeat: no-repeat;
-					width: rem(32);
-					height: rem(32);
-					position: absolute;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					top:rem(10);
-					background-color: $primary;
-					right:rem(10);
-					border-radius: 50%;
-					opacity: var(--op);
-				}
-			}
-		}
-		input:checked ~ .card{
-			--check-text: 'выбран';
-			--op: 1;
-		 }
-	}
-
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -111,3 +53,63 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sCatalog
+
+
+
+
+.card-label{
+	position: relative;
+	// display: block;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	input{
+		@extend .invisible;
+	}
+	.card{
+		cursor: pointer;
+		--op: 0;
+		&__name{
+			display: flex;
+			&::after{
+				order: 1;
+				margin-left: rem(8);
+				content: var(--check-primary);
+				position: relative;
+				top: rem(-2);
+			}
+			&::before{
+				order: 2;
+				content: var(--check-text, 'выбрать');
+				color: $primary;
+				font-size: rem(14);
+				font-weight: 400;
+				// margin-left: rem(4);
+			}
+		}
+		&__img-wrap{
+			&::before{
+				content: '';
+				background-image: var(--check-white);
+				background-position: center;
+				background-size: 20px;
+				background-repeat: no-repeat;
+				width: rem(32);
+				height: rem(32);
+				position: absolute;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				top:rem(10);
+				background-color: $primary;
+				right:rem(10);
+				border-radius: 50%;
+				opacity: var(--op);
+			}
+		}
+	}
+	input:checked ~ .card{
+		--check-text: 'выбран';
+		--op: 1;
+	 }
+}

@@ -9,9 +9,10 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sCardsBlock/_sCardsBlock.pug
 
 block variables
-	- let  mainPage= 'main-page' 
+	- let  mainPage= 'main-page'
 	- let  bg= null
 
 block title
@@ -30,6 +31,15 @@ block pagecontent
 					+card('card-img-1.jpg', 'Зачем психологи обращаются к психологам', 'Посмотрим, откуда растут ноги у мысли, что себя нужно заставить')(href='#')
 				.col-sm-6.col-lg-4.col-xl-3
 					+card('card-img-1.jpg', 'Татьяна', 'Магистр психологии, супервизор, аккредитованный гештальт-терапевт', true, 'Премиум').--hovered
+		//о нас
+		//психолог поможет?
+		+sCardsBlock-1
+		//стоимость
+		//преимущества
+		//отзывы
+		//как работает
+		//вопросы
+		+sCardsBlock-2
 	+parts('footer')
       
 

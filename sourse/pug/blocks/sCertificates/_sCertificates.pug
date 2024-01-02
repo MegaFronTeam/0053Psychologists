@@ -29,11 +29,12 @@ mixin sCertificates(data)
 		.container
 			+e.input-wrap
 				p Сортировка:
-				select(data-tags="true").floating-select.form-select
-					option Сумма сертификата
-					option Сначала старые
-					option Популярные
-					option Еще какие-то
+				+input("Сумма сертификата",'select','')
+				//- select(data-tags="true").floating-select.form-select
+				//- 	option Сумма сертификата
+				//- 	option Сначала старые
+				//- 	option Популярные
+				//- 	option Еще какие-то
 			+e.card-row.row
 				- const wrapClass="col-12 col-lg-6"
 				+e.col(class= wrapClass)

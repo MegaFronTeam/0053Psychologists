@@ -35,7 +35,7 @@
 			<div id="headerWrap"></div>
 			<main>
 				<div class="section container">
-					<h1>Modal page </h1><a class="btn btn-primary" data-fancybox data-type="ajax" href="modal/call.html">call</a>
+					<h1>Modal page </h1><a class="btn btn-primary link-modal-js" href="#modal-call">call</a><a class="btn btn-primary link-modal-js" href="#modal-successful">call</a>
 				</div>
 			</main>
 			<script>addBlock(`footer`)</script>
@@ -68,6 +68,23 @@
 			</div>
 		</div>
 		<!-- #modal-call-->
+		<!--  #modal-successful-->
+		<div id="modal-successful" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data">Спасибо за заявку
+							</div>
+							<p>Наши менеджеры свяжутся с Вами в ближайшее время и ответят на все интересующие вопросы</p>
+						</div>
+						<button class="form-wrap__btn btn btn-primary" type="submit">Понятно
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-successful-->
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>

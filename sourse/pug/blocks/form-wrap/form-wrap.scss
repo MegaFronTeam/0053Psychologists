@@ -187,7 +187,7 @@ input::-webkit-inner-spin-button {
   .air-datepicker{
     --adp-font-family: var(--bs-body-font-family);
     border-radius: 10px;
-    border: 1px solid var(--line, #E6E9F8);
+    border: 1px solid var(--line, #{$gray-300});
     background: var(--White, #FFF);
     // font-size: 12px;
   

@@ -59,12 +59,15 @@
 					<div class="container">
 						<div class="sCertificates__input-wrap">
 							<p>Сортировка:</p>
-							<select class="floating-select form-select" data-tags="true">
-								<option>Сумма сертификата</option>
-								<option>Сначала старые</option>
-								<option>Популярные</option>
-								<option>Еще какие-то</option>
-							</select>
+							<div class="sCertificates__input-wrap form-group custom-select-wrap">
+								<select class="sCertificates__input form-select custom-select-js" name="select" data-placeholder="Сумма сертификата">
+									<option value="Сумма сертификата">Сумма сертификата</option>
+									<option value="Сумма сертификата1">Сумма сертификата1</option>
+									<option value="Сумма сертификата2">Сумма сертификата2</option>
+									<option value="Сумма сертификата3">Сумма сертификата3</option>
+									<option value="Сумма сертификата4">Сумма сертификата4</option>
+								</select>
+							</div>
 						</div>
 						<div class="sCertificates__card-row row">
 							<div class="sCertificates__col col-12 col-lg-6">
@@ -381,6 +384,23 @@
 			</div>
 		</div>
 		<!-- #modal-call-->
+		<!--  #modal-successful-->
+		<div id="modal-successful" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data">Спасибо за заявку
+							</div>
+							<p>Наши менеджеры свяжутся с Вами в ближайшее время и ответят на все интересующие вопросы</p>
+						</div>
+						<button class="form-wrap__btn btn btn-primary" type="submit">Понятно
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-successful-->
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>

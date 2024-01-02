@@ -61,6 +61,31 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
+	new Swiper('.mobile-swiper--js', {
+		loop: false,
+		slidesPerView: 1,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 4,
+			},
+		},
+		// pagination: {
+		// 	el: ' .swiper-pagination',
+		// 	type: 'bullets',
+		// 	clickable: true,
+		// },
+	})
 
 
 	$(".custom-select-wrap").each(function () {
@@ -79,7 +104,7 @@ function eventHandler() {
 
 		new AirDatepicker(dataPicker, {
 			autoClose: false,
-			// inline: true,
+			inline: true,
 			container: dataPickerEll,
 			onShow() {
 				dataPickerIcon.classList.add('active');
@@ -106,6 +131,19 @@ function eventHandler() {
 	})
 
 
+	$(document).on("click", '.sCalendar__td--body', function(){
+		const self =$(this); 
+		const order = window.getComputedStyle(self.parent()[0]).order
+		const activeCLass= 'active';
+		const line = $(".sCalendar__tr--line");
+		if(!line.hasClass(activeCLass) && !self.hasClass(activeCLass)) {
+			line.toggleClass(activeCLass)
+		}
+
+		line.css("order", order) 
+		$( '.sCalendar__td--body.active').removeClass(activeCLass)
+		$(this).toggleClass(activeCLass)
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
