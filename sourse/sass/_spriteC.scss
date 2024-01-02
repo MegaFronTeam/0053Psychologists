@@ -17,6 +17,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(40 / #{$h} *1em );
 }
+.iconC-icq {
+	$h: 32;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(32 / #{$h} *1em );
+}
 .iconC-instagram {
 	$h: 40;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -27,8 +32,23 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(16 / #{$h} *1em );
 }
+.iconC-telegram2 {
+	$h: 32;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(32 / #{$h} *1em );
+}
 .iconC-vk {
 	$h: 40;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(40 / #{$h} *1em );
+}
+.iconC-yandex {
+	$h: 32;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(32 / #{$h} *1em );
+}
+.iconC-zoom {
+	$h: 32;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(32 / #{$h} *1em );
 }

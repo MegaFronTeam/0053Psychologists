@@ -1,0 +1,29 @@
+extends ../layout/main.pug
+
+include ../blocks/sCabinet/_sCabinet.pug
+include ../blocks/sReg/_sReg.pug
+
+block variables
+	- let  mainPage= 'lk-page'
+	- let  bg= '11-cabinet-client-3.jpg'
+
+block title
+	- let  title= 'ЛК КЛИЕНТА 11 03'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('','','Личный кабинет')
+		+sCabinet
+			+b.sCabinet-body 
+				+in-c('checkbox', 'Только важные', 'importnat')
+				+e.notes--full-list.custom-scroll
+					-for(let i = 0; i < 8; i++)
+						+note()
+				+b.send-message
+					+input('Введите сообщение', 'text', '')
+						button(type="submit"): +icon('send')
+	+parts('footer')

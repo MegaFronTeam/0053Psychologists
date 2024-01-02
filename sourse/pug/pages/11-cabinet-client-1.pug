@@ -4,7 +4,7 @@ include ../blocks/sCabinet/_sCabinet.pug
 include ../blocks/sReg/_sReg.pug
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= 'lk-page'
 	- let  bg= null
 
 block title
@@ -18,6 +18,54 @@ block pagecontent
 	main
 		+page-head('','','Личный кабинет')
 		+sCabinet
+			+b.sCabinet-body
+				+b.form-wrap--reg.ms-0
+					+e.row.row.justify-content-between
+						+e.col
+							+input("Имя и фамилия (или псевдоним)*",'text','Имя и фамилия (или псевдоним)*') 
+
+							+input("Телефон*",'tel','Телефон*').is-invalid
+
+							
+							
+							+input("Электронная почта*",'email') 
+							.data-picker-wrap
+								+input("Дата рождения",'text')(required readonly autocomplete="off"  class="date-input" value="22.03.1990").data-picker--js
+									+icon('calendar')
+									.smallest.text-primary Регистрация доступна только совершеннолетним 
+							+e.input-wrap.form-group
+								+e.SPAN.input-title.smallest.d-block.position-static Пол
+								.row
+									.col-auto
+										+in-c('radio','Женщина')(checked)
+									.col-auto
+										+in-c('radio','Мужчина')
+							+e.input-wrap.form-group
+								+e.SPAN.input-title.smallest.d-block.position-static Фото на аватар
+
+								+b.avatar-block-wrap
+									+e.btn-delete.photo-file-delete-js.d-none
+										+icon("trash-can")
+									+b.LABEL.avatar-block.add-photo
+										input(type="file", name="" onchange="loadFile(event)")
+										+e.img-wrap.bg-wrap
+											img(src="img/avatar.jpg", alt="").img-bg.img-preview
+											+icon("avatar")
+									.smallest.text-primary Фото можно загрузить в формате jpeg, jpg, png или выбрать аватар из готовых
+						+e.col
+							+input("17: 31: 51 (мск+0)",'select','Часовой пояс*') 
+							+input("Старый пароль",'password')
+								+b.btn-toggle-type-input--js
+									+icon("eye")
+							+input("Новый пароль",'text').is-invalid
+								+b.btn-toggle-type-input--js
+									+icon("eye-off")
+								.smallest.text-primary Пароль должен содержать большие и маленькие буквы на английском языке, цифры и символы (не менее 10 знаков)
+							+input("Подтверждение пароля*",'password')
+								+b.btn-toggle-type-input--js
+									+icon("eye")
+				.text-center
+					+e.btn.BUTTON.btn.btn-primary Сохранить
 	+parts('footer')
       
 

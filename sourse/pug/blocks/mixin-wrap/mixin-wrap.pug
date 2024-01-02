@@ -110,3 +110,9 @@ mixin cardInput(img, title, text, hovered, badge)
 		input(type="radio", name="psi")
 		+b.card()&attributes(attributes)
 			+cardBody(img, title, text, hovered, badge)
+
+mixin note()
+	+b.note
+		+e.date 11.05.2023 16:00
+		p В&nbsp;отличии от&nbsp;lorem ipsum, текст рыба на&nbsp;русском языке наполнит любой макет непонятным смыслом и&nbsp;придаст неповторимый колорит советских времён. Вы&nbsp;посещали эту страницу несколько раз
+		+e.favorite(href='#'): +icon('star')

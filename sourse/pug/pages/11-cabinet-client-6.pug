@@ -1,0 +1,55 @@
+extends ../layout/main.pug
+
+include ../blocks/sCabinet/_sCabinet.pug
+include ../blocks/sReg/_sReg.pug
+
+block variables
+	- let  mainPage= 'lk-page'
+	- let  bg= '11-cabinet-client-3.jpg'
+
+block title
+	- let  title= 'ЛК КЛИЕНТА 11 03'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('','','Личный кабинет')
+		+sCabinet
+			+b.sCabinet-body 
+				+e.switch-row.row
+					.col-sm-6
+						label.form-check.form-switch
+							input(type="checkbox" role="switch" checked).form-check-input
+							span Акции, специальные предложения и новости
+					.col-sm-6
+						label.form-check.form-switch
+							input(type="checkbox" role="switch" checked).form-check-input
+							span Акции, специальные предложения и новости
+					.col-sm-6
+						label.form-check.form-switch
+							input(type="checkbox" role="switch" checked).form-check-input
+							span Напоминания о сеансе
+					.col-sm-6
+						label.form-check.form-switch
+							input(type="checkbox" role="switch").form-check-input
+							span Новые сообщения в чате
+					.col-sm-6
+						label.form-check.form-switch
+							input(type="checkbox" role="switch" checked).form-check-input
+							span Изменена дата и время сеанса
+					.col-sm-6
+						label.form-check.form-switch
+							input(type="checkbox" role="switch" checked).form-check-input
+							span Изменена дата и время сеанса
+					.col-sm-6
+						label.form-check.form-switch
+							input(type="checkbox" role="switch").form-check-input
+							span Новые сообщения в чате
+					.col-sm-6
+						label.form-check.form-switch
+							input(type="checkbox" role="switch" checked).form-check-input
+							span Напоминания о сеансе
+	+parts('footer')

@@ -1,0 +1,62 @@
+extends ../layout/main.pug
+
+include ../blocks/sCabinet/_sCabinet.pug
+include ../blocks/sReg/_sReg.pug
+
+block variables
+	- let  mainPage= 'lk-page'
+	- let  bg= '11-cabinet-client-3.jpg'
+
+block title
+	- let  title= 'ЛК КЛИЕНТА 11 03'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('','','Личный кабинет')
+		+sCabinet
+			+b.sCabinet-body
+				+e.row.row
+					.col-lg-auto
+						+e.img-wrap: +img('img/avatar-2.jpg', 'bg')
+					.col-lg
+						+e.name Ирина Снигач
+						+e.status Психолог, сертифицированный гештальт-терапевт
+						mixin dateCard(date, name, time)
+							+b.date-card
+								p!= date
+								span!= name
+								p!= time
+						+ddGroup
+							+ddGroupItem('Предстоящие сессии', 'active')
+								+e.row.row
+									+e.col.col-6.col-md-4.col-xl-2.col-xxl-auto: +dateCard('16.01.23', '(четверг)', '16:00')
+									+e.col.col-6.col-md-4.col-xl-2.col-xxl-auto: +dateCard('27.01.23', '(понедельник)', '12:30')
+									+e.col.col-6.col-md-4.col-xl-2.col-xxl-auto: +dateCard('05.02.23', '(среда)', '14:30')
+							+ddGroupItem('Предстоящие сессии', 'active')
+								+e.row.row
+									+e.col.col-6.col-md-4.col-xl-2.col-xxl-auto: +dateCard('14.01.23', '(четверг)', '16:00')
+									+e.col.col-6.col-md-4.col-xl-2.col-xxl-auto: +dateCard('12.01.23', '(понедельник)', '12:30')
+									+e.col.col-6.col-md-4.col-xl-2.col-xxl-auto: +dateCard('10.01.23', '(среда)', '14:30')
+									+e.col.col-6.col-md-4.col-xl-2.col-xxl-auto: +dateCard('09.01.23', '(четверг)', '16:00')
+									+e.col.col-6.col-md-4.col-xl-2.col-xxl-auto: +dateCard('07.01.23', '(понедельник)', '12:30')
+									+e.col.col-6.col-md-4.col-xl-2.col-xxl-auto: +dateCard('05.01.23', '(среда)', '14:30')
+									+e.col.col-6.col-md-4.col-xl-2.col-xxl-auto: +dateCard('29.12.22', '(среда)', '14:30')
+									+e.col.col-6.col-md-4.col-xl-2.col-xxl-auto: +dateCard('22.12.22', '(четверг)', '16:00')
+									+e.col.col-6.col-md-4.col-xl-2.col-xxl-auto: +dateCard('22.11.22', '(понедельник)', '12:30')
+									+e.col.col-6.col-md-4.col-xl-2.col-xxl-auto: +dateCard('20.11.22', '(среда)', '14:30')
+									+e.col.col-6.col-md-4.col-xl-2.col-xxl-auto: +dateCard('16.11.22', '(четверг)', '16:00')
+									+e.col.col-6.col-md-4.col-xl-2.col-xxl-auto: +dateCard('14.11.22', '(понедельник)', '12:30')
+						+e.subtitle С чем работает:
+						+e.UL.work-list
+							li Сильные эмоции:гнев, агрессия
+							li Панические атаки
+							li Травматические события в прошлом
+							li Самооценка и уверенность в себе
+						+e.btn-row.row
+							.col-md-auto: +e.btn.btn.btn-primary(href='#') Оставить отзыв
+							.col-md-auto: +e.btn.btn.btn-outline-light(href='#') Завершить работу с психологом
+	+parts('footer')

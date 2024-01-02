@@ -9,7 +9,7 @@
 	height: 100%;
 	background-position: center 0;
 	opacity: 0;
-	opacity: 0;
+	// height: 15000px;
 	// opacity: 0.7;
 } 
 
@@ -578,4 +578,13 @@ iframe {
 
 .smallest{
 	font-size: 12px;
+}
+
+.lk-page {
+	.page-head {
+		padding-top: rem(8);
+	}
+	.breadcrumb-slider--js {
+		margin-bottom: rem(22.400);
+	}
 }

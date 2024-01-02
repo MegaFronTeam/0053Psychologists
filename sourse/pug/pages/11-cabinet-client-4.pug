@@ -1,0 +1,56 @@
+extends ../layout/main.pug
+
+include ../blocks/sCabinet/_sCabinet.pug
+include ../blocks/sReg/_sReg.pug
+
+block variables
+	- let  mainPage= 'lk-page'
+	- let  bg= '11-cabinet-client-3.jpg'
+
+block title
+	- let  title= 'ЛК КЛИЕНТА 11 03'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('','','Личный кабинет')
+		+sCabinet
+			+b.sCabinet-body
+				+soc
+					+item-sos()
+						+iconC('zoom')
+					+item-sos()
+						+iconC('icq')
+					+item-sos()
+						+iconC('telegram2')
+					+item-sos()
+						+iconC('yandex')
+				+e.chat-wrap
+					+e.video: +img('img/svg/zoom-icon.svg')
+					+e.chat
+						+e.chat-inner.custom-scroll
+							+e.day
+								span 28/10/23
+								+e.message--you
+									+e.message-item
+										p Здравствуйте, вы готовы к встрече?
+										span 28.10.23 17:31
+									+e.message-avatar: +img('img/avatar.jpg', 'bg')
+								+e.message
+									+e.message-item
+										p Здравствуйте, рада вас слышать, готова.
+										span 28.10.23 17:31
+									+e.message-avatar: +img('img/avatar.jpg', 'bg')
+						+b.send-message
+							+input('Введите сообщение', 'text', '')
+								button(type="submit"): +icon('send')
+				+e.notes.custom-scroll
+					-for(let i = 0; i < 8; i++)
+						+note()
+				+b.send-message
+					+input('Введите сообщение', 'text', '')
+						button(type="submit"): +icon('send')
+	+parts('footer')

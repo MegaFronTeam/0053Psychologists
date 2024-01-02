@@ -43,9 +43,9 @@
 	width: calc(24 / #{$h} *1em );
 }
 .icon-instagram {
-	$h: 40;
+	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
-	width: calc(40 / #{$h} *1em );
+	width: calc(24 / #{$h} *1em );
 }
 .icon-mail {
 	$h: 24;
@@ -53,6 +53,16 @@
 	width: calc(24 / #{$h} *1em );
 }
 .icon-phone-call {
+	$h: 24;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
+}
+.icon-send {
+	$h: 24;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
+}
+.icon-star {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );

@@ -250,3 +250,36 @@ input::-webkit-inner-spin-button {
 
 
 }
+
+.form-switch {
+  padding-left: rem(58);
+  margin-bottom: 0;
+  .form-check-input {
+    width: rem(40);
+    height: rem(20);
+    margin-left: rem(-58);
+    border: none;
+    background-color: $gray-600;
+    background-size: rem(16);
+    background-position: rem(2);
+    --bs-form-switch-bg: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='8' fill='white'/%3E%3C/svg%3E%0A");
+    &:checked {
+      background-color: $primary;
+      background-position: calc(100% - rem(2));
+      --bs-form-switch-bg: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='8' fill='white'/%3E%3C/svg%3E%0A");
+      & ~ span {
+        color: #000;
+      }
+    }
+    &:focus {
+      box-shadow: none;
+      --bs-form-switch-bg: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='8' fill='white'/%3E%3C/svg%3E%0A");
+    }
+  }
+  span {
+    @include mt;
+    color: $gray-600;
+    font-size: rem(14);
+    vertical-align: bottom;
+  }
+}

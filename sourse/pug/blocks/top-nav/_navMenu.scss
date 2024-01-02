@@ -7,7 +7,7 @@
     justify-content: center;
   }
   @include media-breakpoint-up(xxl) {
-    --bs-gutter-x: #{rem(28)};
+    --bs-gutter-x: #{rem(18)};
   }
   list-style: none;
   position: relative;
@@ -23,6 +23,9 @@
     padding: 0 calc(var(--bs-gutter-x) / 2);
     color: #000;
     font-weight: 500;
+    @include media-breakpoint-up(xxl) {
+      font-size: rem(18);
+    }
     &:hover {
       color: $blue-900;
     }
