@@ -471,8 +471,8 @@
 		position: absolute;
 		top: rem(8);
 		right: rem(12);
-		&:hover {
-			.icon, &.active {
+		&:hover, &.active {
+			.icon {
 				stroke: #FFED4B;
 				fill: #FFED4B;
 			}
