@@ -1,0 +1,31 @@
+extends ../layout/main.pug
+
+include ../blocks/sReg/_sReg.pug
+include ../blocks/sCalendar/_sCalendar.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+
+block title
+	- let  title= 'РЕГИСТРАЦИЯ КЛИЕНТА 09 5'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+
+		+sReg("",'ПОДТВЕРДИТЕ УСЛОВИЯ СОГЛАСИЯ СЕРВИСА','Необходимо для оплаты Ваших сессий с психологом. Мы списываем средства с Вашей карты только после фактически проведённой сессии','','Зарегистрироваться')
+			+b.documents-block.section
+				.row.gy-4
+					.col-lg-6
+						+document()
+					.col-lg-6
+						+document()
+	+parts('footer')
+      
+
+
+
