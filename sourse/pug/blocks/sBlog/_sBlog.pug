@@ -3,14 +3,9 @@ mixin sBlog(data)
 	// start sBlog
 	+b.sBlog.section&attributes(attributes)
 		.container
-			//- +input('Сначала новые', 'select')
 			+e.input-wrap
 				p Сортировка:
-				select(data-tags="true").floating-select.form-select
-					option Сначала новые
-					option Сначала старые
-					option Популярные
-					option Еще какие-то
+				+input("Сначала новые",'select','')
 			+e.row.row.sorting-row
 				+sortingItem(`ВСЕ`)
 				+sortingItem(`ОТНОШЕНИЯ`)
