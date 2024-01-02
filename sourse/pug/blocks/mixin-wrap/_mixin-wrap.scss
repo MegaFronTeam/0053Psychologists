@@ -1,5 +1,30 @@
  
-	  
+.swiper-button-prev,
+.swiper-button-next {
+	--swiperArrowSize: #{rem(80)};
+	// border-radius: 50%;
+	border: none;
+	background-color: $gray-100;
+	.icon {
+		fill: none;
+		stroke: $primary;
+		width: rem(14);
+		height: rem(28);
+		stroke-width: 1;
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		// @include media-breakpoint-up(lg) {
+		// 	width: 12px;
+		// }
+	}
+	// right: 10px;
+	// margin-top: 0;
+	// &::after {
+	// 	content:'none';
+	// }
+}
+
+
 .soc{
 	@include roww(10px, m);
 	display: flex;
@@ -172,8 +197,6 @@
 	flex-direction: column;
 	height: 100%;
 	position: relative;
-	flex-grow: 1;
-
 	&:hover {
 		box-shadow: none;
 		.card__content {

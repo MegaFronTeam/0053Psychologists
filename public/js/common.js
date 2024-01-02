@@ -61,6 +61,31 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
+	new Swiper('.mobile-swiper--js', {
+		loop: false,
+		slidesPerView: 1,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 4,
+			},
+		},
+		// pagination: {
+		// 	el: ' .swiper-pagination',
+		// 	type: 'bullets',
+		// 	clickable: true,
+		// },
+	})
 
 
 	$(".custom-select-wrap").each(function () {

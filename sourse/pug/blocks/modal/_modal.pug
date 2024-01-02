@@ -14,5 +14,15 @@ mixin modal()
 				+policy()
 	// #modal-call
 
+	//  #modal-successful
+	div(id="modal-successful"  style="display: none" )
+		+b.modal-win
+			+form-wrap
+				.text-center
+					+e.title.form-data Спасибо за заявку
+					p Наши менеджеры свяжутся с Вами в ближайшее время и ответят на все интересующие вопросы
+				+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Понятно
+	// #modal-successful
+
 	
 	// end modals

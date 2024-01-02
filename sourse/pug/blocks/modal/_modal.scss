@@ -11,7 +11,8 @@
 	background-color: #fff;
 	max-width: 100%;
 	position: relative;
-	width: rem(500);
+	width: rem(420);
+	border-radius: rem(20);
 	// min-height: 100%; 
 	padding: 40px;
 
@@ -146,6 +147,10 @@ a {
 }
 
 
+.fancybox__content>.f-button.is-close-btn {
+	top: rem(16);
+	right: rem(20);
+}
 
 .fancybox-throwOutUp {
   animation: 0.25s ease both fancybox-throwOutUp;
@@ -173,4 +178,39 @@ a {
     transform: translate3d(0, 10%, 0);
     opacity: 0;
   }
+}
+
+#modal-successful {
+	.modal-win {
+		padding: rem(40) rem(20);
+		@include media-breakpoint-up(sm) {
+			padding: rem(40) rem(70);
+		}
+		
+	}
+	.form-wrap{
+		form {
+			display: flex;
+			flex-direction: column;
+		}
+		&__title {
+			font-size: rem(24);
+			font-weight: 500;
+			line-height: 116%;
+			margin-bottom: rem(40);
+		}
+		p {
+			line-height: 114%;
+			margin-bottom: rem(20);
+			font-size: rem(14);
+			@include media-breakpoint-up(sm) {
+				margin-bottom: rem(48);
+			}
+		}
+		&__btn {
+			margin-bottom: 0;
+			font-weight: 400;
+			font-size: rem(16);
+		}
+	}
 }
