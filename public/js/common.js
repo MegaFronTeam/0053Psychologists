@@ -79,7 +79,7 @@ function eventHandler() {
 
 		new AirDatepicker(dataPicker, {
 			autoClose: false,
-			// inline: true,
+			inline: true,
 			container: dataPickerEll,
 			onShow() {
 				dataPickerIcon.classList.add('active');
@@ -106,6 +106,19 @@ function eventHandler() {
 	})
 
 
+	$(document).on("click", '.sCalendar__td--body', function(){
+		const self =$(this); 
+		const order = window.getComputedStyle(self.parent()[0]).order
+		const activeCLass= 'active';
+		const line = $(".sCalendar__tr--line");
+		if(!line.hasClass(activeCLass) && !self.hasClass(activeCLass)) {
+			line.toggleClass(activeCLass)
+		}
+
+		line.css("order", order) 
+		$( '.sCalendar__td--body.active').removeClass(activeCLass)
+		$(this).toggleClass(activeCLass)
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -5,6 +5,12 @@
 		--sPT: #{rem(60)};
 		--sPB: #{rem(60)};
 	}
+	.sCatalog{
+		
+		@include media-breakpoint-up(md) { 
+			--sPB: #{rem(60)};
+		}
+	}
 	// --sTPB: #{rem()};
 	
 	&__row{

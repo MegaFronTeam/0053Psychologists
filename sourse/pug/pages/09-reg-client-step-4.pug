@@ -1,0 +1,28 @@
+extends ../layout/main.pug
+
+include ../blocks/sReg/_sReg.pug
+include ../blocks/sCalendar/_sCalendar.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+
+block title
+	- let  title= 'РЕГИСТРАЦИЯ КЛИЕНТА 09 4'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+
+		+sReg("",'ВЫБЕРИТЕ ДАТУ И ВРЕМЯ СЕАНСА','У выбранного Вами психолога свободны следующие даты и время')
+			+e.inner
+				+sCalendar
+				
+	+parts('footer')
+      
+
+
+

@@ -87,3 +87,24 @@ mixin sCatalog09(data)
 				+e.col(class= wrapClass)
 					+cardInput('prod-4.png', 'Анна', 'Психолог, сертифицированный гештальт-терапевт', true, 'II категория').--hovered
 	// end sCatalog
+
+mixin sCatalog09-2(data)
+	// start sCatalog
+	+b.sCatalog.section&attributes(attributes)
+		.container
+			+e.card-row.row
+				- const wrapClass="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2"
+				- for (var x = 0; x < 3; x++)
+					+e.col(class= wrapClass)
+						+cardInputCheck('prod-1.png','', 'Отношения с партнёром').text-center
+					+e.col(class= wrapClass)
+						+cardInputCheck('prod-3.png','', 'Депрессия').text-center
+					+e.col(class= wrapClass)
+						+cardInputCheck('prod-2.png','', 'Панические атаки').text-center
+					+e.col(class= wrapClass)
+						+cardInputCheck('prod-4.png','', 'Тревога').text-center
+					+e.col(class= wrapClass)
+						+cardInputCheck('prod-4.png','', 'Продвижение по карьере').text-center
+					+e.col(class= wrapClass)
+						+cardInputCheck('prod-4.png','', 'Расстройство пищевого поведения').text-center
+	// end sCatalog
