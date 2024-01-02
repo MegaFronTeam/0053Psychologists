@@ -13,7 +13,11 @@
 
 ### РЕГИСТРАЦИЯ КЛИЕНТА
 1. <https://megafronteam.github.io/0053Psychologists/09-reg-client>
-2. <https://megafronteam.github.io/0053Psychologists/09-reg-client-step-3>
+2. <https://megafronteam.github.io/0053Psychologists/09-reg-client-step-2>
+3. <https://megafronteam.github.io/0053Psychologists/09-reg-client-step-3>
+4. <https://megafronteam.github.io/0053Psychologists/09-reg-client-step-4>
+5. <https://megafronteam.github.io/0053Psychologists/09-reg-client-step-5>
+6. <https://megafronteam.github.io/0053Psychologists/09-reg-client-step-6>
 
 
 ### ЛК КЛИЕНТА

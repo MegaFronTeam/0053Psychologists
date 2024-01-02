@@ -1,0 +1,27 @@
+extends ../layout/main.pug
+
+include ../blocks/sReg/_sReg.pug
+include ../blocks/sCatalog/_sCatalog.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+
+block title
+	- let  title= 'РЕГИСТРАЦИЯ КЛИЕНТА 09 2'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+
+		+sReg("",'ЧТО ВАС БЕСПОКОИТ?','Выберите один или несколько пунктов')
+			+sCatalog09-2()
+				
+	+parts('footer')
+      
+
+
+

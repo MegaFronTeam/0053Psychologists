@@ -158,6 +158,21 @@ class JSCCommon {
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
 		Inputmask({ "mask": "+9(999)999-99-99", showMaskOnHover: false }).mask(InputTel);
+
+		
+		let InputCard = [].slice.call(document.querySelectorAll('.card-mask'));
+		// InputCard.forEach(element => element.setAttribute("pattern", "[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"));
+		Inputmask({ "mask": "9999 9999 9999 9999", showMaskOnHover: false }).mask(InputCard);
+		
+		let InputDate = [].slice.call(document.querySelectorAll('.date-mask'));
+		// InputDate.forEach(element => element.setAttribute("pattern", "[0-9]{2}[/][0-9]{2}"));
+		Inputmask({ "mask": "99/99", showMaskOnHover: false }).mask(InputDate);
+		
+		let InputCVV = [].slice.call(document.querySelectorAll('.cvv-mask'));
+		// InputCVV.forEach(element => element.setAttribute("pattern", "[0-9]{3}"));
+		Inputmask({ "mask": "999", showMaskOnHover: false }).mask(InputCVV);
+
+
 	}
 	// /inputMask
 	static sendForm() {

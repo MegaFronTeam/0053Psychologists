@@ -1,0 +1,200 @@
+// start .sCalendar
+.sCalendar {
+	--sPT: #{rem(0)};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title{
+		
+	}
+	&__col{
+		
+	}
+	&__item{
+		
+	}
+	&__head{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: rem(42);
+		font-weight: 500;
+		font-size: rem(18);
+	}
+	&__title{
+		width: calc(160px + 64px * 2);
+		text-align: center;
+		line-height: 1.2;
+	}
+	&__btn-control{
+		cursor: pointer;
+		color: $gray-300;
+		@include mt;
+		&:hover{
+			color: $primary;
+		}
+		.icon{
+			fill: none;
+			stroke: currentColor;
+			font-size: rem(24);
+		}
+	}
+	&__table{
+		border-radius: 4px;
+		border: 1px solid $gray-300;
+		background: var(--White, #FFF);
+		position: relative;
+		overflow: hidden;
+	}
+	&__tr{
+		display: flex; 
+		&--line{
+			display: none;
+			@include media-breakpoint-up(lg) {
+				padding: 14px 40px;
+			} 
+			padding: 14px;
+			background: var(--Azure, #F5F8FF);
+			border: none !important;
+			&.active{
+				display: block;
+			}
+		
+		}
+	}
+	&__td{
+		// flex-grow: 1;
+		width: 100%; 
+		flex: 1 0 0%;
+		max-width: 100%;
+		text-align: center;
+		padding: rem(8) rem(2);
+		&:not(:first-child){
+			border-left: 1px solid $gray-300;
+		}
+		&--title{
+			font-weight: 500;
+			min-height: 1px;
+			&:nth-child(6),
+			&:nth-child(7) {
+				color: $primary;
+			}
+		} 
+	}
+	&__td--body &__number{
+		font-weight: 300;
+	}
+	&__td--disabled-day &__number{
+		color: $gray-300;
+	}
+	&__td--body{
+		
+		// display: flex;
+		cursor: pointer;
+		line-height: 1.2;
+		font-weight: 300;
+		padding-top: rem(25);
+		// flex-direction: column;
+		// justify-content: center;
+		min-height: rem(76);
+		overflow: hidden;
+		cursor: pointer;
+		position: relative;
+		&::before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: rem(5);
+			height: 100%;
+			background-color: $primary;
+			opacity: 0;
+			@include mt;
+		}
+		&.active{
+			&::before{
+				opacity: 1;
+			}
+		}
+		
+	}
+
+	
+	&__row-tr{
+		@include media-breakpoint-up(lg) {
+			flex-wrap: nowrap;
+		}
+		.row{
+			--bs-gutter-y: 5px;
+			@include media-breakpoint-up(lg) {
+
+				--bs-gutter-x: 6%;
+			}
+			--bs-gutter-x: 10px;
+		}
+		label{
+
+			.btn{
+				--bs-btn-border-radius: 5px;
+				--bs-btn-padding-y: #{rem(10)};
+				--bs-btn-padding-x: #{rem(5)};
+				width: rem(60);
+				--bs-btn-font-size: 1rem;
+			} 
+			.btn-primary{
+
+				--bs-btn-color: #{$body-color};
+				--bs-btn-bg: transparent;
+				// --bs-btn-border-color: transparent;
+				--bs-btn-active-bg: #{$primary};
+				--bs-btn-active-border-color: #{$primary};
+			}
+		}
+	}
+	@include media-breakpoint-up(lg) {
+
+		&__day{
+			width: calc(2 * 100% / 7 - var(--bs-gutter-x));
+		}
+	}
+
+	&__number{
+		font-size: rem(18);
+		line-height: calc(20 / 18);
+		// flex-grow: 1;
+		// display: flex;
+		// justify-content: center;
+	}
+	&__tbody{
+		display: flex;
+		flex-direction: column;
+	}
+	&__tbody &__tr{
+		border-top: 1px solid $gray-300;
+		@for $i from 1 through 10 {
+			&:nth-child(#{$i}){order: $i;}
+		}
+
+	}
+	&__label{
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 100%;
+		overflow: hidden;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(sm) {
+		font-size: 14px;
+	}
+} // end.sCalendar

@@ -1,5 +1,5 @@
 
-mixin sReg(title, subtitle, text)
+mixin sReg(title, subtitle, text, policy, btn)
 	// start sReg
 	+b.SECTION.sReg.section#sReg&attributes(attributes)
 		.container
@@ -64,5 +64,7 @@ mixin sReg(title, subtitle, text)
 								+b.btn-toggle-type-input--js
 									+icon("eye-off")
 			.text-center
-				+e.btn.BUTTON.btn.btn-primary Далее
+				+e.btn.BUTTON.btn.btn-primary= btn || 'Далее'
+				if policy=='policy'
+					+e.policy.text-center.smallest.text-secondary Платёжные системы не распространяют и не продают вашу персональную информацию. Это указано в #[a(href="#") уведомлении о конфиденциальности]
 	// end sReg
