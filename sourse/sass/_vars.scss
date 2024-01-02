@@ -298,13 +298,13 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $blue !default;
+$primary:       $blue ;
 $secondary:     $gray-600 ;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
-$danger:        $red !default;
-$light:         $gray-100 !default;
+$danger:        $red ;
+$light:         $gray-100 ;
 $dark:          $gray-900 !default;
 $white:          $white !default;
 // scss-docs-end theme-color-variables
@@ -437,7 +437,7 @@ $position-values: (
 // Settings for the `<body>` element.
 
 $body-text-align:           null !default;
-$body-color:                $black !default;
+$body-color:                $black ;
 $body-bg:                   $white !default;
 
 $body-secondary-color:      rgba($body-color, .75) !default;

@@ -120,11 +120,11 @@ padding-inline: 15px;
 	ul{
 		list-style: none;
 		li:not(:first-child) a{
-			border-top: 1px solid var(--border-bottom, #E6E9F8);
+			border-top: 1px solid var(--border-bottom, #{$gray-300});
 		}
 		
 		li:not(:last-child) a{
-			border-bottom: 1px solid var(--border-bottom, #E6E9F8);
+			border-bottom: 1px solid var(--border-bottom, #{$gray-300});
 		}
 
 		a{
@@ -144,8 +144,8 @@ padding-inline: 15px;
 			&:hover,
 			&.active{
 				z-index: 2;
-				background-color: #F5F8FF;
-				--border-bottom: #F5F8FF;
+				background-color: #{$light};
+				--border-bottom: #{$light};
 			}
 		}
 	}
