@@ -111,7 +111,7 @@ function eventHandler() {
 
 		new AirDatepicker(dataPicker, {
 			autoClose: false,
-			inline: true,
+			// inline: true,
 			container: dataPickerEll,
 			onShow() {
 				dataPickerIcon.classList.add('active');

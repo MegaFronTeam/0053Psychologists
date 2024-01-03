@@ -1,4 +1,16 @@
 
+mixin payForm()
+	+b.form-wrap--payments
+		+input("Номер карты*",'text','Номер карты*','numeric')(required).card-mask 
+		+input("Срок действия*",'text','Срок действия*','numeric')(required).date-mask 
+		+input("ФИО*",'text')(required)
+		+input("CVV*",'text','CVV*','numeric')(required).cvv-mask
+	+e.pay-icon
+		+img("img/pay-1.png")
+		+img("img/pay-2.png")
+		+img("img/pay-3.png")
+		+img("img/pay-4.png")
+		+img("img/pay-5.png")
 mixin sReg(title, subtitle, text, policy, btn)
 	// start sReg
 	+b.SECTION.sReg.section#sReg&attributes(attributes)
@@ -28,6 +40,74 @@ mixin sReg(title, subtitle, text, policy, btn)
 
 							+input("Телефон*",'tel','Телефон*').is-invalid
 							+input("Был ли опыт в терапии?",'text') 
+
+							+e.input-wrap.form-group
+								+e.SPAN.input-title.smallest.d-block.position-static Пол
+								.row
+									.col-auto
+										+in-c('radio','Женщина')
+									.col-auto
+										+in-c('radio','Мужчина')
+							+e.input-wrap.form-group
+								+e.SPAN.input-title.smallest.d-block.position-static Фото на аватар
+
+								+b.avatar-block-wrap
+									+e.btn-delete.photo-file-delete-js.d-none
+										+icon("trash-can")
+									+b.LABEL.avatar-block.add-photo
+										input(type="file", name="" onchange="loadFile(event)")
+										+e.img-wrap.bg-wrap
+											img(src="", alt="").img-bg.img-preview
+											+icon("avatar")
+									.smallest.text-primary Фото можно загрузить в формате jpeg, jpg, png или выбрать аватар из готовых
+						+e.col
+							+input("17: 31: 51 (мск+0)",'select','Часовой пояс*') 
+							
+							+input("Электронная почта*",'email') 
+							.data-picker-wrap
+								+input("Дата рождения",'text')(required readonly autocomplete="off"  class="date-input").data-picker--js
+									+icon('calendar')
+									.smallest.text-primary Регистрация доступна только совершеннолетним 
+							+input("Пароль",'password')
+								+b.btn-toggle-type-input--js
+									+icon("eye")
+								.smallest.text-primary Пароль должен содержать большие и маленькие буквы на английском языке, цифры и символы (не менее 10 знаков)
+							+input("Подтверждение пароля*",'text').is-invalid
+								+b.btn-toggle-type-input--js
+									+icon("eye-off")
+			.text-center
+				+e.btn.BUTTON.btn.btn-primary= btn || 'Далее'
+				if policy=='policy'
+					+e.policy.text-center.smallest.text-secondary Платёжные системы не распространяют и не продают вашу персональную информацию. Это указано в #[a(href="#") уведомлении о конфиденциальности]
+	// end sReg
+
+mixin sReg10(title, subtitle, text, policy, btn)
+	// start sReg
+	+b.SECTION.sReg.section#sReg&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h1= title ||  'РЕГИСТРАЦИЯ КЛИЕНТА'
+				p= subtitle || ' РАССКАЖИТЕ О ВАС'
+
+				if text
+					+e.sub-text= text
+			+e.inner
+				+b.ball-nav--doc
+					+e.item(href="#").btn.btn-outline-secondary.active
+						+icon("check")
+					+e.item(href="#").btn.btn-outline-secondary.active 2
+					+e.item(href="#").btn.btn-outline-secondary 3
+					+e.item(href="#").btn.btn-outline-secondary 4
+			if block
+				block
+			else
+				+b.form-wrap--reg
+					+e.row.row.justify-content-between
+						+e.col
+							+input("Имя*",'text') 
+							+input("Фамилия*",'text') 
+
+							+input("Телефон*",'tel','Телефон*').is-invalid
 
 							+e.input-wrap.form-group
 								+e.SPAN.input-title.smallest.d-block.position-static Пол

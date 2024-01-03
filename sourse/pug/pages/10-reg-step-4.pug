@@ -1,0 +1,26 @@
+extends ../layout/main.pug
+
+include ../blocks/sReg/_sReg.pug
+include ../blocks/sCalendar/_sCalendar.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+
+block title
+	- let  title= 'РЕГИСТРАЦИЯ КЛИЕНТА 10 4'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+
+		+sReg("РЕГИСТРАЦИЯ ПСИХОЛОГА",'ПРИВЯЖИТЕ СВОЮ КАРТУ','На данную карту Вы будете получать оплату за фактически проведённые сессии с клиентами', 'policy')
+			+payForm()
+	+parts('footer')
+      
+
+
+

@@ -66,9 +66,14 @@
 .ball-nav{
 	display: flex;
 	justify-content: space-between;
+	
 	position: relative;
 	overflow: hidden;
+	margin-inline: auto;
 	margin-bottom: var(--sPB);
+	&--doc{
+		max-width: rem(480 + 34);
+	}
 	&__item{ 
 		font-size: 1rem;
 		padding: 0;

@@ -18,18 +18,7 @@ block pagecontent
 	main
 
 		+sReg("",'ПРИВЯЖИТЕ СВОЮ КАРТУ','Необходимо для оплаты Ваших сессий с психологом. Мы списываем средства с Вашей карты только после фактически проведённой сессии', 'policy')
-			+b.form-wrap--payments
-				+input("Номер карты*",'text','Номер карты*','numeric')(required).card-mask 
-				+input("Срок действия*",'text','Срок действия*','numeric')(required).date-mask 
-				+input("ФИО*",'text')(required)
-				+input("CVV*",'text','CVV*','numeric')(required).cvv-mask
-			+e.pay-icon
-				+img("img/pay-1.png")
-				+img("img/pay-2.png")
-				+img("img/pay-3.png")
-				+img("img/pay-4.png")
-				+img("img/pay-5.png")
-			
+			+payForm()
 	+parts('footer')
       
 
