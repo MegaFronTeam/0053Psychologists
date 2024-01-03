@@ -355,7 +355,76 @@ padding-inline: 15px;
 			--bs-gutter-x: #{rem(10)};
 			--bs-gutter-y: #{rem(20)};
 		}
-	} 
+	}
+	&__bill-wrap {
+		max-height: rem(636);
+		overflow: auto;
+		padding:rem(20);
+		margin:rem(-20);
+		&::-webkit-scrollbar {
+			width: 1px;
+		}
+	}
+	&__bill-row {
+		box-shadow: 0px 15px 20px rgba(72, 102, 172, 0.05), 0px -5px 20px rgba(72, 102, 172, 0.05);
+		border-radius: rem(10);
+		font-size: rem(14);
+		color: #000;
+		line-height: 1.14;
+		padding: rem(14) rem(24);
+		&:not(:last-child) {
+			margin-bottom: rem(4);
+		}
+		.row {
+			--bs-gutter-y: #{rem(6)};
+			align-items: center;
+		}
+	}
+	&__bill-col {
+		&:first-child {
+			color: $gray-600;
+			@include media-breakpoint-up(md) {
+				max-width: calc(rem(127) + var(--bs-gutter-x));
+			}
+		}
+		span {
+			display: block;
+			@include media-breakpoint-up(md) {
+				display: inline;
+			}
+		}
+	}
+	&__bill-time {
+		max-width: rem(80);
+	}
+	&__print-wrap {
+		display: flex;
+		align-items: center;
+	}
+	&__print {
+		flex: 0 0 auto;
+		margin-left: auto;
+		color: $gray-600;
+		&:hover {
+			color: $primary;
+		}
+		.icon {
+			font-size: rem(24);
+		}
+	}
+	&__all-bils {
+		display: block;
+		max-width: max-content;
+		margin-left: auto;
+		font-size: rem(14);
+		margin-bottom: rem(18);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(24);
+		}
+		.icon {
+			margin-left: rem(12);
+		}
+	}
 }
 
 .date-card {

@@ -27,3 +27,4 @@
 4. <https://megafronteam.github.io/0053Psychologists/11-cabinet-client-4>
 5. <https://megafronteam.github.io/0053Psychologists/11-cabinet-client-5>
 6. <https://megafronteam.github.io/0053Psychologists/11-cabinet-client-6>
+7. <https://megafronteam.github.io/0053Psychologists/11-cabinet-client-7>
