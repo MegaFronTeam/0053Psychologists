@@ -1,0 +1,112 @@
+// start .sHelp
+.sHelp {
+  --sPT: #{rem(20)};
+  --sPB: #{rem(110)};
+  .title-wrap {
+    position: relative;
+    margin-bottom: rem(40);
+    &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: rem(12);
+      margin-bottom: rem(8);
+      position: relative;
+    }
+    &__link {
+      margin-bottom: rem(8);
+      text-align: right;
+      @include media-breakpoint-up(lg) {
+        position: absolute;
+        top: rem(14);
+        right: rem(18);
+      }
+      @include media-breakpoint-up(xl) {
+        top: rem(20);
+      }
+
+
+    }
+    img {
+      height: rem(32);
+      @include media-breakpoint-up(sm) {
+        height: rem(52);
+      }
+    }
+    p {
+      max-width: rem(640);
+      font-size: rem(16);
+      @include media-breakpoint-up(lg) {
+        font-size: rem(18);
+      }
+      margin: 0 auto;
+      line-height: 133%;
+    }
+  }
+  &__swiper--js {
+    margin-bottom: rem(14);
+  }
+  &__row{
+		flex-wrap: nowrap;
+		@include media-breakpoint-up(lg) {
+			flex-wrap: wrap;
+		}
+	}
+  &__col{
+		width: rem(220);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(20);
+			width: calc((100% / 4) - 20px);
+		}
+	}
+  .help-card {
+    &__img-wrap {
+      @include block(310, 310);
+      margin-bottom: rem(10);
+      overflow: hidden;
+      border-radius: rem(10);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @include mt;
+      }
+    }
+    &__caption {
+      font-size: rem(16);
+
+      text-align: center;
+      line-height: 133%;
+      text-transform: uppercase;
+      @include media-breakpoint-up(md) {
+        font-size: rem(18);
+      }
+    }
+  }
+
+
+  &__btn-wrap {
+    text-align: center !important;
+    max-width: rem(420);
+    margin: 0 auto;
+		.btn {
+			width: 100%;
+      margin-bottom: rem(8);
+			--bs-btn-padding-x: #{rem(32)};
+			--bs-btn-padding-y: #{rem(16)};
+			font-size: rem(16);
+			@include media-breakpoint-up(sm) {
+				width: auto;
+			}
+		}
+    p {
+      max-width: rem(420);
+      font-size: rem(12);
+      color: $gray-700;
+      font-weight: 400;
+      line-height: 133%;
+      margin-bottom: 0;
+    }
+  }
+}
+// end .sHelp
