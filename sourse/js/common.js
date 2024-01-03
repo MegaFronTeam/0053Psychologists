@@ -64,13 +64,14 @@ function eventHandler() {
 	new Swiper('.mobile-swiper--js', {
 		loop: false,
 		slidesPerView: 1,
-		spaceBetween: 20,
+		spaceBetween: 10,
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
 		breakpoints: {
 			768: {
+				spaceBetween: 20,
 				slidesPerView: 2,
 			},
 			992: {
@@ -80,11 +81,17 @@ function eventHandler() {
 				slidesPerView: 4,
 			},
 		},
-		// pagination: {
-		// 	el: ' .swiper-pagination',
-		// 	type: 'bullets',
-		// 	clickable: true,
-		// },
+	})
+	new Swiper('.sHelp__swiper--js', {
+		freeMode: true,
+		slidesPerView: 'auto',
+		spaceBetween: 10,
+		breakpoints: {
+			960: {
+				spaceBetween: 20,
+				// slidesPerView: 4,
+			},
+		},
 	})
 
 

@@ -2,7 +2,7 @@
 .swiper-button-prev,
 .swiper-button-next {
 	--swiperArrowSize: #{rem(80)};
-	// border-radius: 50%;
+	z-index: 20;
 	border: none;
 	background-color: $gray-100;
 	.icon {

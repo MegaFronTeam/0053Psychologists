@@ -1,0 +1,35 @@
+mixin helpCard(img, caption)
+	+e.col.swiper-slide
+		+b.help-card
+			+e.img-wrap
+				+img(`img/help-${img}.png`)
+			+e.caption= caption
+
+
+mixin sHelp(data)
+	// start sHelp
+	+b.sHelp.section&attributes(attributes)
+		.container
+			+b.title-wrap.text-center
+				+e.container
+					h2 ПСИХОЛОГ ПОМОЖЕТ?
+					+img("img/logo-small.png")
+				+e.link
+					a(href="#") Больше услуг
+				p В нашей команде только проверенные специалисты с достаточным количеством знаний и умений для работы с любыми психологическими проблемами
+			+e.swiper--js
+				+e.row.swiper-wrapper
+					+helpCard('1', 'НАЛАДИТЬ ОТНОШЕНИЯ С ПАРТНЁРОМ')
+					+helpCard('2', 'СНИЗИТЬ ТРЕВОГУ')
+					+helpCard('3', 'СПРАВИТЬСЯ С ДЕПРЕССИЕЙ')
+					+helpCard('4', 'ПОДНЯТЬ САМООЦЕНКУ')
+					+helpCard('5', 'НАЛАДИТЬ ОТНОШЕНИЯ С ДЕТЬМИ')
+					+helpCard('6', 'СПРАВИТЬСЯ С РПП')
+					+helpCard('7', 'ПРОДВИНУТЬСЯ ПО КАРЬЕРНОЙ ЛЕСТНИЦЕ')
+					+helpCard('8', 'НАЛАДИТЬ ОТНОШЕНИЯ С РОДИТЕЛЯМИ')
+			
+			+e.btn-wrap
+				+e.btn.btn.btn-primary(href='#') Подобрать психолога
+				p Заполните небольшую анкету и мы поможем Вам в выборе психолога сервиса «ДА» под Ваш запрос
+
+	// end sHelp
