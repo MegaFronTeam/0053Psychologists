@@ -626,7 +626,7 @@
 				<div class="form-wrap text-center">
 					<div class="form-wrap__title h4 fw-500">Перенос сеанса
 					</div>
-					<p>Вы не можете перенести сессию самостоятельно, т.к до сессии осталось менее 24 часов, в соответствии с условиями сервиса. Вы можете связаться с Техподдержкой либо с Психологом</p>
+					<p>Вы не можете перенести сессию самостоятельно, т.к до сессии осталось менее 24 часов, <a href="#">в соответствии с условиями сервиса</a>. Вы можете связаться с  <a href="#">Техподдержкой</a> либо с Психологом</p>
 					<div class="row justify-content-center">
 						<div class="col-sm-auto">
 							<button class="form-wrap__btn btn btn-primary" type="submit">Связаться с психологом
@@ -641,6 +641,309 @@
 			</div>
 		</div>
 		<!-- #modal-rescheduling-->
+		<div id="modal-rescheduling2" style="display: none">
+			<div class="modal-win modal-win--md modal-win--rescheduling">
+				<div class="form-wrap text-center">
+					<div class="form-wrap__title h4 fw-500">Перенос сеанса
+					</div>
+					<div class="new-time">
+						<div class="new-time__item">
+							<div class="new-time__data">16.01.23
+							</div>
+							<div class="smallest">(четверг)</div>
+							<div class="new-time__data">16:00
+							</div>
+						</div>
+						<svg class="icon icon-arrow-right ">
+							<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+						</svg>
+						<div class="new-time__item">
+							<div class="new-time__data">16.01.23
+							</div>
+							<div class="smallest">(четверг)</div>
+							<div class="new-time__data">16:00
+							</div>
+						</div>
+					</div>
+					<p class="text-secondary">Необходимо договариваться о следующей сессии с Психологом на предыдущей сессии</p>
+					<div class="row justify-content-center">
+						<div class="col-sm-auto">
+							<button class="form-wrap__btn btn btn-primary" type="submit">Подтвердить
+							</button>
+						</div>
+						<div class="col-sm-auto">
+							<button class="form-wrap__btn btn btn-outline-primary" type="button">Отмена
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-rescheduling2-->
+		<div id="modal-rescheduling3" style="display: none">
+			<div class="modal-win modal-win--md modal-win--rescheduling">
+				<div class="form-wrap text-center">
+					<div class="form-wrap__title h4 fw-500">Перенос сеанса
+					</div>
+					<p>Мы отправили заявку Вашему психологу. Ожидайте подтверждение.</p>
+					<div class="row justify-content-center">
+						<div class="col-sm-auto">
+							<button class="form-wrap__btn btn btn-primary" type="submit">Понятно
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-rescheduling3-->
+		<div id="modal-shutdown" style="display: none">
+			<div class="modal-win modal-win--md modal-win--rescheduling modal-win--question">
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__title h4 fw-500 text-center">Укажите причину завершения работы с психологом 
+						</div>
+						<div class="form-wrap__wrap">
+							<div class="form-wrap__input-wrap">
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="why" type="radio"/><span class="custom-input__text form-check-label">Плановое завершение терапии</span>
+								</label>
+							</div>
+							<div class="form-wrap__input-wrap">
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="why" type="radio"/><span class="custom-input__text form-check-label">Мне необходим специалист другого профиля</span>
+								</label>
+							</div>
+							<div class="form-wrap__input-wrap">
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="why" type="radio"/><span class="custom-input__text form-check-label">Психолог не подошёл по стилю работы и как личность</span>
+								</label>
+							</div>
+							<div class="form-wrap__input-wrap">
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="why" type="radio"/><span class="custom-input__text form-check-label">Психолог грубо нарушает этические правила</span>
+								</label>
+							</div>
+							<div class="form-wrap__input-wrap">
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="why" type="radio"/><span class="custom-input__text form-check-label">Другая причина</span>
+								</label>
+							</div>
+							<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Укажите причину"></textarea>
+							</div>
+						</div>
+						<div class="row justify-content-center">
+							<div class="col-sm-auto">
+								<button class="form-wrap__btn btn btn-primary" type="submit">Подтвердить
+								</button>
+							</div>
+							<div class="col-sm-auto">
+								<button class="form-wrap__btn btn btn-outline-primary" type="button">Отмена
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-shutdown-->
+		<div id="modal-rew" style="display: none">
+			<div class="modal-win modal-win--md modal-win--rescheduling modal-win--question">
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__title h4 fw-500 text-center">Оставьте свой отзыв о работе с психологом
+						</div>
+						<div class="form-wrap__wrap">
+							<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Введите текст"></textarea>
+							</div>
+						</div>
+						<div class="row justify-content-center">
+							<div class="col-sm-auto">
+								<button class="form-wrap__btn btn btn-primary" type="submit">Отправить
+								</button>
+							</div>
+							<div class="col-sm-auto">
+								<button class="form-wrap__btn btn btn-outline-primary" type="button">Отмена
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-rew-->
+		<div id="modal-rew2" style="display: none">
+			<div class="modal-win modal-win--md modal-win--rescheduling modal-win--question">
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__title h4 fw-500 text-center">Оставьте свой отзыв о работе сервиса
+						</div>
+						<div class="form-wrap__wrap">
+							<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Введите текст"></textarea>
+							</div>
+						</div>
+						<div class="row justify-content-center">
+							<div class="col-sm-auto">
+								<button class="form-wrap__btn btn btn-primary" type="submit">Отправить
+								</button>
+							</div>
+							<div class="col-sm-auto">
+								<button class="form-wrap__btn btn btn-outline-primary" type="button">Отмена
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-rew2-->
+		<div id="modal-shutdown2" style="display: none">
+			<div class="modal-win modal-win--md modal-win--rescheduling modal-win--question">
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__title h4 fw-500 text-center">Укажите причину завершения работы с клиентом
+						</div>
+						<div class="form-wrap__wrap">
+							<div class="form-wrap__input-wrap">
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="why2" type="radio"/><span class="custom-input__text form-check-label">Плановое завершение терапии</span>
+								</label>
+							</div>
+							<div class="form-wrap__input-wrap">
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="why2" type="radio"/><span class="custom-input__text form-check-label">Перенаправлен к другому специалисту</span>
+								</label>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="why2" type="radio"/><span class="custom-input__text form-check-label">Другая причина</span>
+								</label>
+							</div>
+							<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Укажите причину"></textarea>
+							</div>
+						</div>
+						<div class="row justify-content-center">
+							<div class="col-sm-auto">
+								<button class="form-wrap__btn btn btn-primary" type="submit">Подтвердить
+								</button>
+							</div>
+							<div class="col-sm-auto">
+								<button class="form-wrap__btn btn btn-outline-primary" type="button">Отмена
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-shutdown2-->
+		<div id="modal-alert" style="display: none">
+			<div class="modal-win modal-win--sm">
+				<div class="form-wrap">
+					<p class="text-center mb-3">Вы не можете поставить выходной, т.к на этот день у Вас есть действующие сеансы. Обратитесь в техподдержку.</p>
+					<div class="row justify-content-center"> 
+						<div class="col-sm-auto">
+							<button class="form-wrap__btn btn btn-primary mt-0" type="button">Понятно
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-alert-->
+		<div id="modal-add-session" style="display: none">
+			<div class="modal-win modal-win--md modal-win--md2">
+				<div class="form-wrap text-center"> 
+					<p>Вы действительно хотите удалить запись?</p>
+					<div class="row justify-content-center">
+						<div class="col-sm-auto">
+							<button class="form-wrap__btn btn btn-primary" type="submit">Сохранить
+							</button>
+						</div>
+						<div class="col-sm-auto">
+							<button class="form-wrap__btn btn btn-outline-primary" type="button">Отмена
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-add-session-->
+		<div id="modal-delete-session" style="display: none">
+			<div class="modal-win modal-win--md modal-win--md2">
+				<div class="form-wrap text-center"> 
+					<p>Вы действительно хотите удалить запись?</p>
+					<div class="row justify-content-center">
+						<div class="col-sm-auto">
+							<button class="form-wrap__btn btn btn-primary" type="submit">Удалить
+							</button>
+						</div>
+						<div class="col-sm-auto">
+							<button class="form-wrap__btn btn btn-outline-primary" type="button">Отмена
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-delete-session-->
+		<div id="modal-rescheduling-doc-1" style="display: none">
+			<div class="modal-win modal-win--md modal-win--rescheduling">
+				<div class="form-wrap text-center">
+					<div class="form-wrap__title h4 fw-500">Перенос времени на сеанс
+					</div>
+					<div class="new-time">
+						<div class="new-time__item">
+							<div class="new-time__data">16.01.23
+							</div>
+							<div class="smallest">(четверг)</div>
+							<div class="new-time__data">16:00
+							</div>
+						</div>
+						<svg class="icon icon-arrow-right ">
+							<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+						</svg>
+						<div class="new-time__item">
+							<div class="new-time__data">16.01.23
+							</div>
+							<div class="smallest">(четверг)</div>
+							<div class="new-time__data">16:00
+							</div>
+						</div>
+					</div>
+					<p class="text-secondary">Марина Лиончикова просит перенести сеанс</p>
+					<div class="row justify-content-center">
+						<div class="col-sm-auto">
+							<button class="form-wrap__btn btn btn-primary" type="submit">Подтвердить
+							</button>
+						</div>
+						<div class="col-sm-auto">
+							<button class="form-wrap__btn btn btn-outline-primary" type="button">Отмена
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-rescheduling-doc-1-->
+		<div id="modal-new-session" style="display: none">
+			<div class="modal-win modal-win--md modal-win--rescheduling">
+				<div class="form-wrap text-center">
+					<div class="form-wrap__title h4 fw-500">Подтвердите новый сеанс
+					</div>
+					<div class="new-time">
+						<div class="new-time__item">
+							<div class="new-time__data">16.01.23
+							</div>
+							<div class="smallest">(четверг)</div>
+							<div class="new-time__data">16:00  
+							</div>
+						</div>
+					</div>
+					<p class="text-secondary">Новый клиент Карина Светлова</p>
+					<div class="row justify-content-center">
+						<div class="col-sm-auto">
+							<button class="form-wrap__btn btn btn-primary" type="submit">Подтвердить
+							</button>
+						</div>
+						<div class="col-sm-auto">
+							<button class="form-wrap__btn btn btn-outline-primary" type="button">Отмена
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-new-session-->
 		<!--  #about-psychologist-->
 		<div id="about-psychologist" style="display: none">
 			<div class="modal-win modal-win--doctor">

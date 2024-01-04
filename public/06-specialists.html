@@ -456,30 +456,6 @@
 			</div>
 		</div>
 		<!-- #modal-rew2-->
-		<div class="modal-win modal-win--question">
-			<div class="form-wrap">
-				<form>
-					<div class="form-wrap__title h4 fw-500">Задать вопрос
-					</div>
-					<div class="form-wrap__wrap">
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Введите текст"/><span class="form-wrap__input-title">Тема</span>
-						</div>
-						<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Введите текст"></textarea><span class="form-wrap__input-title">Сообщение</span>
-						</div>
-					</div>
-					<div class="row justify-content-center">
-						<div class="col-sm-auto">
-							<button class="form-wrap__btn btn btn-primary" type="submit">Отправить
-							</button>
-						</div>
-						<div class="col-sm-auto">
-							<button class="form-wrap__btn btn btn-outline-primary" type="button">Отмена
-							</button>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
 		<div id="modal-shutdown2" style="display: none">
 			<div class="modal-win modal-win--md modal-win--rescheduling modal-win--question">
 				<div class="form-wrap">
@@ -515,6 +491,124 @@
 			</div>
 		</div>
 		<!-- #modal-shutdown2-->
+		<div id="modal-alert" style="display: none">
+			<div class="modal-win modal-win--sm">
+				<div class="form-wrap">
+					<p class="text-center mb-3">Вы не можете поставить выходной, т.к на этот день у Вас есть действующие сеансы. Обратитесь в техподдержку.</p>
+					<div class="row justify-content-center"> 
+						<div class="col-sm-auto">
+							<button class="form-wrap__btn btn btn-primary mt-0" type="button">Понятно
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-alert-->
+		<div id="modal-add-session" style="display: none">
+			<div class="modal-win modal-win--md modal-win--md2">
+				<div class="form-wrap text-center"> 
+					<p>Вы действительно хотите удалить запись?</p>
+					<div class="row justify-content-center">
+						<div class="col-sm-auto">
+							<button class="form-wrap__btn btn btn-primary" type="submit">Сохранить
+							</button>
+						</div>
+						<div class="col-sm-auto">
+							<button class="form-wrap__btn btn btn-outline-primary" type="button">Отмена
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-add-session-->
+		<div id="modal-delete-session" style="display: none">
+			<div class="modal-win modal-win--md modal-win--md2">
+				<div class="form-wrap text-center"> 
+					<p>Вы действительно хотите удалить запись?</p>
+					<div class="row justify-content-center">
+						<div class="col-sm-auto">
+							<button class="form-wrap__btn btn btn-primary" type="submit">Удалить
+							</button>
+						</div>
+						<div class="col-sm-auto">
+							<button class="form-wrap__btn btn btn-outline-primary" type="button">Отмена
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-delete-session-->
+		<div id="modal-rescheduling-doc-1" style="display: none">
+			<div class="modal-win modal-win--md modal-win--rescheduling">
+				<div class="form-wrap text-center">
+					<div class="form-wrap__title h4 fw-500">Перенос времени на сеанс
+					</div>
+					<div class="new-time">
+						<div class="new-time__item">
+							<div class="new-time__data">16.01.23
+							</div>
+							<div class="smallest">(четверг)</div>
+							<div class="new-time__data">16:00
+							</div>
+						</div>
+						<svg class="icon icon-arrow-right ">
+							<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+						</svg>
+						<div class="new-time__item">
+							<div class="new-time__data">16.01.23
+							</div>
+							<div class="smallest">(четверг)</div>
+							<div class="new-time__data">16:00
+							</div>
+						</div>
+					</div>
+					<p class="text-secondary">Марина Лиончикова просит перенести сеанс</p>
+					<div class="row justify-content-center">
+						<div class="col-sm-auto">
+							<button class="form-wrap__btn btn btn-primary" type="submit">Подтвердить
+							</button>
+						</div>
+						<div class="col-sm-auto">
+							<button class="form-wrap__btn btn btn-outline-primary" type="button">Отмена
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-rescheduling-doc-1-->
+		<div id="modal-new-session" style="display: none">
+			<div class="modal-win modal-win--md modal-win--rescheduling">
+				<div class="form-wrap text-center">
+					<div class="form-wrap__title h4 fw-500">Подтвердите новый сеанс
+					</div>
+					<div class="new-time">
+						<div class="new-time__item">
+							<div class="new-time__data">16.01.23
+							</div>
+							<div class="smallest">(четверг)</div>
+							<div class="new-time__data">16:00  
+							</div>
+						</div>
+					</div>
+					<p class="text-secondary">Новый клиент Карина Светлова</p>
+					<div class="row justify-content-center">
+						<div class="col-sm-auto">
+							<button class="form-wrap__btn btn btn-primary" type="submit">Подтвердить
+							</button>
+						</div>
+						<div class="col-sm-auto">
+							<button class="form-wrap__btn btn btn-outline-primary" type="button">Отмена
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-new-session-->
 		<!--  #about-psychologist-->
 		<div id="about-psychologist" style="display: none">
 			<div class="modal-win modal-win--doctor">

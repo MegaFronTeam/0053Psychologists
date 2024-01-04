@@ -28,24 +28,24 @@ block pagecontent
 				.col-auto
 					a(href= a).btn.btn-primary.link-modal-js= t
 			.section.pt-0
-				.row.gy-3 
+				.row.gy-3.mb-3 
 					+btn("#modal-call", 'call')
 					+btn("#modal-successful", 'call')
 			.section.pt-0
 				h3 РЕГИСТРАЦИЯ КЛИЕНТА
-				.row.gy-3
+				.row.gy-3.mb-3
 					+btn("#modal-welcome", 'РАДЫ ПРИВЕТСТВОВАТЬ  ')
 					+btn("#modal-kod", 'Введите код')
 					+btn("#modal-policy", 'Политика конфиденциальности')
 					+btn("#modal-successful2", 'Ваш аккаунт создан')
 			.section.pt-0
 				h3 РЕГИСТРАЦИЯ ПСИХОЛОГА
-				.row.gy-3
+				.row.gy-3.mb-3
 					+btn("#modal-your-order", '  заявка будет рассмотрена') 
 					+btn("#modal-successful3", 'Ваш аккаунт создан')
 			.section.pt-0
 				h3 ЛК КЛИЕНТА
-				.row.gy-3
+				.row.gy-3.mb-3
 					+btn("#modal-rescheduling", 'Перенос сеанса')
 					+btn("#modal-rescheduling2", 'Перенос сеанса 2')
 					+btn("#modal-rescheduling3", 'Перенос сеанса 3')
@@ -57,12 +57,19 @@ block pagecontent
 					
 			.section.pt-0
 				h3 ЛК ПСИХОЛОГА
-				.row.gy-3
+				.row.gy-3.mb-3
 					+btn("#modal-shutdown2", ' причина завершения работы  ')
+					+btn("#modal-alert", ' alert ')
+				h5 РАСПИСАНИЕ
+				.row.gy-3.mb-3
+					+btn("#modal-add-session", 'Добавить сеанс')
+					+btn("#modal-delete-session", 'Удалить cеанс ')
+					+btn("#modal-rescheduling-doc-1", ' Перенос времени   ')
+					+btn("#modal-new-session", '   новый сеанс ')
 
 			.section.pt-0
 				h3 Окно о психологе
-				.row.gy-3
+				.row.gy-3.mb-3
 					+btn("#about-psychologist", 'Ваш аккаунт создан')
 
 	+parts('footer')

@@ -13,6 +13,9 @@
 	position: relative;
 	width: rem(420);
 	border-radius: rem(20);
+	.btn{
+		padding-inline: rem(30);
+	}
 	// min-height: 100%; 
 	@include media-breakpoint-up(sm) {
 
@@ -483,6 +486,11 @@ a {
 		padding-inline: rem(30);
 	}
 } 
+
+.modal-win--md2{
+
+	width: 460px;
+}
 
 .new-time{
 	display: flex;

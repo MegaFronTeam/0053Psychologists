@@ -197,15 +197,15 @@ mixin modal()
 					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
 	// #modal-rew2
 	
-	+b.modal-win--question
-			+form-wrap
-				+e.title.h4.fw-500 Задать вопрос
-				+e.wrap
-					+input("Введите текст", 'text', 'Тема')
-					+input('Введите текст', 'textarea', 'Сообщение')
-				.row.justify-content-center
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Отправить
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+	//- +b.modal-win--question
+	//- 		+form-wrap
+	//- 			+e.title.h4.fw-500 Задать вопрос
+	//- 			+e.wrap
+	//- 				+input("Введите текст", 'text', 'Тема')
+	//- 				+input('Введите текст', 'textarea', 'Сообщение')
+	//- 			.row.justify-content-center
+	//- 				.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Отправить
+	//- 				.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
 
 	div(id="modal-shutdown2"  style="display: none" )
 		+b.modal-win--md.--rescheduling.--question
@@ -222,6 +222,74 @@ mixin modal()
 					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Подтвердить
 					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
 	// #modal-shutdown2
+	
+	div(id="modal-alert"  style="display: none" )
+		+b.modal-win--sm
+			+b.form-wrap
+				p.text-center.mb-3 Вы не можете поставить выходной, т.к на этот день у Вас есть действующие сеансы. Обратитесь в техподдержку.
+				.row.justify-content-center 
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="button").mt-0 Понятно
+	// #modal-alert
+
+	div(id="modal-add-session"  style="display: none" )
+		+b.modal-win--md.--md2
+			+b.form-wrap.text-center 
+				p Вы действительно хотите удалить запись?
+				.row.justify-content-center
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Сохранить
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+	// #modal-add-session
+	
+
+	div(id="modal-delete-session"  style="display: none" )
+		+b.modal-win--md.--md2
+			+b.form-wrap.text-center 
+				p Вы действительно хотите удалить запись?
+				.row.justify-content-center
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Удалить
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+	// #modal-delete-session
+	
+
+	div(id="modal-rescheduling-doc-1"  style="display: none" )
+		+b.modal-win--md.--rescheduling
+			+b.form-wrap.text-center
+				+e.title.h4.fw-500 Перенос времени на сеанс
+				+b.new-time
+					+e.item
+						+e.data 16.01.23
+						.smallest (четверг)
+
+						+e.data 16:00
+					+icon("arrow-right")
+					+e.item
+						+e.data 16.01.23
+						.smallest (четверг)
+
+						+e.data 16:00
+				p.text-secondary Марина Лиончикова просит перенести сеанс
+				.row.justify-content-center
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Подтвердить
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+	// #modal-rescheduling-doc-1
+	
+
+	div(id="modal-new-session"  style="display: none" )
+		+b.modal-win--md.--rescheduling
+			+b.form-wrap.text-center
+				+e.title.h4.fw-500 Подтвердите новый сеанс
+				+b.new-time
+					+e.item
+						+e.data 16.01.23
+						.smallest (четверг)
+
+						+e.data 16:00  
+				p.text-secondary Новый клиент Карина Светлова
+				.row.justify-content-center
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Подтвердить
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+	// #modal-new-session
+
 	//  #about-psychologist
 	div(id="about-psychologist" style="display: none" )
 		+b.modal-win--doctor
