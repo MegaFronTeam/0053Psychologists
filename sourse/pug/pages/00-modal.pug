@@ -14,7 +14,7 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= index.head.title
+	- let  title= 'Modals` page'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -23,7 +23,7 @@ block pagecontent
 	+parts('header')
 	main
 		.container
-			h1 Modal page 
+			h1 Modals` page 
 			mixin btn(a, t) 
 				.col-auto
 					a(href= a).btn.btn-primary.link-modal-js= t
@@ -34,7 +34,15 @@ block pagecontent
 			.section.pt-0
 				h3 РЕГИСТРАЦИЯ КЛИЕНТА
 				.row
+					+btn("#modal-welcome", 'РАДЫ ПРИВЕТСТВОВАТЬ  ')
+					+btn("#modal-kod", 'Введите код')
+					+btn("#modal-policy", 'Политика конфиденциальности')
 					+btn("#modal-successful2", 'Ваш аккаунт создан')
+			.section.pt-0
+				h3 РЕГИСТРАЦИЯ ПСИХОЛОГА
+				.row
+					+btn("#modal-your-order", '  заявка будет рассмотрена') 
+					+btn("#modal-successful3", 'Ваш аккаунт создан')
 			.section.pt-0
 				h3 ЛК КЛИЕНТА
 				.row

@@ -172,6 +172,9 @@ class JSCCommon {
 		let InputCVV = [].slice.call(document.querySelectorAll('.cvv-mask'));
 		// InputCVV.forEach(element => element.setAttribute("pattern", "[0-9]{3}"));
 		Inputmask({ "mask": "999", showMaskOnHover: false }).mask(InputCVV);
+		let InpuCKod = [].slice.call(document.querySelectorAll('.kod-mask'));
+		// InpuCKod.forEach(element => element.setAttribute("pattern", "[0-9]{3}"));
+		Inputmask({ "mask": "9 9 9 9 9", showMaskOnHover: false }).mask(InpuCKod);
 
 
 	}

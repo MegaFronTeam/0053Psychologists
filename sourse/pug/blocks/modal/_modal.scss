@@ -14,7 +14,11 @@
 	width: rem(420);
 	border-radius: rem(20);
 	// min-height: 100%; 
-	padding: 40px;
+	@include media-breakpoint-up(sm) {
+
+		padding: 40px;
+	}
+	padding: 40px 20px;
 
 	.modal-content {
 		// max-width: 485px;
@@ -286,11 +290,11 @@ a {
 	.modal-win--sm {
 		padding: rem(40) rem(20);
 		@include media-breakpoint-up(sm) {
-			padding: rem(40) rem(70);
+			padding: rem(40) rem(60);
 		} 
 	.form-wrap{
-		display: flex;
-		flex-direction: column; 
+		// display: flex;
+		// flex-direction: column; 
 		&__title {
 			font-size: rem(24);
 			font-weight: 500;
@@ -311,5 +315,35 @@ a {
 			font-size: rem(16);
 			width: 100%;
 		}
+	}
+}
+
+.modal-win--policy{
+	width: 900px;
+	@include media-breakpoint-up(sm){
+		// margin-bottom: rem(32);
+		padding: 60px 80px;
+	}
+	padding: 60px 20px;
+}
+.modal-win--welcome{
+	width: 900px;
+	padding-top: 100px;
+	.h1{
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(32);
+		}
+	}
+	.h5{
+		@include media-breakpoint-up(sm){
+
+			margin: 0 auto rem(80);
+		}
+		margin: 0 auto rem(40);
+		font-weight: 500;
+		max-width: 390px;
+	}
+	.btn{
+		margin-bottom: 20px;
 	}
 }

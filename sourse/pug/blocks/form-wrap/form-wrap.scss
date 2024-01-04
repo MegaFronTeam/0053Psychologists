@@ -295,3 +295,14 @@ input::-webkit-inner-spin-button {
     vertical-align: bottom;
   }
 }
+
+.form-control--round.form-wrap__input:not(textarea){
+  border-radius: 50px;
+  border: 1px solid var(--Gray-light, #AFB9D2) !important;
+  font-size: rem(40);
+  text-align: center;
+  &::placeholder{
+    color: #AFB9D2;
+    opacity: 1 !important;
+  }
+}
