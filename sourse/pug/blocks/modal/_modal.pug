@@ -16,13 +16,93 @@ mixin modal()
 
 	//  #modal-successful
 	div(id="modal-successful"  style="display: none" )
-		+b.modal-win
-			+form-wrap
+		+b.modal-win--sm
+			+b.form-wrap
 				.text-center
 					+e.title.form-data Спасибо за заявку
 					p Наши менеджеры свяжутся с Вами в ближайшее время и ответят на все интересующие вопросы
-				+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Понятно
-	// #modal-successful
+				+e.BUTTON.btn.btn.btn-primary(type="button"  ) Понятно
+	// /#modal-successful
+	//  #modal-successful
+	div(id="modal-successful2"  style="display: none" )
+		+b.modal-win--sm
+			+b.form-wrap
+				.text-center
+					+e.title.form-data Ваш аккаунт создан
+					p Вы уже можете пользоваться всеми функциями сервиса
+				+e.BUTTON.btn.btn.btn-primary(type="button"  ) Понятно
+	// /#modal-successful
+	//  #modal-confrim
+	div(id="modal-confrim"  style="display: none" )
+		+b.modal-win--confrim
+			p Вы действительно хотите удалить карту?
+			.row
+				.col-auto: +e.btn.btn.btn-primary(href='#') Удалить
+				.col-auto: +e.btn.btn.btn-outline-light(href='#') Отмена
+	// #modal-confrim
 
+	div(id="modal-question"  style="display: none" )
+		+b.modal-win--question
+			+form-wrap
+				+e.title.form-data.h4 Задать вопрос
+				+e.wrap
+					+input("Введите текст", 'text', 'Тема')
+					+input('Введите текст', 'textarea', 'Сообщение')
+				.row.justify-content-center
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Отправить
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+	// #modal-question
+	
+	//  #about-psychologist
+	div(id="about-psychologist" style="display: none" )
+		+b.modal-win--doctor
+			.container
+				+e.row.row
+					.col-2
+						+e.img-wrap: +img(`img/avatar-psycho.png`, 'bg')
+					.col-auto
+						+e.details
+							+e.name Андрей
+							p Психолог, сертифицированный гештальт-терапевт
+							+e.item
+								span Опыт работы:
+								p 12 лет
+					.col-12
+						+e.content
+							+e.item
+								p Я психолог, аналитически ориентированный. Частная практика 12 лет. Работаю офлайн, онлайн. Работаю в Москве. В моем опыте, обращения за помощью, люди разного возраста. Частые обращения, это запрос разобраться в себе в своём состоянии. Боль, обида, потери, нет жилания жить, хочу быть самостоятельным, не понимаю людей. Запутался в отношениях, не приносят радости.
+							+e.item
+								span Образование:
+								p Московский Государственный университет имени А.В. Павлова
+							+e.item
+								span Дополнительное образование:
+								p Московский Государственный университет имени А.В. Павлова
+							+e.item
+								span Дипломы, сертификаты:
+								+e.imgs-wrap
+									+img(`img/certif-01.png`, 'bg')
+									+img(`img/certif-02.png`, 'bg')
+									+img(`img/certif-03.png`, 'bg')
+							+e.item
+								span С чем работает:
+								ul
+									li
+										+iconC('check')
+										| Сильные эмоции:гнев, агрессия
+									li
+										+iconC('check')
+										| Панические атаки
+									li
+										+iconC('check')
+										| Травматические события в прошлом
+									li
+										+iconC('check')
+										| Самооценка и уверенность в себе
+									li
+										+iconC('check')
+										| Сильные эмоции:гнев, агрессия
+
+
+		// #about-psychologist
 	
 	// end modals

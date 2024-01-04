@@ -12,6 +12,8 @@ include ../blocks/sBlog/_sBlog.pug
 include ../blocks/sHelp/_sHelp.pug
 include ../blocks/sCardsBlock/_sCardsBlock.pug
 include ../blocks/sPrice/_sPrice.pug
+include ../blocks/sReviews/_sReviews.pug
+include ../blocks/sHowItWorks/_sHowItWorks.pug
 include ../blocks/sQuestions/_sQuestions.pug
 
 block variables
@@ -27,7 +29,7 @@ block pagecontent
 	
 	+parts('header')
 	main
-		+headerBlock 
+		+headerBlock
 		.container
 			.row
 				.col-sm-6.col-lg-4.col-xl-3
@@ -39,8 +41,8 @@ block pagecontent
 		+sCardsBlock-1
 		+sPrice
 		//преимущества
-		//отзывы
-		//как работает
+		+sReviews
+		+sHowItWorks
 		+sQuestions
 		+sCardsBlock-2
 	+parts('footer')

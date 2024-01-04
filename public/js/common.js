@@ -93,6 +93,15 @@ function eventHandler() {
 			},
 		},
 	})
+	new Swiper('.sReviews__swiper--js', {
+		loop: false,
+		slidesPerView: 1,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	})
 
 
 	$(".custom-select-wrap").each(function () {
