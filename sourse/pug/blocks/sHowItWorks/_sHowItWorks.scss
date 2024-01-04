@@ -1,0 +1,116 @@
+
+.sHowItWorks {
+  --sPT: #{rem(110)};
+  --sPB: #{rem(108)};
+  .title-wrap {
+    position: relative;
+    margin-bottom: rem(36);
+    display: flex;
+    gap: rem(10);
+    align-items: center;
+    img {
+      height: rem(32);
+      @include media-breakpoint-up(sm) {
+        height: rem(52);
+      }
+    }
+  }
+  &__row {
+    --bs-gutter-y: #{rem(30)};
+  }
+  &__col:first-child {
+    position: relative;
+    &:not(:last-child) {
+			&::before {
+				content: '';
+				position: absolute;
+				left: rem(33);
+				z-index: -1;
+				top: 3%;
+				border: 1px dashed $blue;
+				width: 1px;
+				height: 81%;
+        @include media-breakpoint-up(md) {
+          left: rem(40);
+        }
+			}
+    }
+  }
+
+  &__img-wrap {
+    margin-top: rem(6);
+    // max-width: rem(540);
+    @include block(48, 64);
+    @include mt;
+    border-radius: 40% 40% 40% 0;
+    overflow: hidden;
+    @include media-breakpoint-up(md) {
+      border-radius: rem(200) rem(200) rem(200) 0;
+    }
+  }
+  .step-card {
+    display: flex;
+    gap: rem(16);
+    align-items: flex-start;
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+      @include media-breakpoint-up(md) {
+        margin-bottom: rem(32);
+        &:nth-child(3) {
+          margin-bottom: rem(44);
+        }
+      }
+    }
+    @include media-breakpoint-up(md) {
+      gap: rem(32);
+    }
+    @include media-breakpoint-up(lg) {
+      max-width: rem(540);
+    }
+    &:first-child .step-card__number {
+      background: $gray-100;
+    }
+    &:nth-child(2) .step-card__number {
+      background: $blue-200;
+    }
+    &:nth-child(3) .step-card__number {
+      background: $blue-100;
+    }
+    &:nth-child(4) .step-card__number {
+      background: $blue-300;
+    }
+    &__number {
+      position: relative;
+      border-radius: rem(100);
+      aspect-ratio: 1;
+      height: rem(46);
+      text-align: center;
+      padding-top: rem(9);
+      font-size: rem(20);
+      line-height: 133%;
+      @include media-breakpoint-up(md) {
+        height: rem(60);
+        padding-top: rem(14);
+        font-size: rem(24);
+      }
+    }
+    &__title {
+      text-transform: uppercase;
+      font-size: rem(20);
+      font-weight: 300;
+      line-height: 117%;
+      margin-bottom: rem(8);
+      @include media-breakpoint-up(md) {
+        font-size: rem(24);
+        margin-bottom: rem(16);
+      }
+    }
+    &__descr {
+      line-height: 125%;
+      font-size: rem(14);
+      @include media-breakpoint-up(md) {
+        font-size: rem(16);
+      }
+    }
+  }
+}
