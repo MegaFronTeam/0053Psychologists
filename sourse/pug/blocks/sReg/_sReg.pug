@@ -148,3 +148,28 @@ mixin sReg10(title, subtitle, text, policy, btn)
 				if policy=='policy'
 					+e.policy.text-center.smallest.text-secondary Платёжные системы не распространяют и не продают вашу персональную информацию. Это указано в #[a(href="#") уведомлении о конфиденциальности]
 	// end sReg
+
+mixin RegTerms()
+	+b.regTerms
+		+e.head.text-center
+			p Онлайн-сервис психотерапии «ДА» - это максимально удобный способ планирования сессий, исчерпывающий и комфортный интерфейс для проведения самих сессий. Пространство сообщества «ДА» позволяет психологам сконцентрироваться на своей работе, а не заниматься маркетингом и продвижением себя. Нацельтесь на собственное развитие с помощью продуманных инструментов «ДА» во благо себя и своих клиентов
+		.row.gy-4
+			.col-lg-7
+				+b.sCabinet-aside
+						ul
+							li: a(href="#").active Название документа
+							- for (var x = 0; x < 6; x++)
+								li: a(href="#") Название документа
+			.col-lg-5
+				+document()
+		.h5.text-center.strong ПРОЧИТАЙТЕ И ПОДТВЕРДИТЕ СВОЁ СОГЛАСИЕ
+		+b.documents-block.section
+				.row.gy-4
+					.col-lg-6
+						+document()
+					.col-lg-6
+						+document()
+					.col-lg-6
+						+document()
+					.col-lg-6
+						+document('empty').--mepty
