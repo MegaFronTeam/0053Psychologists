@@ -1,0 +1,72 @@
+extends ../layout/main.pug
+
+include ../blocks/sCabinet/_sCabinet.pug
+include ../blocks/sReg/_sReg.pug
+
+block variables
+	- let  mainPage= 'lk-page'
+	- let  bg= '11-cabinet-client-3.jpg'
+
+block title
+	- let  title= 'ЛК ПСИХОЛОГА 12 03'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('','','Личный кабинет')
+		+sCabinet
+			+b.sCabinet-body
+				mixin item(img, name, status)
+					+b.client-item&attributes(attributes)
+						+e.close(href='#'): +icon('cross')
+						+e.img-wrap
+							+img(`img/${img}`, 'bg')
+							+e.info i
+						div
+							+e.name!= name
+							+e.status(class=(status == 'offline' ? 'offline' : 'online'))!= status
+							+e.note(href='#') + Заметка о клиенте
+						+e.more-info
+							.h6 Елена Филлипова
+							+e.item
+								span Часовой пояс:
+								| 17: 31: 51 (мск+0)
+							+e.item
+								span Возраст:
+								| 28 лет
+							+e.item
+								span Проблемы:
+								ul
+									li
+										+iconC('check') 
+										| Сильные эмоции:гнев, агрессия
+									li
+										+iconC('check') 
+										| Панические атаки
+									li
+										+iconC('check') 
+										| Травматические события в прошлом
+									li
+										+iconC('check') 
+										| Самооценка и неуверенность в себе
+							+e.item
+								span Зметка о клиенте:
+								+e.personality Есть прогресс
+								+e.personality Впечатлительная
+								+e.personality Трудно разговорить
+				+e.clients-row.row
+					.col-lg-6: +item('avatar.jpg', 'МАРИНА ЛИОНЧИКОВА', 'offline')
+					.col-lg-6: +item('avatar.jpg', 'МАРИНА ЛИОНЧИКОВА', 'online')
+					.col-lg-6: +item('avatar-2.jpg', 'ЕЛЕНА фИЛЛИПОВА', 'offline')
+					.col-lg-6: +item('avatar.jpg', 'МАРИНА ЛИОНЧИКОВА', 'offline')
+					.col-lg-6: +item('avatar.jpg', 'СВЕТЛАНА ИГНАТОВА', 'offline')
+					.col-lg-6: +item('avatar.jpg', 'МАРИНА ЛИОНЧИКОВА', 'online')
+					.col-lg-6: +item('avatar.jpg', 'МАРИНА ЛИОНЧИКОВА', 'online')
+					.col-lg-6: +item('avatar.jpg', 'МАРИНА ЛИОНЧИКОВА', 'offline')
+					.col-lg-6: +item('avatar.jpg', 'АНДРЕЙ ИВАНОВ', 'offline').active
+					.col-lg-6: +item('avatar.jpg', 'МАРИНА ЛИОНЧИКОВА', 'online').active
+				+e.clients-btn.btn.btn-outline-primary(href="#") Увеличить количество клиентов
+	+parts('footer')

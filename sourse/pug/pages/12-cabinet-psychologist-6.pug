@@ -1,0 +1,49 @@
+extends ../layout/main.pug
+
+include ../blocks/sCabinet/_sCabinet.pug
+include ../blocks/sReg/_sReg.pug
+
+block variables
+	- let  mainPage= 'lk-page'
+	- let  bg= '11-cabinet-client-3.jpg'
+
+block title
+	- let  title= 'ЛК ПСИХОЛОГА 13 06'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('','','Личный кабинет')
+		+sCabinet
+			+b.sCabinet-body
+				+e.client-row.row
+					.col-sm
+						+input("Все",'select','Клиент:') 
+					.col-sm-auto
+						+e.calendar-control
+							.calendar-arrow: +icon('arrow-left2')
+							span ЯНВАРЬ 2024
+							.calendar-arrow: +icon('arrow-right2')
+				+b.custom-table
+					+e.wrap
+						+e.row.row
+							+e.col.col: .th ПН
+							+e.col.col: .th ВТ
+							+e.col.col: .th СР
+							+e.col.col: .th ЧТ
+							+e.col.col: .th ПТ
+							+e.col.col: .th.weekend СБ
+							+e.col.col: .th.weekend ВС
+						-let j = 0;
+						-for(let i = 1; i <= 4; i++) 
+							+e.row.row
+								-for(i * j; j < (7 * i); j++) 
+									+e.col.col
+										.td(class=(i == 1 && j == 0 ? 'active' : ''))
+											span.text-black!= j + 1
+											.line
+
+	+parts('footer')

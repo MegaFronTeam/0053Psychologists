@@ -1,0 +1,22 @@
+extends ../layout/main.pug
+
+include ../blocks/sCabinet/_sCabinet.pug
+include ../blocks/sReg/_sReg.pug
+
+block variables
+	- let  mainPage= 'lk-page'
+	- let  bg= '11-cabinet-client-3.jpg'
+
+block title
+	- let  title= 'ЛК ПСИХОЛОГА 13 06'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('','','Личный кабинет')
+		+sCabinet
+			+b.
+	+parts('footer')

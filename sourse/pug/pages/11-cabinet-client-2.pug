@@ -1,0 +1,54 @@
+extends ../layout/main.pug
+
+include ../blocks/sCabinet/_sCabinet.pug
+include ../blocks/sReg/_sReg.pug
+
+block variables
+	- let  mainPage= 'lk-page'
+	- let  bg= null
+
+block title
+	- let  title= 'ЛК КЛИЕНТА 11 01'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('','','Личный кабинет')
+		+sCabinet
+			+b.sCabinet-body
+				+e.calendar-control-wrap
+					+e.calendar-control
+						.calendar-arrow: +icon('arrow-left2')
+						span ЯНВАРЬ 2024
+						.calendar-arrow: +icon('arrow-right2')
+					+e.calendar-btn: +icon('calendar')
+				+b.custom-table
+					+e.wrap
+						+e.row.row
+							+e.col.col: .th ПН
+							+e.col.col: .th ВТ
+							+e.col.col: .th СР
+							+e.col.col: .th ЧТ
+							+e.col.col: .th ПТ
+							+e.col.col: .th.weekend СБ
+							+e.col.col: .th.weekend ВС
+						-let j = 0;
+						-for(let i = 1; i <= 4; i++) 
+							+e.row.row
+								-for(i * j; j < (7 * i); j++) 
+									+e.col.col
+										.td(class=(j == 6 ? 'active' : ''))
+											- if (j == 8 || j == 9 || j == 10 || j == 11 || j == 14 || j == 15 || j == 17 || j == 22 || j == 23)
+													span.text-black!= j + 1
+													+e.sessions 7 сеансов
+											-else
+												span!= j + 1
+											.line
+	+parts('footer')
+      
+
+
+

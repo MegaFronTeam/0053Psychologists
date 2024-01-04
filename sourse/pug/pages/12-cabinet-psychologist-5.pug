@@ -1,0 +1,61 @@
+extends ../layout/main.pug
+
+include ../blocks/sCabinet/_sCabinet.pug
+include ../blocks/sReg/_sReg.pug
+
+block variables
+	- let  mainPage= 'lk-page'
+	- let  bg= '11-cabinet-client-3.jpg'
+
+block title
+	- let  title= 'ЛК ПСИХОЛОГА 13 05'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('','','Личный кабинет')
+		+sCabinet
+			+b.sCabinet-body
+				.row
+					.col-md-auto
+						+e.card
+							.row
+								.col: +img('img/svg/visa.svg')
+								.col-auto: .number 4989 58** **** 0123
+							.row 
+								.col: span Основная карта
+								.col-auto
+									+e.delete-card(href='#modal-confrim' data-fancybox="modal"): +icon('cross')
+					.col-md-auto
+						+e.card
+							.row
+								.col: +img('img/svg/visa.svg')
+								.col-auto: .number 4989 58** **** 0123
+							.row 
+								.col: span Основная карта
+								.col-auto
+									+e.delete-card(href='#modal-confrim' data-fancybox="modal"): +icon('cross')
+					.col-12
+						+e.add-card(href='#')
+							+icon('plus')
+							| Добавить карту
+				+e.new-card
+					+e.new-card-title Привязать новую карту
+					+e.new-card-wrap
+						.row
+							.col-12
+								+input('', 'text', 'Номер карты')
+							.col
+								.sCabinet-body__input-wrap.form-group
+									.sCabinet-body__input-inner-wrap
+										input.sCabinet-body__input.form-control(inputmode='text' name='text' type='text' placeholder='ММ')
+										span / 
+										input.sCabinet-body__input.form-control(inputmode='text' name='text' type='text' placeholder='ГГ')
+									span.sCabinet-body__input-title Срок действия
+							.col-auto
+								+input('CVC', 'text', 'Код').cvc
+						+e.btn.btn.btn-primary(type="submit") Сохранить карту
+	+parts('footer')

@@ -1,0 +1,42 @@
+extends ../layout/main.pug
+
+include ../blocks/sCabinet/_sCabinet.pug
+include ../blocks/sReg/_sReg.pug
+
+block variables
+	- let  mainPage= 'lk-page'
+	- let  bg= '11-cabinet-client-3.jpg'
+
+block title
+	- let  title= 'ЛК ПСИХОЛОГА 13 04'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('','','Личный кабинет')
+		+sCabinet
+			+b.sCabinet-body
+				+e.client-row.row
+					+e.date-col.col-sm-auto: +input("по дате",'select','Сортировка:') 
+					+e.client-col.col-sm: +input("Все",'select','Клиент:') 
+					.col-sm-auto
+						+e.all-bils(href='#')
+							| Одним чеком
+							+icon('printer')
+				+e.bill-wrap.custom-scroll
+					-for(let i = 0; i < 15; i++)
+						+e.bill-row
+							.row
+								+e.bill-col.col-12.col-md: +e.bill-time 11.05.2023 18:28
+								+e.bill-col.col-6.col-md Психолог: #[span Ирина Снигач]
+								+e.bill-col.col-6.col-md Длительность: #[span 2ч: 15мин]
+								+e.bill-col.col-xl 
+									+e.print-wrap
+										| Списано: 
+										| 
+										span 3 600 ₽
+										+e.print(href='#'): +icon('printer')
+	+parts('footer')

@@ -27,7 +27,7 @@
 
 ### ЛК КЛИЕНТА
 1. <https://megafronteam.github.io/0053Psychologists/11-cabinet-client-1>
-2. 
+2. <https://megafronteam.github.io/0053Psychologists/11-cabinet-client-2>
 3. <https://megafronteam.github.io/0053Psychologists/11-cabinet-client-3>
 4. <https://megafronteam.github.io/0053Psychologists/11-cabinet-client-4>
 5. <https://megafronteam.github.io/0053Psychologists/11-cabinet-client-5>
@@ -41,3 +41,8 @@
 ### ПСИХОЛОГА
 1. <https://megafronteam.github.io/0053Psychologists/12-cabinet-psychologist-1>
 2. <https://megafronteam.github.io/0053Psychologists/12-cabinet-psychologist-2>
+3. <https://megafronteam.github.io/0053Psychologists/12-cabinet-psychologist-3>
+4. <https://megafronteam.github.io/0053Psychologists/12-cabinet-psychologist-4>
+5. <https://megafronteam.github.io/0053Psychologists/12-cabinet-psychologist-5>
+6. <https://megafronteam.github.io/0053Psychologists/12-cabinet-psychologist-6>
+7. <https://megafronteam.github.io/0053Psychologists/12-cabinet-psychologist-6-4>

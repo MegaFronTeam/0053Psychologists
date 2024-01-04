@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>ЛК ПСИХОЛОГА 12 02</title>
+		<title>ЛК ПСИХОЛОГА 13 05</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
@@ -71,53 +71,81 @@
 						<div class="sCabinet__row row">
 							<div class="sCabinet__col-main col">
 								<div class="sCabinet-body">
-									<div class="sCabinet-body__client-row row">
-										<div class="col-sm">
-											<div class="sCabinet-body__input-wrap form-group custom-select-wrap">
-												<select class="sCabinet-body__input form-select custom-select-js" data-placeholder="Все">
-													<option value="Все">Все</option>
-													<option value="Все1">Все1</option>
-													<option value="Все2">Все2</option>
-													<option value="Все3">Все3</option>
-													<option value="Все4">Все4</option>
-												</select><span class="sCabinet-body__input-title">Клиент:</span> 
+									<div class="row">
+										<div class="col-md-auto">
+											<div class="sCabinet-body__card">
+												<div class="row">
+													<div class="col"><img src="img/svg/visa.svg" alt="" loading="lazy"/>
+													</div>
+													<div class="col-auto">
+														<div class="number">4989 58** **** 0123</div>
+													</div>
+												</div>
+												<div class="row"> 
+													<div class="col"><span>Основная карта</span></div>
+													<div class="col-auto">
+														<a class="sCabinet-body__delete-card" href="#modal-confrim" data-fancybox="modal">
+															<svg class="icon icon-cross ">
+																<use xlink:href="img/svg/sprite.svg#cross"></use>
+															</svg>
+														</a>
+													</div>
+												</div>
 											</div>
 										</div>
-										<div class="col-sm-auto">
-											<div class="btn btn-primary" href="#">Позвонить</div>
+										<div class="col-md-auto">
+											<div class="sCabinet-body__card">
+												<div class="row">
+													<div class="col"><img src="img/svg/visa.svg" alt="" loading="lazy"/>
+													</div>
+													<div class="col-auto">
+														<div class="number">4989 58** **** 0123</div>
+													</div>
+												</div>
+												<div class="row"> 
+													<div class="col"><span>Основная карта</span></div>
+													<div class="col-auto">
+														<a class="sCabinet-body__delete-card" href="#modal-confrim" data-fancybox="modal">
+															<svg class="icon icon-cross ">
+																<use xlink:href="img/svg/sprite.svg#cross"></use>
+															</svg>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-12">
+											<a class="sCabinet-body__add-card" href="#">
+												<svg class="icon icon-plus ">
+													<use xlink:href="img/svg/sprite.svg#plus"></use>
+												</svg>Добавить карту
+											</a>
 										</div>
 									</div>
-									<div class="sCabinet-body__chat-wrap">
-										<div class="sCabinet-body__video"><img src="img/svg/zoom-icon.svg" alt="" loading="lazy"/>
+									<div class="sCabinet-body__new-card">
+										<div class="sCabinet-body__new-card-title">Привязать новую карту
 										</div>
-										<div class="sCabinet-body__chat">
-											<div class="sCabinet-body__chat-inner custom-scroll">
-												<div class="sCabinet-body__day"><span>28/10/23</span>
-													<div class="sCabinet-body__message">
-														<div class="sCabinet-body__message-item">
-															<p>Здравствуйте, рада вас слышать, готова.</p><span>28.10.23 17:31</span>
-														</div>
-														<div class="sCabinet-body__message-avatar"><img class="object-fit-js" src="img/avatar.jpg" alt="" loading="lazy"/>
-														</div>
+										<div class="sCabinet-body__new-card-wrap">
+											<div class="row">
+												<div class="col-12">
+													<div class="sCabinet-body__input-wrap form-group"><input class="sCabinet-body__input form-control" inputmode="text" name="text" type="text" placeholder=""/><span class="sCabinet-body__input-title">Номер карты</span>
 													</div>
-													<div class="sCabinet-body__message sCabinet-body__message--you">
-														<div class="sCabinet-body__message-item">
-															<p>Здравствуйте, вы готовы к встрече?</p><span>28.10.23 17:31</span>
-														</div>
-														<div class="sCabinet-body__message-avatar"><img class="object-fit-js" src="img/avatar.jpg" alt="" loading="lazy"/>
-														</div>
+												</div>
+												<div class="col">
+													<div class="sCabinet-body__input-wrap form-group">
+														<div class="sCabinet-body__input-inner-wrap">
+															<input class="sCabinet-body__input form-control" inputmode="text" name="text" type="text" placeholder="ММ"><span>/ </span>
+															<input class="sCabinet-body__input form-control" inputmode="text" name="text" type="text" placeholder="ГГ">
+														</div><span class="sCabinet-body__input-title">Срок действия</span>
+													</div>
+												</div>
+												<div class="col-auto">
+													<div class="sCabinet-body__input-wrap form-group"><input class="sCabinet-body__input form-control cvc" inputmode="text" name="text" type="text" placeholder="CVC"/><span class="sCabinet-body__input-title">Код</span>
 													</div>
 												</div>
 											</div>
-											<div class="send-message">
-												<div class="send-message__input-wrap form-group"><input class="send-message__input form-control" inputmode="text" name="text" type="text" placeholder="Введите сообщение"/>
-													<button type="submit">
-														<svg class="icon icon-send ">
-															<use xlink:href="img/svg/sprite.svg#send"></use>
-														</svg>
-													</button>
-												</div>
-											</div>
+											<button class="sCabinet-body__btn btn btn-primary" type="submit">Сохранить карту
+											</button>
 										</div>
 									</div>
 								</div>
