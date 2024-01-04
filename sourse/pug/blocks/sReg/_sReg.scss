@@ -180,12 +180,76 @@
 	}
 }
 
-.form-wrap--payments{
-	margin-inline: auto;
-	max-width: rem(310);
-}
+	.form-wrap--payments{
+		margin-inline: auto;
+		max-width: rem(310);
+	}
 
 .documents-block{
 	--sPT: 0;
 	--sPB: #{rem(60)};
+}
+
+.regTerms{
+	.sCabinet-aside{
+		max-width: rem(640);
+	}
+	.documents-block{
+		margin-inline: auto;
+		max-width: 1090px;
+	}
+	.h5{
+		margin-bottom: var(--sTPB);
+		margin-top: var(--sPT);
+	}
+}
+
+.proveEducation{
+	margin-inline: auto;
+	max-width: rem(800);
+	padding-bottom: var(--sPB);
+	.form-wrap{
+
+		@include media-breakpoint-up(md) {
+			&__short-block{
+				max-width: rem(310);
+			}
+		}
+
+		&__text-field{
+			.form-group{
+				display: flex;
+				flex-direction: column;
+				padding-top: 0;
+			}
+		}
+	}
+	.btn-check + .btn-outline-primary{
+		--bs-btn-color: var(--Gray-light, #AFB9D2);
+		--bs-btn-border-color: var(--Gray-light, #AFB9D2);
+		--bs-btn-active-bg: #{$primary};
+		--bs-btn-active-border-color: #{$primary}; 
+		border-radius: 10px;
+		min-width: 60px;
+		padding: 8px;
+		margin-bottom: rem(8);
+	}
+
+	textarea.form-control{
+		border-radius: 10px;
+		border: 1px solid var(--Gray-light, #AFB9D2);
+		background: var(--White, #FFF);
+		margin-top: 0;
+		padding: 14px;
+		& +.form-wrap__input-title{
+			order: -1;
+			display: block;
+			position: static;
+			transform: none;
+			margin-bottom: 10px;
+			height: auto;
+			font-size: 12px;
+		}
+	}
+	
 }

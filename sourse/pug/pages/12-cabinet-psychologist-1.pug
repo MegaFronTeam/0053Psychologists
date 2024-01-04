@@ -8,7 +8,7 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= 'ЛК КЛИЕНТА 11 01'
+	- let  title= 'ЛК ПСИХОЛОГА 12 01'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -29,10 +29,10 @@ block pagecontent
 							
 							
 							+input("Электронная почта*",'email') 
-							.data-picker-wrap
-								+input("Дата рождения",'text')(required readonly autocomplete="off"  class="date-input" value="22.03.1990").data-picker--js
-									+icon('calendar')
-									.smallest.text-primary Регистрация доступна только совершеннолетним 
+							//- .data-picker-wrap
+							//- 	+input("Дата рождения",'text')(required readonly autocomplete="off"  class="date-input" value="22.03.1990").data-picker--js
+							//- 		+icon('calendar')
+							//- 		.smallest.text-primary Регистрация доступна только совершеннолетним 
 							+e.input-wrap.form-group
 								+e.SPAN.input-title.smallest.d-block.position-static Пол
 								.row
