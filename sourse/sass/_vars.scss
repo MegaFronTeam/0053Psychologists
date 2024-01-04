@@ -919,7 +919,7 @@ $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
 
-$input-placeholder-color:               var(--#{$prefix}secondary-color) !default;
+$input-placeholder-color:               #AFB9D2;
 $input-plaintext-color:                 var(--#{$prefix}body-color) !default;
 
 $input-height-border:                   calc(#{$input-border-width} * 2) !default; // stylelint-disable-line function-disallowed-list

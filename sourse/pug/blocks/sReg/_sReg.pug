@@ -173,3 +173,51 @@ mixin RegTerms()
 						+document()
 					.col-lg-6
 						+document('empty').--mepty
+
+mixin ProveEducation()
+	+b.proveEducation
+		+b.form-wrap
+			.row
+				.col-md-6
+					+e.short-block: +input("Образование*") 
+				.col-12
+				.col-md-6
+					+e.short-block: +input("Опыт работы*") 
+				.col-md-6
+					+e.short-block: +input("Выберите не более 10",'select',"С какими проблемами работаете*")(multiple="multiple")
+				.col-md-6
+					+e.short-block: +input("Налоговый статус*") 
+				.col-md-6
+					+e.short-block: +input('Выберите подходящий вариант','select',"Сколько времени можете уделять работе на сервисе")
+				.col-lg-12
+					+e.input-wrap.form-group
+						+e.SPAN.input-title.smallest.d-block.position-static Личная терапия*
+						.row
+							.col-auto
+								label
+									input(type="radio" name="self" checked).btn-check
+									span.btn.btn-outline-primary Есть
+									
+							.col-auto
+								label
+									input(type="radio" name="self").btn-check
+									span.btn.btn-outline-primary Нет
+				.col-lg-12
+					+e.text-field: +input('Введите текст','textarea',"Опыт работы*")
+				.col-lg-12
+					+e.input-wrap.form-group
+						+e.SPAN.input-title.smallest.d-block.position-static Супервизия*
+						.row
+							.col-auto
+								label
+									input(type="radio" name="super" checked).btn-check
+									span.btn.btn-outline-primary Есть
+									
+							.col-auto
+								label
+									input(type="radio" name="super").btn-check
+									span.btn.btn-outline-primary Нет
+				.col-lg-12
+					+e.text-field: +input('Введите текст','textarea',"Укажите супервизора с контактами")
+				.col-lg-12
+					+e.text-field: +input('Введите текст','textarea',"Расскажите о себе")
