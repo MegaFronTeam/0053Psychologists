@@ -16,13 +16,22 @@ mixin modal()
 
 	//  #modal-successful
 	div(id="modal-successful"  style="display: none" )
-		+b.modal-win
-			+form-wrap
+		+b.modal-win--sm
+			+b.form-wrap
 				.text-center
 					+e.title.form-data Спасибо за заявку
 					p Наши менеджеры свяжутся с Вами в ближайшее время и ответят на все интересующие вопросы
-				+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Понятно
-	// #modal-successful
+				+e.BUTTON.btn.btn.btn-primary(type="button"  ) Понятно
+	// /#modal-successful
 
+	//  #modal-successful
+	div(id="modal-successful2"  style="display: none" )
+		+b.modal-win--sm
+			+b.form-wrap
+				.text-center
+					+e.title.form-data Ваш аккаунт создан
+					p Вы уже можете пользоваться всеми функциями сервиса
+				+e.BUTTON.btn.btn.btn-primary(type="button"  ) Понятно
+	// /#modal-successful
 	
 	// end modals

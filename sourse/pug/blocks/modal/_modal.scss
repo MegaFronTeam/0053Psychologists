@@ -150,6 +150,8 @@ a {
 .fancybox__content>.f-button.is-close-btn {
 	top: rem(16);
 	right: rem(20);
+	--fancybox-color: #AFB9D2;
+	opacity: 1;
 }
 
 .fancybox-throwOutUp {
@@ -180,19 +182,15 @@ a {
   }
 }
 
-#modal-successful {
-	.modal-win {
+ 
+	.modal-win--sm {
 		padding: rem(40) rem(20);
 		@include media-breakpoint-up(sm) {
 			padding: rem(40) rem(70);
-		}
-		
-	}
+		} 
 	.form-wrap{
-		form {
-			display: flex;
-			flex-direction: column;
-		}
+		display: flex;
+		flex-direction: column; 
 		&__title {
 			font-size: rem(24);
 			font-weight: 500;
@@ -211,6 +209,7 @@ a {
 			margin-bottom: 0;
 			font-weight: 400;
 			font-size: rem(16);
+			width: 100%;
 		}
 	}
 }

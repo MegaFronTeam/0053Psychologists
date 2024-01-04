@@ -17,6 +17,7 @@ class JSCCommon {
 			trapFocus: false,
 			placeFocusBack: false,
 			infinite: false,
+			compact: false,
 			// type: 'html',
 			dragToClose: false,
 			autoFocus: false,
