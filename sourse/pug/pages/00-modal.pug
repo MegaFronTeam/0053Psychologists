@@ -24,17 +24,23 @@ block pagecontent
 	main
 		.container
 			h1 Modal page 
-			mixin btn(a, t)
+			mixin btn(a, t) 
 				.col-auto
 					a(href= a).btn.btn-primary.link-modal-js= t
 			.section.pt-0
-				.row
+				.row 
 					+btn("#modal-call", 'call')
-					+btn("#modal-successful", 'modal-successful')
+					+btn("#modal-successful", 'call')
 			.section.pt-0
 				h3 РЕГИСТРАЦИЯ КЛИЕНТА
 				.row
 					+btn("#modal-successful2", 'Ваш аккаунт создан')
+			.section.pt-0
+				h3 ЛК КЛИЕНТА
+				.row
+					+btn("#modal-confrim", 'modal-confrim')
+					+btn("#modal-question", 'modal-question')
+
 	+parts('footer')
       
 

@@ -1,0 +1,36 @@
+extends ../layout/main.pug
+
+include ../blocks/sCabinet/_sCabinet.pug
+include ../blocks/sReg/_sReg.pug
+
+block variables
+	- let  mainPage= 'lk-page'
+	- let  bg= '11-cabinet-client-3.jpg'
+
+block title
+	- let  title= 'ЛК КЛИЕНТА 11 10'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('','','Личный кабинет')
+		+sCabinet
+			+b.sCabinet-body
+				+e.support
+					.row
+						.col-sm
+							+e.support-wrap.custom-scroll
+								-for(let i = 0; i < 14; i++)
+									+e.support-item
+										+e.support-date 11.05.2023 18:28
+										p Не могу перенести время сессии
+										if i > 1
+											+e.support-more-info.disabled i
+										else
+											+e.support-more-info i
+						.col-sm-auto 
+							+e.btn.btn.btn-outline-primary(href='#modal-question' data-fancybox="modal") Задать вопрос
+	+parts('footer')

@@ -1,0 +1,29 @@
+extends ../layout/main.pug
+
+include ../blocks/sCabinet/_sCabinet.pug
+include ../blocks/sReg/_sReg.pug
+
+block variables
+	- let  mainPage= 'lk-page'
+	- let  bg= '11-cabinet-client-3.jpg'
+
+block title
+	- let  title= 'ЛК КЛИЕНТА 11 09'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('','','Личный кабинет')
+		+sCabinet
+			+b.sCabinet-body
+				+e.balance
+					| НА БАЛАНСЕ
+					span 5 000 ₽
+				+b.form-wrap--balance
+					+input('Введите сертификат', 'text')(value='RTHko89*pNVBN').is-invalid
+						.invalid-feedback Неверный сертификат
+					+e.btn.btn.btn-primary(type='submit') Применить
+	+parts('footer')

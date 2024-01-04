@@ -151,6 +151,23 @@ function eventHandler() {
 		$( '.sCalendar__td--body.active').removeClass(activeCLass)
 		$(this).toggleClass(activeCLass)
 	})
+
+	let addCardBtn = document.querySelector('.sCabinet-body__add-card');
+	if(addCardBtn) {
+		addCardBtn.addEventListener('click', (e) => {
+			e.preventDefault();
+			addCardBtn.classList.toggle('active');
+			document.querySelector('.sCabinet-body__new-card').classList.toggle('active');
+		});
+	}
+	document.addEventListener('click', (e) => {
+		let modalTarget = e.target.closest('.sCabinet-body__new-card');
+		let addBtnTarget = e.target.closest('.sCabinet-body__add-card');
+		if(!modalTarget && !addBtnTarget) {
+			addCardBtn.classList.remove('active');
+			document.querySelector('.sCabinet-body__new-card').classList.remove('active');
+		}
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

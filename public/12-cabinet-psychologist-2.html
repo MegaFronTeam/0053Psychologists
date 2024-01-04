@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Главная</title>
+		<title>ЛК ПСИХОЛОГА 11 02</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
@@ -29,33 +29,120 @@
 			}
 		</script>
 	</head>
-	<body class="main-page">
+	<body class="lk-page" data-bg="11-cabinet-client-3.jpg">
 		<div class="main-wrapper">
 			<script>addBlock(`header`)</script>
 			<div id="headerWrap"></div>
 			<main>
-				<div class="container">
-					<h1>Modal page </h1>
-					<div class="section pt-0">
-						<div class="row"> 
-												<div class="col-auto"><a class="btn btn-primary link-modal-js" href="#modal-call">call</a></div>
-												<div class="col-auto"><a class="btn btn-primary link-modal-js" href="#modal-successful">call</a></div>
-						</div>
+				<div class="page-head">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Личный кабинет</span>
+										<meta itemprop="position" content="2"/></a></li>
+							</ol>
+						</nav>
 					</div>
-					<div class="section pt-0">
-						<h3>РЕГИСТРАЦИЯ КЛИЕНТА</h3>
-						<div class="row">
-												<div class="col-auto"><a class="btn btn-primary link-modal-js" href="#modal-successful2">Ваш аккаунт создан</a></div>
+				</div>
+				<!-- start sCabinet-->
+				<div class="sCabinet section" id="sCabinet">
+					<div class="container">
+						<div class="sCabinet-head">
+							<div class="row">
+								<div class="sCabinet-head__col col-md-3">
+									<div class="sCabinet-head__avatar-block">
+										<div class="sCabinet-head__img-wrap"><img src="img/avatar.jpg" alt="" loading="lazy"/>
+										</div>
+										<div class="sCabinet-head__text">МАРИНА ЛИОНЧИКОВА
+										</div>
+									</div>
+								</div>
+								<div class="col">
+									<ul class="sCabinet-head__nav">
+										<li><a class="active" href="#">МОЙ ПРОФИЛЬ</a></li>
+										<li><a href="#">ФИНАНСЫ</a></li>
+										<li><a href="#">ПОДДЕРЖКА</a></li>
+									</ul>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="section pt-0">
-						<h3>ЛК КЛИЕНТА</h3>
-						<div class="row">
-												<div class="col-auto"><a class="btn btn-primary link-modal-js" href="#modal-confrim">modal-confrim</a></div>
-												<div class="col-auto"><a class="btn btn-primary link-modal-js" href="#modal-question">modal-question</a></div>
+						<div class="sCabinet__row row">
+							<div class="sCabinet__col-main col">
+								<div class="sCabinet-body">
+									<div class="sCabinet-body__client-row row">
+										<div class="col-sm">
+											<div class="sCabinet-body__input-wrap form-group custom-select-wrap">
+												<select class="sCabinet-body__input form-select custom-select-js" data-placeholder="Все">
+													<option value="Все">Все</option>
+													<option value="Все1">Все1</option>
+													<option value="Все2">Все2</option>
+													<option value="Все3">Все3</option>
+													<option value="Все4">Все4</option>
+												</select><span class="sCabinet-body__input-title">Клиент:</span> 
+											</div>
+										</div>
+										<div class="col-sm-auto">
+											<div class="btn btn-primary" href="#">Позвонить</div>
+										</div>
+									</div>
+									<div class="sCabinet-body__chat-wrap">
+										<div class="sCabinet-body__video"><img src="img/svg/zoom-icon.svg" alt="" loading="lazy"/>
+										</div>
+										<div class="sCabinet-body__chat">
+											<div class="sCabinet-body__chat-inner custom-scroll">
+												<div class="sCabinet-body__day"><span>28/10/23</span>
+													<div class="sCabinet-body__message">
+														<div class="sCabinet-body__message-item">
+															<p>Здравствуйте, рада вас слышать, готова.</p><span>28.10.23 17:31</span>
+														</div>
+														<div class="sCabinet-body__message-avatar"><img class="object-fit-js" src="img/avatar.jpg" alt="" loading="lazy"/>
+														</div>
+													</div>
+													<div class="sCabinet-body__message sCabinet-body__message--you">
+														<div class="sCabinet-body__message-item">
+															<p>Здравствуйте, вы готовы к встрече?</p><span>28.10.23 17:31</span>
+														</div>
+														<div class="sCabinet-body__message-avatar"><img class="object-fit-js" src="img/avatar.jpg" alt="" loading="lazy"/>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="send-message">
+												<div class="send-message__input-wrap form-group"><input class="send-message__input form-control" inputmode="text" name="text" type="text" placeholder="Введите сообщение"/>
+													<button type="submit">
+														<svg class="icon icon-send ">
+															<use xlink:href="img/svg/sprite.svg#send"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sCabinet__col-aside order-lg-first">
+								<div class="sCabinet-aside">
+									<ul>
+										<li><a href="#">МОИ ДАННЫЕ
+												<div class="smallest text-secondary">Ирина Снигач</div></a></li>
+										<li><a class="active" href="#">МОЙ ПСИХОЛОГ
+												<div class="sCabinet-aside__status smallest" style="--color:#FD2734 ">offline
+												</div></a></li>
+										<li><a href="#">РАСПИСАНИЕ
+												<div class="smallest text-secondary">Следующий сеанс:<br/>Чт. 08.01.23 в 16:00</div></a></li>
+										<li><a href="#">ЧАТ И ВИДЕОЧАТ
+												<div class="smallest text-secondary">Проведённых сессий: 17</div></a></li>
+										<li><a href="#">МОИ ЗАМЕТКИ</a></li>
+										<li><a href="#">РАССЫЛКА</a></li>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
+				<!-- end sCabinet-->
 			</main>
 			<script>addBlock(`footer`)</script>
 			<div id="footerWrap"></div>
