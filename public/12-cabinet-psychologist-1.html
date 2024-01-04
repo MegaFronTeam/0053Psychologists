@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>ЛК КЛИЕНТА 11 05</title>
+		<title>ЛК ПСИХОЛОГА 12 01</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
@@ -29,7 +29,7 @@
 			}
 		</script>
 	</head>
-	<body class="lk-page" data-bg="11-cabinet-client-3.jpg">
+	<body class="lk-page">
 		<div class="main-wrapper">
 			<script>addBlock(`header`)</script>
 			<div id="headerWrap"></div>
@@ -70,99 +70,85 @@
 						</div>
 						<div class="sCabinet__row row">
 							<div class="sCabinet__col-main col">
-								<div class="sCabinet-body"> 
-									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="importnat" type="checkbox"/><span class="custom-input__text form-check-label">Только важные</span>
-									</label>
-									<div class="sCabinet-body__notes sCabinet-body__notes--full-list custom-scroll">
-										<div class="note">
-											<div class="note__date">11.05.2023 16:00
+								<div class="sCabinet-body">
+									<div class="form-wrap form-wrap--reg ms-0">
+										<div class="form-wrap__row row justify-content-between">
+											<div class="form-wrap__col">
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Имя и фамилия (или псевдоним)*"/><span class="form-wrap__input-title">Имя и фамилия (или псевдоним)*</span> 
+												</div>
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control is-invalid" inputmode="tel" name="tel" type="tel" placeholder="Телефон*"/><span class="form-wrap__input-title">Телефон*</span>
+												</div>
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="Электронная почта*"/><span class="form-wrap__input-title">Электронная почта*</span> 
+												</div>
+												<div class="form-wrap__input-wrap form-group"><span class="form-wrap__input-title smallest d-block position-static">Пол</span>
+													<div class="row">
+														<div class="col-auto">
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Женщина</span>
+															</label>
+														</div>
+														<div class="col-auto">
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="custom-input__text form-check-label">Мужчина</span>
+															</label>
+														</div>
+													</div>
+												</div>
+												<div class="form-wrap__input-wrap form-group"><span class="form-wrap__input-title smallest d-block position-static">Фото на аватар</span>
+													<div class="avatar-block-wrap">
+														<div class="avatar-block-wrap__btn-delete photo-file-delete-js d-none">
+															<svg class="icon icon-trash-can ">
+																<use xlink:href="img/svg/sprite.svg#trash-can"></use>
+															</svg>
+														</div>
+														<label class="avatar-block add-photo">
+															<input type="file" name="" onchange="loadFile(event)"><span class="avatar-block__img-wrap bg-wrap"><img class="img-bg img-preview" src="img/avatar.jpg" alt="">
+															<svg class="icon icon-avatar ">
+																<use xlink:href="img/svg/sprite.svg#avatar"></use>
+															</svg></span>
+														</label>
+														<div class="smallest text-primary">Фото можно загрузить в формате jpeg, jpg, png или выбрать аватар из готовых</div>
+													</div>
+												</div>
 											</div>
-											<p>В&nbsp;отличии от&nbsp;lorem ipsum, текст рыба на&nbsp;русском языке наполнит любой макет непонятным смыслом и&nbsp;придаст неповторимый колорит советских времён. Вы&nbsp;посещали эту страницу несколько раз</p>
-											<a class="note__favorite" href="#">
-												<svg class="icon icon-star ">
-													<use xlink:href="img/svg/sprite.svg#star"></use>
-												</svg>
-											</a>
-										</div>
-										<div class="note">
-											<div class="note__date">11.05.2023 16:00
+											<div class="form-wrap__col">
+												<div class="form-wrap__input-wrap form-group custom-select-wrap">
+													<select class="form-wrap__input form-select custom-select-js" name="select" data-placeholder="17: 31: 51 (мск+0)">
+														<option value="17: 31: 51 (мск+0)">17: 31: 51 (мск+0)</option>
+														<option value="17: 31: 51 (мск+0)1">17: 31: 51 (мск+0)1</option>
+														<option value="17: 31: 51 (мск+0)2">17: 31: 51 (мск+0)2</option>
+														<option value="17: 31: 51 (мск+0)3">17: 31: 51 (мск+0)3</option>
+														<option value="17: 31: 51 (мск+0)4">17: 31: 51 (мск+0)4</option>
+													</select><span class="form-wrap__input-title">Часовой пояс*</span> 
+												</div>
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="password" name="password" type="password" placeholder="Старый пароль"/><span class="form-wrap__input-title">Старый пароль</span>
+													<div class="btn-toggle-type-input btn-toggle-type-input--js">
+														<svg class="icon icon-eye ">
+															<use xlink:href="img/svg/sprite.svg#eye"></use>
+														</svg>
+													</div>
+												</div>
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control is-invalid" inputmode="text" name="text" type="text" placeholder="Новый пароль"/><span class="form-wrap__input-title">Новый пароль</span>
+													<div class="btn-toggle-type-input btn-toggle-type-input--js">
+														<svg class="icon icon-eye-off ">
+															<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+														</svg>
+													</div>
+													<div class="smallest text-primary">Пароль должен содержать большие и маленькие буквы на английском языке, цифры и символы (не менее 10 знаков)</div>
+												</div>
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="password" name="password" type="password" placeholder="Подтверждение пароля*"/><span class="form-wrap__input-title">Подтверждение пароля*</span>
+													<div class="btn-toggle-type-input btn-toggle-type-input--js">
+														<svg class="icon icon-eye ">
+															<use xlink:href="img/svg/sprite.svg#eye"></use>
+														</svg>
+													</div>
+												</div>
+												<a class="form-wrap__log-out" href="#">Выйти из личного кабинета
+												</a>
 											</div>
-											<p>В&nbsp;отличии от&nbsp;lorem ipsum, текст рыба на&nbsp;русском языке наполнит любой макет непонятным смыслом и&nbsp;придаст неповторимый колорит советских времён. Вы&nbsp;посещали эту страницу несколько раз</p>
-											<a class="note__favorite" href="#">
-												<svg class="icon icon-star ">
-													<use xlink:href="img/svg/sprite.svg#star"></use>
-												</svg>
-											</a>
-										</div>
-										<div class="note">
-											<div class="note__date">11.05.2023 16:00
-											</div>
-											<p>В&nbsp;отличии от&nbsp;lorem ipsum, текст рыба на&nbsp;русском языке наполнит любой макет непонятным смыслом и&nbsp;придаст неповторимый колорит советских времён. Вы&nbsp;посещали эту страницу несколько раз</p>
-											<a class="note__favorite" href="#">
-												<svg class="icon icon-star ">
-													<use xlink:href="img/svg/sprite.svg#star"></use>
-												</svg>
-											</a>
-										</div>
-										<div class="note">
-											<div class="note__date">11.05.2023 16:00
-											</div>
-											<p>В&nbsp;отличии от&nbsp;lorem ipsum, текст рыба на&nbsp;русском языке наполнит любой макет непонятным смыслом и&nbsp;придаст неповторимый колорит советских времён. Вы&nbsp;посещали эту страницу несколько раз</p>
-											<a class="note__favorite" href="#">
-												<svg class="icon icon-star ">
-													<use xlink:href="img/svg/sprite.svg#star"></use>
-												</svg>
-											</a>
-										</div>
-										<div class="note">
-											<div class="note__date">11.05.2023 16:00
-											</div>
-											<p>В&nbsp;отличии от&nbsp;lorem ipsum, текст рыба на&nbsp;русском языке наполнит любой макет непонятным смыслом и&nbsp;придаст неповторимый колорит советских времён. Вы&nbsp;посещали эту страницу несколько раз</p>
-											<a class="note__favorite" href="#">
-												<svg class="icon icon-star ">
-													<use xlink:href="img/svg/sprite.svg#star"></use>
-												</svg>
-											</a>
-										</div>
-										<div class="note">
-											<div class="note__date">11.05.2023 16:00
-											</div>
-											<p>В&nbsp;отличии от&nbsp;lorem ipsum, текст рыба на&nbsp;русском языке наполнит любой макет непонятным смыслом и&nbsp;придаст неповторимый колорит советских времён. Вы&nbsp;посещали эту страницу несколько раз</p>
-											<a class="note__favorite" href="#">
-												<svg class="icon icon-star ">
-													<use xlink:href="img/svg/sprite.svg#star"></use>
-												</svg>
-											</a>
-										</div>
-										<div class="note">
-											<div class="note__date">11.05.2023 16:00
-											</div>
-											<p>В&nbsp;отличии от&nbsp;lorem ipsum, текст рыба на&nbsp;русском языке наполнит любой макет непонятным смыслом и&nbsp;придаст неповторимый колорит советских времён. Вы&nbsp;посещали эту страницу несколько раз</p>
-											<a class="note__favorite" href="#">
-												<svg class="icon icon-star ">
-													<use xlink:href="img/svg/sprite.svg#star"></use>
-												</svg>
-											</a>
-										</div>
-										<div class="note">
-											<div class="note__date">11.05.2023 16:00
-											</div>
-											<p>В&nbsp;отличии от&nbsp;lorem ipsum, текст рыба на&nbsp;русском языке наполнит любой макет непонятным смыслом и&nbsp;придаст неповторимый колорит советских времён. Вы&nbsp;посещали эту страницу несколько раз</p>
-											<a class="note__favorite" href="#">
-												<svg class="icon icon-star ">
-													<use xlink:href="img/svg/sprite.svg#star"></use>
-												</svg>
-											</a>
 										</div>
 									</div>
-									<div class="send-message">
-										<div class="send-message__input-wrap form-group"><input class="send-message__input form-control" inputmode="text" name="text" type="text" placeholder="Введите сообщение"/>
-											<button type="submit">
-												<svg class="icon icon-send ">
-													<use xlink:href="img/svg/sprite.svg#send"></use>
-												</svg>
-											</button>
-										</div>
+									<div class="text-center">
+										<button class="sCabinet-body__btn btn btn-primary">Сохранить
+										</button>
 									</div>
 								</div>
 							</div>

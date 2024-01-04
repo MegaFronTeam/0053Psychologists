@@ -24,5 +24,25 @@ mixin modal()
 				+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Понятно
 	// #modal-successful
 
+	//  #modal-confrim
+	div(id="modal-confrim"  style="display: none" )
+		+b.modal-win--confrim
+			p Вы действительно хотите удалить карту?
+			.row
+				.col-auto: +e.btn.btn.btn-primary(href='#') Удалить
+				.col-auto: +e.btn.btn.btn-outline-light(href='#') Отмена
+	// #modal-confrim
+
+	div(id="modal-question"  style="display: none" )
+		+b.modal-win--question
+			+form-wrap
+				+e.title.form-data.h4 Задать вопрос
+				+e.wrap
+					+input("Введите текст", 'text', 'Тема')
+					+input('Введите текст', 'textarea', 'Сообщение')
+				.row.justify-content-center
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Отправить
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+	// #modal-question
 	
 	// end modals

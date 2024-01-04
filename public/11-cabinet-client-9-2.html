@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>РЕГИСТРАЦИЯ КЛИЕНТА 10 4</title>
+		<title>ЛК КЛИЕНТА 11 09</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
@@ -29,60 +29,80 @@
 			}
 		</script>
 	</head>
-	<body>
+	<body class="lk-page" data-bg="11-cabinet-client-3.jpg">
 		<div class="main-wrapper">
 			<script>addBlock(`header`)</script>
 			<div id="headerWrap"></div>
 			<main>
-				<!-- start sReg-->
-				<section class="sReg section" id="sReg">
+				<div class="page-head">
 					<div class="container">
-						<div class="section-title text-center">
-							<h1>РЕГИСТРАЦИЯ ПСИХОЛОГА</h1>
-							<p>ПРИВЯЖИТЕ СВОЮ КАРТУ</p>
-							<div class="section-title__sub-text">На данную карту Вы будете получать оплату за фактически проведённые сессии с клиентами
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Личный кабинет</span>
+										<meta itemprop="position" content="2"/></a></li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				<!-- start sCabinet-->
+				<div class="sCabinet section" id="sCabinet">
+					<div class="container">
+						<div class="sCabinet-head">
+							<div class="row">
+								<div class="sCabinet-head__col col-md-3">
+									<div class="sCabinet-head__avatar-block">
+										<div class="sCabinet-head__img-wrap"><img src="img/avatar.jpg" alt="" loading="lazy"/>
+										</div>
+										<div class="sCabinet-head__text">МАРИНА ЛИОНЧИКОВА
+										</div>
+									</div>
+								</div>
+								<div class="col">
+									<ul class="sCabinet-head__nav">
+										<li><a class="active" href="#">МОЙ ПРОФИЛЬ</a></li>
+										<li><a href="#">ФИНАНСЫ</a></li>
+										<li><a href="#">ПОДДЕРЖКА</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
-						<div class="sReg__inner">
-							<div class="ball-nav">
-								<a class="ball-nav__item btn btn-outline-secondary active" href="#">
-									<svg class="icon icon-check ">
-										<use xlink:href="img/svg/sprite.svg#check"></use>
-									</svg>
-								</a>
-								<a class="ball-nav__item btn btn-outline-secondary active" href="#">2
-								</a>
-								<a class="ball-nav__item btn btn-outline-secondary" href="#">3
-								</a>
-								<a class="ball-nav__item btn btn-outline-secondary" href="#">4
-								</a>
-								<a class="ball-nav__item btn btn-outline-secondary" href="#">5
-								</a>
-								<a class="ball-nav__item btn btn-outline-secondary" href="#">6
-								</a>
+						<div class="sCabinet__row row">
+							<div class="sCabinet__col-main col">
+								<div class="sCabinet-body">
+									<div class="sCabinet-body__balance">НА БАЛАНСЕ<span>5 000 ₽</span>
+									</div>
+									<div class="form-wrap form-wrap--balance">
+										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control is-invalid" inputmode="text" name="text" type="text" placeholder="Введите сертификат" value="RTHko89*pNVBN"/><span class="form-wrap__input-title">Введите сертификат</span>
+											<div class="invalid-feedback">Неверный сертификат</div>
+										</div>
+										<button class="form-wrap__btn btn btn-primary" type="submit">Применить
+										</button>
+									</div>
+								</div>
 							</div>
-						</div>
-						<div class="form-wrap form-wrap--payments">
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control card-mask" inputmode="numeric" name="text" type="text" placeholder="Номер карты*" required="required"/><span class="form-wrap__input-title">Номер карты*</span> 
-							</div>
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control date-mask" inputmode="numeric" name="text" type="text" placeholder="Срок действия*" required="required"/><span class="form-wrap__input-title">Срок действия*</span> 
-							</div>
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="ФИО*" required="required"/><span class="form-wrap__input-title">ФИО*</span>
-							</div>
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control cvv-mask" inputmode="numeric" name="text" type="text" placeholder="CVV*" required="required"/><span class="form-wrap__input-title">CVV*</span>
-							</div>
-						</div>
-						<div class="sReg__pay-icon"><img src="img/pay-1.png" alt="" loading="lazy"/><img src="img/pay-2.png" alt="" loading="lazy"/><img src="img/pay-3.png" alt="" loading="lazy"/><img src="img/pay-4.png" alt="" loading="lazy"/><img src="img/pay-5.png" alt="" loading="lazy"/>
-						</div>
-						<div class="text-center">
-							<button class="sReg__btn btn btn-primary">Далее
-							</button>
-							<div class="sReg__policy text-center smallest text-secondary">Платёжные системы не распространяют и не продают вашу персональную информацию. Это указано в <a href="#">уведомлении о конфиденциальности</a>
+							<div class="sCabinet__col-aside order-lg-first">
+								<div class="sCabinet-aside">
+									<ul>
+										<li><a href="#">МОИ ДАННЫЕ
+												<div class="smallest text-secondary">Ирина Снигач</div></a></li>
+										<li><a class="active" href="#">МОЙ ПСИХОЛОГ
+												<div class="sCabinet-aside__status smallest" style="--color:#FD2734 ">offline
+												</div></a></li>
+										<li><a href="#">РАСПИСАНИЕ
+												<div class="smallest text-secondary">Следующий сеанс:<br/>Чт. 08.01.23 в 16:00</div></a></li>
+										<li><a href="#">ЧАТ И ВИДЕОЧАТ
+												<div class="smallest text-secondary">Проведённых сессий: 17</div></a></li>
+										<li><a href="#">МОИ ЗАМЕТКИ</a></li>
+										<li><a href="#">РАССЫЛКА</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
-				</section>
-				<!-- end sReg-->
+				</div>
+				<!-- end sCabinet-->
 			</main>
 			<script>addBlock(`footer`)</script>
 			<div id="footerWrap"></div>
