@@ -23,10 +23,9 @@
     }
   }
   &__btn {
-    @extend .btn;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 600;
+    // @extend .btn;
+    cursor: pointer; 
+    // font-weight: 600;
     padding: 16px;
     margin-bottom: 16px;
     margin-top: 40px;
