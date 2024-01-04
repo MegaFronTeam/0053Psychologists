@@ -176,21 +176,78 @@
 		<!-- #modal-call-->
 		<!--  #modal-successful-->
 		<div id="modal-successful" style="display: none">
-			<div class="modal-win">
+			<div class="modal-win modal-win--sm">
+				<div class="form-wrap">
+					<div class="text-center">
+						<div class="form-wrap__title form-data">Спасибо за заявку
+						</div>
+						<p>Наши менеджеры свяжутся с Вами в ближайшее время и ответят на все интересующие вопросы</p>
+					</div>
+					<button class="form-wrap__btn btn btn-primary" type="button">Понятно
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- /#modal-successful-->
+		<!--  #modal-successful-->
+		<div id="modal-successful2" style="display: none">
+			<div class="modal-win modal-win--sm">
+				<div class="form-wrap">
+					<div class="text-center">
+						<div class="form-wrap__title form-data">Ваш аккаунт создан
+						</div>
+						<p>Вы уже можете пользоваться всеми функциями сервиса</p>
+					</div>
+					<button class="form-wrap__btn btn btn-primary" type="button">Понятно
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- /#modal-successful-->
+		<!--  #modal-confrim-->
+		<div id="modal-confrim" style="display: none">
+			<div class="modal-win modal-win--confrim">
+				<p>Вы действительно хотите удалить карту?</p>
+				<div class="row">
+					<div class="col-auto">
+						<a class="modal-win__btn btn btn-primary" href="#">Удалить
+						</a>
+					</div>
+					<div class="col-auto">
+						<a class="modal-win__btn btn btn-outline-light" href="#">Отмена
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-confrim-->
+		<div id="modal-question" style="display: none">
+			<div class="modal-win modal-win--question">
 				<div class="form-wrap">
 					<form>
-						<div class="text-center">
-							<div class="form-wrap__title form-data">Спасибо за заявку
-							</div>
-							<p>Наши менеджеры свяжутся с Вами в ближайшее время и ответят на все интересующие вопросы</p>
+						<div class="form-wrap__title form-data h4">Задать вопрос
 						</div>
-						<button class="form-wrap__btn btn btn-primary" type="submit">Понятно
-						</button>
+						<div class="form-wrap__wrap">
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Введите текст"/><span class="form-wrap__input-title">Тема</span>
+							</div>
+							<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Введите текст"></textarea><span class="form-wrap__input-title">Сообщение</span>
+							</div>
+						</div>
+						<div class="row justify-content-center">
+							<div class="col-sm-auto">
+								<button class="form-wrap__btn btn btn-primary" type="submit">Отправить
+								</button>
+							</div>
+							<div class="col-sm-auto">
+								<button class="form-wrap__btn btn btn-outline-primary" type="button">Отмена
+								</button>
+							</div>
+						</div>
 					</form>
 				</div>
 			</div>
 		</div>
-		<!-- #modal-successful about psychologist-->
+		<!-- #modal-question-->
 		<!--  #about-psychologist-->
 		<div id="about-psychologist" style="display: none">
 			<div class="modal-win modal-win--doctor">
