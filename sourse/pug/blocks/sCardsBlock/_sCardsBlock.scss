@@ -29,9 +29,7 @@
   &__card-row{
 		--bs-gutter-y: #{rem(18)} !important;
 	}
-  .swiper {
-    margin-bottom: rem(40);
-  }
+  
   &__btn-wrap {
     text-align: center;
 		.btn {
@@ -51,9 +49,18 @@
   .sCardsBlock__card-row {
     position: relative;
   }
+  .card__text {
+    margin-bottom: auto;
+    margin-top: 0;
+  }
+  .swiper-slide {
+    height: auto;
+  }
   .swiper {
     overflow: visible;
     width: 90%;
+    padding-bottom: rem(40);
+    padding-top: rem(40);
     @include media-breakpoint-up(md) {
       overflow: hidden;
       width: 100%;
@@ -67,6 +74,7 @@
     }
   }
   .title-wrap {
+    margin-bottom: 0;
     h2 {
       margin-bottom: rem(12);
     }

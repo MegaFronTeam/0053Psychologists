@@ -6,7 +6,7 @@
     padding-top: calc(var(--input-sp-top) - #{$input-padding-y});
     margin-bottom: rem(10);
   }
-  textarea {
+  textarea.form-control {
     min-height: 144px;
     padding: 22px 24px;
     margin-top: calc(-1 * var(--input-sp-top));
@@ -42,12 +42,17 @@
     top: calc(var(--input-sp-top));
     font-size: rem(16);
     color: $gray-700;
-    transform-origin: left;
+    transform-origin: bottom left;
     pointer-events: none;
     @include mt;
     max-width: 100%;
+    line-height: 1;
     &.smallest{
       font-size: 12px;
+    }
+    &.position-static{
+      margin-bottom: rem(8);
+      display: block;
     }
   }
   textarea + &__input-title {
@@ -70,8 +75,15 @@
     &:not(:placeholder-shown),
     &.form-select {
       & ~ .form-wrap__input-title {
-        transform: scale(0.86) translateY(calc(-1 * (var(--input-sp-top)))) translateX(0);
-        max-width: calc(100%);
+        transform: scale(0.82) translateY(calc(-1 * (var(--input-sp-top)))) translateX(0);
+        max-width: calc(115%);
+        width: 115%;
+      }
+    }
+    &.form-select {
+      margin-top: rem(20);
+      & ~ .form-wrap__input-title {
+        transform-origin: top left;
       }
     }
     &:focus {

@@ -8,7 +8,7 @@ mixin input(placeholder,  t='text', label= placeholder, inputmode= t, name= t)
 		if t== "textarea"
 			+e.TEXTAREA.input.form-control(name=name placeholder=placeholder)
 		else if t== "select"
-			+e.SELECT.input.form-select(name= name data-placeholder= placeholder).custom-select-js&attributes(attributes)
+			+e.SELECT.input.form-select( data-placeholder= placeholder).custom-select-js&attributes(attributes)
 				option(value= placeholder)= placeholder
 				- for (var x = 1; x < 5; x++)
 					option(value=`${placeholder + x}`)=`${placeholder + x}`

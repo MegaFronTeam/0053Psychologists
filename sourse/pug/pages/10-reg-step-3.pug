@@ -1,0 +1,26 @@
+extends ../layout/main.pug
+
+include ../blocks/sReg/_sReg.pug
+include ../blocks/sCalendar/_sCalendar.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+
+block title
+	- let  title= 'РЕГИСТРАЦИЯ КЛИЕНТА 10 3'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+
+		+sReg10("РЕГИСТРАЦИЯ ПСИХОЛОГА",'УСЛОВИЯ РАБОТЫ В СЕРВИСЕ «ДА»')
+			+RegTerms
+	+parts('footer')
+      
+
+
+
