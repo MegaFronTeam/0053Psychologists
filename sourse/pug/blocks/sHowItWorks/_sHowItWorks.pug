@@ -1,0 +1,34 @@
+
+
+mixin sHowItWorks(data)
+	// start sHowItWorks
+	+b.sHowItWorks.section&attributes(attributes)
+		.container
+			+b.title-wrap
+				h2 КАК РАБОТАЕТ
+				+img("img/logo-small.png")
+			+e.row.row
+				+e.col.col-12.col-lg-6
+					+b.step-card
+						+e.number 01
+						.content-wrap
+							+e.title ЗАПОЛНИТЕ НЕБОЛЬШУЮ АНКЕТУ
+							+e.descr Анкета поможет сузить поиск и выбрать именно тех специалистов, которые подойдут Вам лучше всего!
+					+b.step-card
+						+e.number 02
+						.content-wrap
+							+e.title ВЫБЕРИТЕ ПСИХОЛОГА
+							+e.descr Мы предложим Вам несколько специалистов, чтобы Вы начали свою работу. Вы также сможете посмотреть профили всех доступных психологов, если Вам не подойдёт ни один из предложенных специалистов.
+					+b.step-card
+						+e.number 03
+						.content-wrap
+							+e.title НАЗНАЧЬТЕ ПЕРВУЮ ВСТРЕЧУ
+							+e.descr Выберите удобное время у понравившегося специалиста и мы пришлём Вам уведомление о записи. А также за час до встречи напоминим о предстоящей сессии.
+					+b.step-card
+						+e.number 04
+						.content-wrap
+							+e.title НАЧНИТЕ ПСИХОТЕРАПИЮ
+							+e.descr В назначенное время Вам позвонит ваш психолог и Вы просто начнёте свою работу. Мы используем надёжную видеосвязь и только проверенных специалистов.
+				+e.col.col-12.col-lg-6
+					+e.img-wrap: +img('img/how-works.png', 'bg')
+	// end sHowItWorks

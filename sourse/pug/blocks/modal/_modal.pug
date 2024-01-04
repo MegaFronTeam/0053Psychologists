@@ -5,7 +5,7 @@ mixin modal()
 		+b.modal-win
 			+form-wrap
 				.text-center
-					+e.title.form-data.h3.ttu Обратный звонок
+					+e.title.h3.ttu Обратный звонок
 					p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
 
 				+input("Ваше Имя")(required)  
@@ -16,14 +16,77 @@ mixin modal()
 
 	//  #modal-successful
 	div(id="modal-successful"  style="display: none" )
-		+b.modal-win
+		+b.modal-win--sm
+			+b.form-wrap.text-center
+				
+				+e.title Спасибо за заявку
+				p Наши менеджеры свяжутся с Вами в ближайшее время и ответят на все интересующие вопросы
+				+e.BUTTON.btn.btn.btn-primary(type="button"  ).modal-close-js Понятно
+	// /#modal-successful
+
+	//  #modal-welcome
+	div(id="modal-welcome"  style="display: none" )
+		+b.modal-win--welcome.text-center
+				.h1 РАДЫ ПРИВЕТСТВОВАТЬ ВАС НА НАШЕЙ ПЛАТФОРМЕ
+				.h5.ttu ДЛЯ ТОГО ЧТОБЫ НАЧАТЬ РАБОТУ, ПОЖАЛУЙСТА, ЗАРЕГИСТРИРУЙТЕСЬ
+				+e.BUTTON.btn.btn.btn-primary(type="button"  ) Регистрация как психолог
+				br
+				+e.BUTTON.btn.btn.btn-primary(type="button"  ) Регистрация как клиент
+				br
+				+e.BUTTON.btn.btn.btn-outline-primary(type="button"  ) Уже есть аккаунт
+	//  /#modal-welcome
+	//  #modal-kod
+	div(id="modal-kod"  style="display: none" )
+		+b.modal-win--sm
 			+form-wrap
 				.text-center
-					+e.title.form-data Спасибо за заявку
-					p Наши менеджеры свяжутся с Вами в ближайшее время и ответят на все интересующие вопросы
-				+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Понятно
-	// #modal-successful
+					+e.title Введите код
+					p.mb-1 Мы отправили код на Ваш номер. Введите его в поле ниже
+				+input('_ _ _ _ _','text','','numeric').form-control--round.kod-mask
+				.smallest.text-secondary.text-center Через 00:40 мин можно будет отправить код заново
+				+e.BUTTON.btn.btn.btn-primary(type="button"  ) Войти
+	// /#modal-kod
 
+	// /#modal-policy
+	div(id="modal-policy"  style="display: none" )
+		+b.modal-win--policy
+			.h5.text-primary.text-center.fw-500 Политика конфиденциальности
+			p Настоящий документ «Политика конфиденциальности» (далее по тексту – «Политика») представляет собой правила использования /указать владельца сайта/ (далее – «мы» и/или «Администрация») данных интернет-пользователей (далее «вы» и/или «Пользователь»), собираемых с использованием сайта / указать URL сайта/ (далее – «сайт»).
+			p 1. Обрабатываемые данные
+			p 1.1. Мы не осуществляем сбор ваших персональных данных с использованием сайта.
+			p 1.2. Все данные, собираемые на сайте, предоставляются и принимаются в обезличенной форме (далее – «Обезличенные данные»).
+			p 1.3. Обезличенные данные включают следующие сведения, которые не позволяют вас идентифицировать:
+			p 1.3.1. Информацию, которую вы предоставляете о себе самостоятельно с использованием онлайн-форм и программных модулей сайта, включая имя и номер телефона и/или адрес электронной почты.1.3.2. Данные, которые передаются в обезличенном виде в автоматическом режиме в зависимости от настроек используемого вами программного обеспечения.
+			p 1.4. Администрация вправе устанавливать требования к составу Обезличенных данных Пользователя, которые собираются использованием сайта.
+	// /#modal-policy
+	//  #modal-successful2
+	div(id="modal-successful2"  style="display: none" )
+		+b.modal-win--sm
+			+b.form-wrap.text-center
+				
+				+e.title Ваш аккаунт создан
+				p Вы уже можете пользоваться всеми функциями сервиса
+				+e.BUTTON.btn.btn.btn-primary(type="button"  ).modal-close-js Понятно
+	// /#modal-successful2
+	//  #modal-your-order
+	div(id="modal-your-order"  style="display: none" )
+		+b.modal-win--sm
+			+b.form-wrap.text-center
+				
+				+e.title Ваша заявка будет рассмотрена
+				p Мы свяжемся с Вами в ближайшее время
+				+e.BUTTON.btn.btn.btn-primary(type="button"  ).modal-close-js Понятно
+	// /#modal-your-order
+	
+	//  #modal-successful3
+	div(id="modal-successful3"  style="display: none" )
+		+b.modal-win--sm
+			+b.form-wrap.text-center
+				
+				+e.title Ваш аккаунт создан
+				p Наши менеджеры проверят достоверность введённой информации и Вы сможете пользоваться всеми функциями сервиса
+				+e.BUTTON.btn.btn.btn-primary(type="button"  ).modal-close-js Понятно
+	// /#modal-successful3
 	//  #modal-confrim
 	div(id="modal-confrim"  style="display: none" )
 		+b.modal-win--confrim
@@ -36,7 +99,7 @@ mixin modal()
 	div(id="modal-question"  style="display: none" )
 		+b.modal-win--question
 			+form-wrap
-				+e.title.form-data.h4 Задать вопрос
+				+e.title.h4.fw-500 Задать вопрос
 				+e.wrap
 					+input("Введите текст", 'text', 'Тема')
 					+input('Введите текст', 'textarea', 'Сообщение')
@@ -44,5 +107,239 @@ mixin modal()
 					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Отправить
 					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
 	// #modal-question
+
+	div(id="modal-rescheduling"  style="display: none" )
+		+b.modal-win--md.--rescheduling
+			+b.form-wrap.text-center
+				+e.title.h4.fw-500 Перенос сеанса
+				p Вы не можете перенести сессию самостоятельно, т.к до сессии осталось менее 24 часов, #[a(href="#") в соответствии с условиями сервиса]. Вы можете связаться с  #[a(href="#") Техподдержкой] либо с Психологом
+				.row.justify-content-center
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Связаться с психологом
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+	// #modal-rescheduling
+	
+
+	div(id="modal-rescheduling2"  style="display: none" )
+		+b.modal-win--md.--rescheduling
+			+b.form-wrap.text-center
+				+e.title.h4.fw-500 Перенос сеанса
+				
+				+b.new-time
+					+e.item
+						+e.data 16.01.23
+						.smallest (четверг)
+
+						+e.data 16:00
+					+icon("arrow-right")
+					+e.item
+						+e.data 16.01.23
+						.smallest (четверг)
+
+						+e.data 16:00
+				p.text-secondary Необходимо договариваться о следующей сессии с Психологом на предыдущей сессии
+				.row.justify-content-center
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Подтвердить
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+	// #modal-rescheduling2
+	
+
+	div(id="modal-rescheduling3"  style="display: none" )
+		+b.modal-win--md.--rescheduling
+			+b.form-wrap.text-center
+				+e.title.h4.fw-500 Перенос сеанса
+				p Мы отправили заявку Вашему психологу. Ожидайте подтверждение.
+				.row.justify-content-center
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Понятно
+	// #modal-rescheduling3
+	
+
+	div(id="modal-shutdown"  style="display: none" )
+		+b.modal-win--md.--rescheduling.--question
+			+form-wrap
+				+e.title.h4.fw-500.text-center Укажите причину завершения работы с психологом 
+				+e.wrap
+					+e.input-wrap
+						+in-c('radio','Плановое завершение терапии','why')
+					+e.input-wrap
+						+in-c('radio','Мне необходим специалист другого профиля','why')
+					+e.input-wrap
+						+in-c('radio','Психолог не подошёл по стилю работы и как личность','why')
+					+e.input-wrap
+						+in-c('radio','Психолог грубо нарушает этические правила','why')
+					+e.input-wrap
+						+in-c('radio','Другая причина','why')
+					+input('Укажите причину', 'textarea', '')
+				.row.justify-content-center
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Подтвердить
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+	// #modal-shutdown
+	
+	div(id="modal-rew"  style="display: none" )
+		+b.modal-win--md.--rescheduling.--question
+			+form-wrap
+				+e.title.h4.fw-500.text-center Оставьте свой отзыв о работе с психологом
+				+e.wrap
+					+input('Введите текст', 'textarea', '')
+				.row.justify-content-center
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Отправить
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+	// #modal-rew
+	
+	
+	div(id="modal-rew2"  style="display: none" )
+		+b.modal-win--md.--rescheduling.--question
+			+form-wrap
+				+e.title.h4.fw-500.text-center Оставьте свой отзыв о работе сервиса
+				+e.wrap
+					+input('Введите текст', 'textarea', '')
+				.row.justify-content-center
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Отправить
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+	// #modal-rew2
+	
+	//- +b.modal-win--question
+	//- 		+form-wrap
+	//- 			+e.title.h4.fw-500 Задать вопрос
+	//- 			+e.wrap
+	//- 				+input("Введите текст", 'text', 'Тема')
+	//- 				+input('Введите текст', 'textarea', 'Сообщение')
+	//- 			.row.justify-content-center
+	//- 				.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Отправить
+	//- 				.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+
+	div(id="modal-shutdown2"  style="display: none" )
+		+b.modal-win--md.--rescheduling.--question
+			+form-wrap
+				+e.title.h4.fw-500.text-center Укажите причину завершения работы с клиентом
+				+e.wrap
+					+e.input-wrap
+						+in-c('radio','Плановое завершение терапии','why2')
+					+e.input-wrap
+						+in-c('radio','Перенаправлен к другому специалисту','why2')
+						+in-c('radio','Другая причина','why2')
+					+input('Укажите причину', 'textarea', '')
+				.row.justify-content-center
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Подтвердить
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+	// #modal-shutdown2
+	
+	div(id="modal-alert"  style="display: none" )
+		+b.modal-win--sm
+			+b.form-wrap
+				p.text-center.mb-3 Вы не можете поставить выходной, т.к на этот день у Вас есть действующие сеансы. Обратитесь в техподдержку.
+				.row.justify-content-center 
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="button").mt-0 Понятно
+	// #modal-alert
+
+	div(id="modal-add-session"  style="display: none" )
+		+b.modal-win--md.--md2
+			+b.form-wrap.text-center 
+				p Вы действительно хотите удалить запись?
+				.row.justify-content-center
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Сохранить
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+	// #modal-add-session
+	
+
+	div(id="modal-delete-session"  style="display: none" )
+		+b.modal-win--md.--md2
+			+b.form-wrap.text-center 
+				p Вы действительно хотите удалить запись?
+				.row.justify-content-center
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Удалить
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+	// #modal-delete-session
+	
+
+	div(id="modal-rescheduling-doc-1"  style="display: none" )
+		+b.modal-win--md.--rescheduling
+			+b.form-wrap.text-center
+				+e.title.h4.fw-500 Перенос времени на сеанс
+				+b.new-time
+					+e.item
+						+e.data 16.01.23
+						.smallest (четверг)
+
+						+e.data 16:00
+					+icon("arrow-right")
+					+e.item
+						+e.data 16.01.23
+						.smallest (четверг)
+
+						+e.data 16:00
+				p.text-secondary Марина Лиончикова просит перенести сеанс
+				.row.justify-content-center
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Подтвердить
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+	// #modal-rescheduling-doc-1
+	
+
+	div(id="modal-new-session"  style="display: none" )
+		+b.modal-win--md.--rescheduling
+			+b.form-wrap.text-center
+				+e.title.h4.fw-500 Подтвердите новый сеанс
+				+b.new-time
+					+e.item
+						+e.data 16.01.23
+						.smallest (четверг)
+
+						+e.data 16:00  
+				p.text-secondary Новый клиент Карина Светлова
+				.row.justify-content-center
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Подтвердить
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+	// #modal-new-session
+
+	//  #about-psychologist
+	div(id="about-psychologist" style="display: none" )
+		+b.modal-win--doctor
+			.container
+				+e.row.row
+					.col-2
+						+e.img-wrap: +img(`img/avatar-psycho.png`, 'bg')
+					.col-auto
+						+e.details
+							+e.name Андрей
+							p Психолог, сертифицированный гештальт-терапевт
+							+e.item
+								span Опыт работы:
+								p 12 лет
+					.col-12
+						+e.content
+							+e.item
+								p Я психолог, аналитически ориентированный. Частная практика 12 лет. Работаю офлайн, онлайн. Работаю в Москве. В моем опыте, обращения за помощью, люди разного возраста. Частые обращения, это запрос разобраться в себе в своём состоянии. Боль, обида, потери, нет жилания жить, хочу быть самостоятельным, не понимаю людей. Запутался в отношениях, не приносят радости.
+							+e.item
+								span Образование:
+								p Московский Государственный университет имени А.В. Павлова
+							+e.item
+								span Дополнительное образование:
+								p Московский Государственный университет имени А.В. Павлова
+							+e.item
+								span Дипломы, сертификаты:
+								+e.imgs-wrap
+									+img(`img/certif-01.png`, 'bg')
+									+img(`img/certif-02.png`, 'bg')
+									+img(`img/certif-03.png`, 'bg')
+							+e.item
+								span С чем работает:
+								ul
+									li
+										+iconC('check')
+										| Сильные эмоции:гнев, агрессия
+									li
+										+iconC('check')
+										| Панические атаки
+									li
+										+iconC('check')
+										| Травматические события в прошлом
+									li
+										+iconC('check')
+										| Самооценка и уверенность в себе
+									li
+										+iconC('check')
+										| Сильные эмоции:гнев, агрессия
+
+
+		// #about-psychologist
 	
 	// end modals

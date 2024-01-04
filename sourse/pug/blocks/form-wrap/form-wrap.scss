@@ -23,10 +23,9 @@
     }
   }
   &__btn {
-    @extend .btn;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 600;
+    // @extend .btn;
+    cursor: pointer; 
+    // font-weight: 600;
     padding: 16px;
     margin-bottom: 16px;
     margin-top: 40px;
@@ -293,5 +292,16 @@ input::-webkit-inner-spin-button {
     color: $gray-600;
     font-size: rem(14);
     vertical-align: bottom;
+  }
+}
+
+.form-control--round.form-wrap__input:not(textarea){
+  border-radius: 50px;
+  border: 1px solid var(--Gray-light, #AFB9D2) !important;
+  font-size: rem(40);
+  text-align: center;
+  &::placeholder{
+    color: #AFB9D2;
+    opacity: 1 !important;
   }
 }

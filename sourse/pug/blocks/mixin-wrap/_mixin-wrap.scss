@@ -496,13 +496,27 @@
 	padding-bottom: 44px;
 	flex-direction: column;
 	margin-bottom: 18px;
-	&--mepty{
+	&--empty{
 		background: #F8FAFC;
 		box-shadow: none;
 	}
 	&__head{
-		padding: 40px 20px 20px;
+		padding: 40px 68px 20px;
 		text-align: center;
+		position: relative;
+
+	}
+	&__modal{
+		padding: 0;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		position: absolute;
+		top: rem(40);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		right: rem(20);
 	}
 	&__title{
 		color: $primary;
