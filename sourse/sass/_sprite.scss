@@ -62,6 +62,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
 }
+.icon-doctor {
+	$h: 60;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(60 / #{$h} *1em );
+}
 .icon-eye {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -77,6 +82,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
 }
+.icon-info {
+	$h: 60;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(60 / #{$h} *1em );
+}
 .icon-instagram {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -86,6 +96,11 @@
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
+}
+.icon-money {
+	$h: 60;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(60 / #{$h} *1em );
 }
 .icon-phone-call {
 	$h: 24;
@@ -111,6 +126,11 @@
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
+}
+.icon-support {
+	$h: 60;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(60 / #{$h} *1em );
 }
 .icon-telegram {
 	$h: 16;
