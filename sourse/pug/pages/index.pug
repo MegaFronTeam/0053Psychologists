@@ -12,9 +12,11 @@ include ../blocks/sBlog/_sBlog.pug
 include ../blocks/sHelp/_sHelp.pug
 include ../blocks/sCardsBlock/_sCardsBlock.pug
 include ../blocks/sPrice/_sPrice.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
 include ../blocks/sReviews/_sReviews.pug
 include ../blocks/sHowItWorks/_sHowItWorks.pug
 include ../blocks/sQuestions/_sQuestions.pug
+
 
 block variables
 	- let  mainPage= 'main-page'
@@ -40,7 +42,7 @@ block pagecontent
 		+sHelp
 		+sCardsBlock-1
 		+sPrice
-		//преимущества
+		+sAdvantages
 		+sReviews
 		+sHowItWorks
 		+sQuestions

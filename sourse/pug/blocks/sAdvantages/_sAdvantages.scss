@@ -1,0 +1,92 @@
+.sAdvantages {
+  --sPT: #{rem(110)};
+  --sPB: #{rem(105)};
+  p {
+    line-height: 125%;
+    color: $gray-700;
+    margin-bottom: 0;
+    font-size: rem(14);
+    @include media-breakpoint-up(md) {
+      font-size: rem(16);
+    }
+  }
+  &__row {
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: #{rem(20)};
+	}
+  .title-wrap {
+    position: relative;
+    margin-bottom: rem(40);
+    @include media-breakpoint-up(xl) {
+      margin-top: rem(74);
+    }
+    h2 {
+      margin-bottom: 0;
+    }
+    p {
+      font-size: rem(16);
+      line-height: 133%;
+      @include media-breakpoint-up(md) {
+        font-size: rem(18);
+      }
+    }
+    &__container {
+      display: flex;
+      align-items: center;
+      gap: rem(8);
+      margin-bottom: rem(8);
+      position: relative;
+      @include media-breakpoint-up(sm) {
+        gap: rem(16);
+      }
+    }
+    img {
+      height: rem(32);
+      @include media-breakpoint-up(sm) {
+        height: rem(52);
+      }
+    }
+  }
+  &__img-wrap {
+    width: rem(530);
+    max-width: 100%;
+    border-radius: rem(10);
+    overflow: hidden;
+    @include block(60, 53);
+    @include mt;
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: repeat(2, minmax(rem(250), rem(310)));
+    }
+    justify-content: space-between;
+    // @include media-breakpoint-only(lg) {
+    //   justify-content: start;
+    // }
+    row-gap: rem(32);
+    column-gap: rem(20);
+    .icon {
+      color: $primary;
+      width: rem(60);
+      height: rem(60);
+      margin-bottom: rem(16);
+      @include media-breakpoint-up(md)  {
+        margin-bottom: rem(24);
+      }
+    }
+  }
+  .adv-card {
+    &__title {
+      margin-bottom: rem(10);
+      font-size: rem(16);
+      font-weight: 500;
+      line-height: 111%;
+      @include media-breakpoint-up(md) {
+        font-size: rem(18);
+        margin-bottom: rem(16);
+      }
+    }
+  }
+}
