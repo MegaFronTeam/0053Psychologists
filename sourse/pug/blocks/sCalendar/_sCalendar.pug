@@ -1,13 +1,14 @@
-mixin sCalendar(data)
+mixin sCalendar(head=true, circle, consultation)
 	// start sCalendar
 	+b.sCalendar.section#sCalendar&attributes(attributes)
 		.container
-			+e.head
-				+e.btn-control
-					+icon("arrow-left")
-				+e.title ЯНВАРЬ 2024
-				+e.btn-control
-					+icon("arrow-right")
+			if head
+				+e.head
+					+e.btn-control
+						+icon("arrow-left")
+					+e.title ЯНВАРЬ 2024
+					+e.btn-control
+						+icon("arrow-right")
 			+e.body
 				+e.table
 					+e.thead
@@ -44,11 +45,17 @@ mixin sCalendar(data)
 								+e.label.text-primary 7 сеансов
 							+td('12')
 								+e.label.text-primary 1 сеанс
-							+td('13')
+							+td('13').current
 							+td('14')
 						+e.tr
 							+td('15')
+								if circle
+									.circle(style="--bgColor: #FF507D;")
 							+td('16')
+								if circle
+									.circle(style="--bgColor: #82B93C;")
+								if consultation
+									.consultation консультация в 16:00
 							+td('17')
 							+td('18')
 							+td('19')
