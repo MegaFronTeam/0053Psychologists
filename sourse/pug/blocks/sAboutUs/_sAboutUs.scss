@@ -1,8 +1,19 @@
 // start .sAboutUs
 .sAboutUs {
-  background: $gray-100;
+  position: relative;
   --sPT: #{rem(110)};
-  --sPB: #{rem(10)};
+  --sPB: #{rem(0)};
+  &::before{
+    content: '';
+    background: $gray-100;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: calc(100% - rem(130));
+  }
   p {
     font-size: rem(14);
     @include media-breakpoint-up(lg) {

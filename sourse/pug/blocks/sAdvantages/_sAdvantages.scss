@@ -69,8 +69,7 @@
     column-gap: rem(20);
     .icon {
       color: $primary;
-      width: rem(60);
-      height: rem(60);
+      font-size: rem(60);
       margin-bottom: rem(16);
       @include media-breakpoint-up(md)  {
         margin-bottom: rem(24);
