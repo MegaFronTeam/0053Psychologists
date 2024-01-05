@@ -19,7 +19,20 @@ block pagecontent
 		+page-head('','','Личный кабинет')
 		+sCabinet
 			+b.schedule
-				+e.back
+				+e.back(href='#'): +icon('chevron-left-2')
 				+e.wrap
-					
+					+e.row.row
+						.col-auto
+							+e.date
+								| 16.01.23
+								span (четверг)
+								+icon('calendar')
+						.col
+							+e.add(href='#') 
+								+icon('plus')
+								| Добавить&nbsp;сеанс
+							+e.attention Продолжительность сессии — 50 минут
+					label.form-check.form-switch
+						input(type="checkbox" role="switch").form-check-input
+						span отметить как выходной
 	+parts('footer')

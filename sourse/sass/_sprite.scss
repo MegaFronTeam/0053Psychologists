@@ -52,10 +52,20 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(16 / #{$h} *1em );
 }
+.icon-chevron-left-2 {
+	$h: 24;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
+}
 .icon-chevron-right {
 	$h: 30;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(16 / #{$h} *1em );
+}
+.icon-close {
+	$h: 20;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(20 / #{$h} *1em );
 }
 .icon-cross {
 	$h: 24;
@@ -101,6 +111,11 @@
 	$h: 60;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(60 / #{$h} *1em );
+}
+.icon-pencil {
+	$h: 20;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(20 / #{$h} *1em );
 }
 .icon-phone-call {
 	$h: 24;

@@ -1,0 +1,65 @@
+extends ../layout/main.pug
+
+include ../blocks/sCabinet/_sCabinet.pug
+include ../blocks/sReg/_sReg.pug
+
+block variables
+	- let  mainPage= 'lk-page'
+	- let  bg= '11-cabinet-client-3.jpg'
+
+block title
+	- let  title= 'ЛК ПСИХОЛОГА 13 06'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('','','Личный кабинет')
+		+sCabinet
+			+b.schedule
+				+e.back(href='#'): +icon('chevron-left-2')
+				+e.wrap
+					+e.row.row
+						.col-auto
+							+e.date
+								| 16.01.23
+								span (четверг)
+								+icon('calendar')
+						.col
+							+e.add(href='#') 
+								+icon('plus')
+								| Добавить&nbsp;сеанс
+							+e.attention Продолжительность сессии — 50 минут
+					label.form-check.form-switch
+						input(type="checkbox" role="switch").form-check-input
+						span отметить как выходной
+					+e.card-row
+						.row
+							mixin item(time, name)
+								+e.item(class=(name ? 'active' : ''))
+									.time!= time
+									if name
+										.name!= name
+									if !name
+										+e.edits
+											+e.edit(href='#'): +icon('close')
+											+e.edit(href='#'): +icon('pencil')
+							.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3: +item('с 08: 00 до 08: 50')
+							.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3: +item('с 09: 00 до 09: 50')
+							.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3: +item('с 10: 00 до 10: 50')
+							.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3: +item('с 11: 00 до 11: 50')
+							.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3: +item('с 12: 00 до 12: 50', 'Марина Леончикова')
+							.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3: +item('с 13: 00 до 13: 50')
+							.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3: +item('с 14: 00 до 14: 50', 'Елена Лотова')
+							.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3: +item('с 15: 00 до 15: 50', 'Алексей Филлипов')
+							.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3: +item('с 16: 00 до 16: 50')
+							.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3: +item('с 17: 00 до 17: 50', 'Светлана Резникова')
+							.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3: +item('с 18: 00 до 18: 50')
+							.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3: +item('с 19: 00 до 19: 50')
+							.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3: +item('с 20: 00 до 20: 50')
+							.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3: +item('с 21: 00 до 21: 50')
+							.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3: +item('с 22: 00 до 22: 50')
+							.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3: +item('с 23: 00 до 23: 50')
+	+parts('footer')
