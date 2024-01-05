@@ -35,15 +35,12 @@
     }
     &__img-wrap {
       width: rem(150);
-      // height: rem(230);
       border-radius: 50%;
       overflow: hidden;
-      // max-height: rem(310);
       @include block(1, 1);
       @include mt;
       @include media-breakpoint-up(lg) {
         width: rem(310);
-        height: rem(310);
       }
     }
     &__content {
