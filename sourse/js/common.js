@@ -177,6 +177,23 @@ function eventHandler() {
 			document.querySelector('.sCabinet-body__new-card').classList.remove('active');
 		}
 	});
+
+	document.querySelectorAll(".time-sliders__col").forEach(el =>{
+		
+		new Swiper(el.querySelector('.time-sliders__slider--js'), {
+			loop: true,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			observer: true,
+			direction: 'vertical',
+			speed: 300,
+			navigation: {
+				nextEl: el.querySelector('.swiper-button-next'),
+				prevEl: el.querySelector('.swiper-button-prev'),
+			},
+		})
+	})
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

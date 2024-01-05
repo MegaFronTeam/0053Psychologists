@@ -233,14 +233,81 @@ mixin modal()
 
 	div(id="modal-add-session"  style="display: none" )
 		+b.modal-win--md.--md2
-			+b.form-wrap.text-center 
-				p Вы действительно хотите удалить запись?
+			+form-wrap
+				+e.line.row
+					+e.line-title.col-auto Время
+					.col
+						+b.time-sliders
+							+e.col c
+							+e.col
+								+arrow
+								+e.slider--js.--hour-start.swiper
+									.swiper-wrapper
+										+e.slide.swiper-slide 08
+										+e.slide.swiper-slide 09
+										+e.slide.swiper-slide 10
+										+e.slide.swiper-slide 11
+										+e.slide.swiper-slide 12
+										+e.slide.swiper-slide 13
+										+e.slide.swiper-slide 14
+										+e.slide.swiper-slide 15
+										+e.slide.swiper-slide 16
+										+e.slide.swiper-slide 17
+										+e.slide.swiper-slide 18
+										+e.slide.swiper-slide 19
+										+e.slide.swiper-slide 20
+							+e.col.p-0 :
+							+e.col
+								+arrow
+								+e.slider--js.--time-start.swiper
+									.swiper-wrapper
+										+e.slide.swiper-slide 00
+										+e.slide.swiper-slide 10
+										+e.slide.swiper-slide 20
+										+e.slide.swiper-slide 30
+										+e.slide.swiper-slide 40
+										+e.slide.swiper-slide 50
+
+							+e.col до
+							+e.col
+								+arrow
+								+e.slider--js.--hour-end.swiper
+									.swiper-wrapper
+										+e.slide.swiper-slide 08
+										+e.slide.swiper-slide 09
+										+e.slide.swiper-slide 10
+										+e.slide.swiper-slide 11
+										+e.slide.swiper-slide 12
+										+e.slide.swiper-slide 13
+										+e.slide.swiper-slide 14
+										+e.slide.swiper-slide 15
+										+e.slide.swiper-slide 16
+										+e.slide.swiper-slide 17
+										+e.slide.swiper-slide 18
+										+e.slide.swiper-slide 19
+										+e.slide.swiper-slide 20
+							+e.col.p-0 :
+							+e.col
+								+arrow
+								+e.slider--js.--time-end.swiper
+									.swiper-wrapper
+										+e.slide.swiper-slide 00
+										+e.slide.swiper-slide 10
+										+e.slide.swiper-slide 20
+										+e.slide.swiper-slide 30
+										+e.slide.swiper-slide 40
+										+e.slide.swiper-slide 50
+					
+				+e.line.row
+					+e.line-title.col-auto Клиент
+					.col
+						+input("Не выбрано",'select','')
+
 				.row.justify-content-center
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Сохранить
+					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Сохранить 
 					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
 	// #modal-add-session
 	
-
 	div(id="modal-delete-session"  style="display: none" )
 		+b.modal-win--md.--md2
 			+b.form-wrap.text-center 
@@ -250,6 +317,7 @@ mixin modal()
 					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
 	// #modal-delete-session
 	
+
 
 	div(id="modal-rescheduling-doc-1"  style="display: none" )
 		+b.modal-win--md.--rescheduling
