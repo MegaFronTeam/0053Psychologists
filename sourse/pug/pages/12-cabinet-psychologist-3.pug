@@ -21,7 +21,7 @@ block pagecontent
 			+b.sCabinet-body
 				mixin item(img, name, status)
 					+b.client-item&attributes(attributes)
-						+e.close(href='#'): +icon('cross')
+						+e.close(href='#modal-shutdown2' data-fancybox='modal'): +icon('cross')
 						+e.img-wrap
 							+img(`img/${img}`, 'bg')
 							+e.info i

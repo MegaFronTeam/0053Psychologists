@@ -87,3 +87,92 @@ mixin sCalendar(head=true, circle, consultation)
 										+time('16:00')
 										+time('17:00')
 	// end sCalendar
+
+mixin sCalendar2(head=true, circle, consultation)
+	// start sCalendar
+	+b.sCalendar.section#sCalendar&attributes(attributes)
+		if head
+			+e.head
+				+e.btn-control
+					+icon("arrow-left")
+				+e.title ЯНВАРЬ 2024
+				+e.btn-control
+					+icon("arrow-right")
+		+e.body
+			+e.table
+				+e.thead
+					+e.tr
+						+e.td--title ПН
+						+e.td--title ВТ
+						+e.td--title СР
+						+e.td--title ЧТ
+						+e.td--title ПТ
+						+e.td--title СБ
+						+e.td--title ВС
+				+e.tbody
+					mixin td(n)
+						+e.td--body&attributes(attributes)
+							+e.number= n
+							block
+					+e.tr
+						+td('1').--disabled-day
+						+td('2').--disabled-day
+						+td('3').--disabled-day
+						+td('4').--disabled-day
+						+td('5').--disabled-day
+						+td('6').--disabled-day
+						+td('7').--disabled-day
+						
+					+e.tr
+						+td('8')
+							+e.label.text-primary 7 сеансов
+						+td('9')
+							+e.label.text-primary 7 сеансов
+						+td('10')
+							+e.label.text-primary 7 сеансов
+						+td('11')
+							+e.label.text-primary 7 сеансов
+						+td('12')
+							+e.label.text-primary 1 сеанс
+						+td('13').current
+						+td('14')
+					+e.tr
+						+td('15')
+							if circle
+								.circle(href='#modal-rescheduling-doc-1' data-fancybox='modal' style="--bgColor: #FF507D;")
+						+td('16')
+							if circle
+								.circle(href='#modal-new-session' data-fancybox='modal' style="--bgColor: #82B93C;")
+							if consultation
+								.consultation консультация в 16:00
+						+td('17')
+						+td('18')
+						+td('19')
+						+td('20')
+						+td('21')
+					+e.tr
+						+td('22')
+						+td('23')
+						+td('24')
+						+td('25')
+						+td('26')
+						+td('27')
+						+td('28')
+					+e.tr--line
+						+e.row-tr.row
+							+e.day.col-lg-auto 18 января
+							.col
+								.row
+									mixin time(t)
+										label.col-auto
+											input(type="checkbox" name="time").btn-check
+											span.btn.btn-primary= t
+									+time('10:00')
+									+time('11:00')
+									+time('12:00')
+									+time('13:00')
+									+time('14:00')
+									+time('15:00')
+									+time('16:00')
+									+time('17:00')
+	// end sCalendar

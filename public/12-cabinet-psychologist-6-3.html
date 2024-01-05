@@ -86,7 +86,7 @@
 												</div>
 											</div>
 											<div class="col">
-												<a class="schedule__add" href="#"> 
+												<a class="schedule__add" href="#modal-add-session" data-fancybox="modal"> 
 													<svg class="icon icon-plus ">
 														<use xlink:href="img/svg/sprite.svg#plus"></use>
 													</svg>Добавить&nbsp;сеанс
@@ -104,7 +104,7 @@
 														<div class="schedule__item">
 															<div class="time">с 08: 00 до 08: 50</div>
 															<div class="schedule__edits">
-																<a class="schedule__edit" href="#">
+																<a class="schedule__edit" href="#modal-delete-session">
 																	<svg class="icon icon-close ">
 																		<use xlink:href="img/svg/sprite.svg#close"></use>
 																	</svg>
@@ -121,7 +121,7 @@
 														<div class="schedule__item">
 															<div class="time">с 09: 00 до 09: 50</div>
 															<div class="schedule__edits">
-																<a class="schedule__edit" href="#">
+																<a class="schedule__edit" href="#modal-delete-session">
 																	<svg class="icon icon-close ">
 																		<use xlink:href="img/svg/sprite.svg#close"></use>
 																	</svg>
@@ -138,7 +138,7 @@
 														<div class="schedule__item">
 															<div class="time">с 10: 00 до 10: 50</div>
 															<div class="schedule__edits">
-																<a class="schedule__edit" href="#">
+																<a class="schedule__edit" href="#modal-delete-session">
 																	<svg class="icon icon-close ">
 																		<use xlink:href="img/svg/sprite.svg#close"></use>
 																	</svg>
@@ -155,7 +155,7 @@
 														<div class="schedule__item">
 															<div class="time">с 11: 00 до 11: 50</div>
 															<div class="schedule__edits">
-																<a class="schedule__edit" href="#">
+																<a class="schedule__edit" href="#modal-delete-session">
 																	<svg class="icon icon-close ">
 																		<use xlink:href="img/svg/sprite.svg#close"></use>
 																	</svg>
@@ -178,7 +178,7 @@
 														<div class="schedule__item">
 															<div class="time">с 13: 00 до 13: 50</div>
 															<div class="schedule__edits">
-																<a class="schedule__edit" href="#">
+																<a class="schedule__edit" href="#modal-delete-session">
 																	<svg class="icon icon-close ">
 																		<use xlink:href="img/svg/sprite.svg#close"></use>
 																	</svg>
@@ -207,7 +207,7 @@
 														<div class="schedule__item">
 															<div class="time">с 16: 00 до 16: 50</div>
 															<div class="schedule__edits">
-																<a class="schedule__edit" href="#">
+																<a class="schedule__edit" href="#modal-delete-session">
 																	<svg class="icon icon-close ">
 																		<use xlink:href="img/svg/sprite.svg#close"></use>
 																	</svg>
@@ -230,7 +230,7 @@
 														<div class="schedule__item">
 															<div class="time">с 18: 00 до 18: 50</div>
 															<div class="schedule__edits">
-																<a class="schedule__edit" href="#">
+																<a class="schedule__edit" href="#modal-delete-session">
 																	<svg class="icon icon-close ">
 																		<use xlink:href="img/svg/sprite.svg#close"></use>
 																	</svg>
@@ -247,7 +247,7 @@
 														<div class="schedule__item">
 															<div class="time">с 19: 00 до 19: 50</div>
 															<div class="schedule__edits">
-																<a class="schedule__edit" href="#">
+																<a class="schedule__edit" href="#modal-delete-session">
 																	<svg class="icon icon-close ">
 																		<use xlink:href="img/svg/sprite.svg#close"></use>
 																	</svg>
@@ -264,7 +264,7 @@
 														<div class="schedule__item">
 															<div class="time">с 20: 00 до 20: 50</div>
 															<div class="schedule__edits">
-																<a class="schedule__edit" href="#">
+																<a class="schedule__edit" href="#modal-delete-session">
 																	<svg class="icon icon-close ">
 																		<use xlink:href="img/svg/sprite.svg#close"></use>
 																	</svg>
@@ -281,7 +281,7 @@
 														<div class="schedule__item">
 															<div class="time">с 21: 00 до 21: 50</div>
 															<div class="schedule__edits">
-																<a class="schedule__edit" href="#">
+																<a class="schedule__edit" href="#modal-delete-session">
 																	<svg class="icon icon-close ">
 																		<use xlink:href="img/svg/sprite.svg#close"></use>
 																	</svg>
@@ -298,7 +298,7 @@
 														<div class="schedule__item">
 															<div class="time">с 22: 00 до 22: 50</div>
 															<div class="schedule__edits">
-																<a class="schedule__edit" href="#">
+																<a class="schedule__edit" href="#modal-delete-session">
 																	<svg class="icon icon-close ">
 																		<use xlink:href="img/svg/sprite.svg#close"></use>
 																	</svg>
@@ -315,7 +315,7 @@
 														<div class="schedule__item">
 															<div class="time">с 23: 00 до 23: 50</div>
 															<div class="schedule__edits">
-																<a class="schedule__edit" href="#">
+																<a class="schedule__edit" href="#modal-delete-session">
 																	<svg class="icon icon-close ">
 																		<use xlink:href="img/svg/sprite.svg#close"></use>
 																	</svg>
@@ -1093,6 +1093,66 @@
 				</div>
 			</div>
 			<!-- #about-psychologist-->
+		</div>
+		<!--  #modal-chat-->
+		<div id="modal-chat" style="display: none">
+			<div class="modal-win modal-win--chat">
+				<div class="modal-win__chat">
+					<div class="modal-win__theme">
+						Тема:
+						 <span>Не могу перенести время сессии</span>
+					</div>
+					<div class="modal-win__chat-inner custom-scroll">
+						<div class="modal-win__day"><span>28/10/23</span>
+							<div class="modal-win__message">
+								<div class="modal-win__message-avatar"><img class="object-fit-js" src="img/avatar.jpg" alt="" loading="lazy"/>
+								</div>
+								<div class="modal-win__message-item">
+									<p>Здравствуйте, не могу в личном кабинете перенести встречу</p><span>28.10.23 17:31</span>
+								</div>
+							</div>
+							<div class="modal-win__message modal-win__message--you">
+								<div class="modal-win__message-avatar"><img class="object-fit-js" src="img/avatar.jpg" alt="" loading="lazy"/>
+								</div>
+								<div class="modal-win__message-item">
+									<p>Здравствуйте, укажите, пожалуйста, кто является вашим психологом и на какое время вы хотели бы перенести сессию?</p><span>28.10.23 17:31</span>
+								</div>
+							</div>
+							<div class="modal-win__message">
+								<div class="modal-win__message-avatar"><img class="object-fit-js" src="img/avatar.jpg" alt="" loading="lazy"/>
+								</div>
+								<div class="modal-win__message-item">
+									<p>Здравствуйте, не могу в личном кабинете перенести встречу</p><span>28.10.23 17:31</span>
+								</div>
+							</div>
+							<div class="modal-win__message modal-win__message--you">
+								<div class="modal-win__message-avatar"><img class="object-fit-js" src="img/avatar.jpg" alt="" loading="lazy"/>
+								</div>
+								<div class="modal-win__message-item">
+									<p>Здравствуйте, укажите, пожалуйста, кто является вашим психологом и на какое время вы хотели бы перенести сессию?</p><span>28.10.23 17:31</span>
+								</div>
+							</div>
+							<div class="modal-win__message">
+								<div class="modal-win__message-avatar"><img class="object-fit-js" src="img/avatar.jpg" alt="" loading="lazy"/>
+								</div>
+								<div class="modal-win__message-item">
+									<p>Здравствуйте, не могу в личном кабинете перенести встречу</p><span>28.10.23 17:31</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="send-message">
+						<div class="send-message__input-wrap form-group"><input class="send-message__input form-control" inputmode="text" name="text" type="text" placeholder="Введите сообщение"/>
+							<button type="submit">
+								<svg class="icon icon-send ">
+									<use xlink:href="img/svg/sprite.svg#send"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- #modal-chat-->
 		</div>
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>

@@ -409,5 +409,47 @@ mixin modal()
 
 
 		// #about-psychologist
+
+	//  #modal-chat
+	div(id="modal-chat" style="display: none" )
+		+b.modal-win--chat
+			+e.chat
+				+e.theme
+					| Тема:
+					| 
+					span Не могу перенести время сессии
+				+e.chat-inner.custom-scroll
+					+e.day
+						span 28/10/23
+						+e.message
+							+e.message-avatar: +img('img/avatar.jpg', 'bg')
+							+e.message-item
+								p Здравствуйте, не могу в личном кабинете перенести встречу
+								span 28.10.23 17:31
+						+e.message--you
+							+e.message-avatar: +img('img/avatar.jpg', 'bg')
+							+e.message-item
+								p Здравствуйте, укажите, пожалуйста, кто является вашим психологом и на какое время вы хотели бы перенести сессию?
+								span 28.10.23 17:31
+						+e.message
+							+e.message-avatar: +img('img/avatar.jpg', 'bg')
+							+e.message-item
+								p Здравствуйте, не могу в личном кабинете перенести встречу
+								span 28.10.23 17:31
+						+e.message--you
+							+e.message-avatar: +img('img/avatar.jpg', 'bg')
+							+e.message-item
+								p Здравствуйте, укажите, пожалуйста, кто является вашим психологом и на какое время вы хотели бы перенести сессию?
+								span 28.10.23 17:31
+						+e.message
+							+e.message-avatar: +img('img/avatar.jpg', 'bg')
+							+e.message-item
+								p Здравствуйте, не могу в личном кабинете перенести встречу
+								span 28.10.23 17:31
+				+b.send-message
+					+input('Введите сообщение', 'text', '')
+						button(type="submit"): +icon('send')
+
+		// #modal-chat
 	
 	// end modals

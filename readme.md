@@ -45,4 +45,6 @@
 4. <https://megafronteam.github.io/0053Psychologists/12-cabinet-psychologist-4>
 5. <https://megafronteam.github.io/0053Psychologists/12-cabinet-psychologist-5>
 6. <https://megafronteam.github.io/0053Psychologists/12-cabinet-psychologist-6>
-7. <https://megafronteam.github.io/0053Psychologists/12-cabinet-psychologist-6-4>
+7. <https://megafronteam.github.io/0053Psychologists/12-cabinet-psychologist-6-2>
+8. <https://megafronteam.github.io/0053Psychologists/12-cabinet-psychologist-6-3>
+9. <https://megafronteam.github.io/0053Psychologists/12-cabinet-psychologist-6-4>

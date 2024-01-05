@@ -30,7 +30,7 @@ block pagecontent
 										if i > 1
 											+e.support-more-info.disabled i
 										else
-											+e.support-more-info i
+											+e.support-more-info(href='#modal-chat' data-fancybox='modal') i
 						.col-sm-auto 
 							+e.btn.btn.btn-outline-primary(href='#modal-question' data-fancybox="modal") Задать вопрос
 	+parts('footer')
