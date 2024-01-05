@@ -293,9 +293,9 @@ mixin modal()
 	//  #about-psychologist
 	div(id="about-psychologist" style="display: none" )
 		+b.modal-win--doctor
-			.container
+			+b.wrap.container
 				+e.row.row
-					.col-2
+					.col-12.col-md-2
 						+e.img-wrap: +img(`img/avatar-psycho.png`, 'bg')
 					.col-auto
 						+e.details
