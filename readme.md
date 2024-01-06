@@ -1,14 +1,12 @@
 # 0053Psychologists
- 
 1. <https://megafronteam.github.io/0053Psychologists/>
-2. <https://megafronteam.github.io/0053Psychologists/02-catalog>
-3. <https://megafronteam.github.io/0053Psychologists/03-certificates>
-4. <https://megafronteam.github.io/0053Psychologists/04-blog>
-5. <https://megafronteam.github.io/0053Psychologists/05-business>
-6. <https://megafronteam.github.io/0053Psychologists/06-specialists>
-7. <https://megafronteam.github.io/0053Psychologists/07-text>
-8. <https://megafronteam.github.io/0053Psychologists/08-text-news>
-
+1. <https://megafronteam.github.io/0053Psychologists/02-catalog>
+1. <https://megafronteam.github.io/0053Psychologists/03-certificates>
+1. <https://megafronteam.github.io/0053Psychologists/04-blog>
+1. <https://megafronteam.github.io/0053Psychologists/05-business>
+1. <https://megafronteam.github.io/0053Psychologists/06-specialists>
+1. <https://megafronteam.github.io/0053Psychologists/07-text>
+1. <https://megafronteam.github.io/0053Psychologists/08-text-news>
 1. <https://megafronteam.github.io/0053Psychologists/404>
 
 ### РЕГИСТРАЦИЯ КЛИЕНТА
