@@ -2,9 +2,20 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+e.slider--js.swiper
-				.swiper-wrapper
-					+e.slide.swiper-slide
+			+e.slider--js
+				.swiper
+					.swiper-wrapper
+						+e.slide.swiper-slide.bg-wrap
+							+img('img/headerblock-img-1.jpg', 'bg').picture-bg
+							.h1 ВАШ ПСИХОЛОГ ОНЛАЙН
+							p Подберём Вам специалиста<br>из проверенных нами психологов
+							+e.btn.btn.btn-primary(href='#') Подобрать психолога
+						+e.slide.swiper-slide.bg-wrap
+							+img('img/headerblock-img-1.jpg', 'bg').picture-bg
+							.h1 ВАШ ПСИХОЛОГ ОНЛАЙН
+							p Подберём Вам специалиста<br>из проверенных нами психологов
+							+e.btn.btn.btn-primary(href='#') Подобрать психолога
+				+arrow()
 			+e.item-row.row
 				+e.col.col-lg
 					+e.item

@@ -103,6 +103,16 @@ function eventHandler() {
 		},
 	})
 
+	new Swiper('.headerBlock__slider--js .swiper', {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	})
+
 
 	$(".custom-select-wrap").each(function () {
     const self = $(this);
@@ -168,15 +178,15 @@ function eventHandler() {
 			addCardBtn.classList.toggle('active');
 			document.querySelector('.sCabinet-body__new-card').classList.toggle('active');
 		});
+		document.addEventListener('click', (e) => {
+			let modalTarget = e.target.closest('.sCabinet-body__new-card');
+			let addBtnTarget = e.target.closest('.sCabinet-body__add-card');
+			if(!modalTarget && !addBtnTarget) {
+				addCardBtn.classList.remove('active');
+				document.querySelector('.sCabinet-body__new-card').classList.remove('active');
+			}
+		});
 	}
-	document.addEventListener('click', (e) => {
-		let modalTarget = e.target.closest('.sCabinet-body__new-card');
-		let addBtnTarget = e.target.closest('.sCabinet-body__add-card');
-		if(!modalTarget && !addBtnTarget) {
-			addCardBtn.classList.remove('active');
-			document.querySelector('.sCabinet-body__new-card').classList.remove('active');
-		}
-	});
 
 	document.querySelectorAll(".time-sliders__col").forEach(el =>{
 		
