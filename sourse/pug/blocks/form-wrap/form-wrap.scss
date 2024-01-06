@@ -265,6 +265,7 @@ input::-webkit-inner-spin-button {
 .form-switch {
   padding-left: rem(58);
   margin-bottom: 0;
+  max-width: max-content;
   .form-check-input {
     width: rem(40);
     height: rem(20);

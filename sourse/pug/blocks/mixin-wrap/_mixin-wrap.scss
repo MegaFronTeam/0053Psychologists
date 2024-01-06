@@ -413,8 +413,11 @@
 			top: 50%;
 			transform: translateY(-50%);
 			right: rem(24);
+			color: $gray-700;
+			&:hover {
+				color: $primary;
+			}
 			.icon {
-				color: $gray-700;
 				font-size: rem(24);
 				fill: none;
 				stroke: currentColor;

@@ -179,18 +179,20 @@ function eventHandler() {
 	})
 
 
-	$(document).on("click", '.sCalendar__td--body', function(){
+	$(document).on("click", '.sCalendar__td--body', function(e){
 		const self =$(this); 
 		const order = window.getComputedStyle(self.parent()[0]).order
 		const activeCLass= 'active';
 		const line = $(".sCalendar__tr--line");
-		if(!line.hasClass(activeCLass) && !self.hasClass(activeCLass)) {
-			line.toggleClass(activeCLass)
+		const circle = $(".sCalendar__td .circle");
+		if (!e.target.classList.contains('circle')) {
+			if(!line.hasClass(activeCLass) && !self.hasClass(activeCLass)) {
+				line.toggleClass(activeCLass)
+			}
+			line.css("order", order) 
+			$( '.sCalendar__td--body.active').removeClass(activeCLass)
+			$(this).toggleClass(activeCLass)
 		}
-
-		line.css("order", order) 
-		$( '.sCalendar__td--body.active').removeClass(activeCLass)
-		$(this).toggleClass(activeCLass)
 	})
 
 	let addCardBtn = document.querySelector('.sCabinet-body__add-card');

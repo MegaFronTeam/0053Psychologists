@@ -175,6 +175,9 @@ class JSCCommon {
 		let InpuCKod = [].slice.call(document.querySelectorAll('.kod-mask'));
 		// InpuCKod.forEach(element => element.setAttribute("pattern", "[0-9]{3}"));
 		Inputmask({ "mask": "9 9 9 9 9", showMaskOnHover: false }).mask(InpuCKod);
+		let twoNumberCode = [].slice.call(document.querySelectorAll('.two-number-code'));
+		// InpuCKod.forEach(element => element.setAttribute("pattern", "[0-9]{3}"));
+		Inputmask({ "mask": "99", showMaskOnHover: false }).mask(twoNumberCode);
 
 
 	}

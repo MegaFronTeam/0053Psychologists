@@ -21,6 +21,8 @@ block pagecontent
 			+b.sCabinet-body
 				+e.support
 					.row
+						.col-sm-auto.order-sm-last
+							+e.btn.btn.btn-outline-primary(href='#modal-question' data-fancybox="modal") Задать вопрос
 						.col-sm
 							+e.support-wrap.custom-scroll
 								-for(let i = 0; i < 14; i++)
@@ -31,6 +33,4 @@ block pagecontent
 											+e.support-more-info.disabled i
 										else
 											+e.support-more-info(href='#modal-chat' data-fancybox='modal') i
-						.col-sm-auto 
-							+e.btn.btn.btn-outline-primary(href='#modal-question' data-fancybox="modal") Задать вопрос
 	+parts('footer')

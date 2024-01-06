@@ -47,15 +47,15 @@ block pagecontent
 					+e.new-card-wrap
 						.row
 							.col-12
-								+input('', 'text', 'Номер карты')
+								+input('', 'text', 'Номер карты').card-mask
 							.col
 								.sCabinet-body__input-wrap.form-group
 									.sCabinet-body__input-inner-wrap
-										input.sCabinet-body__input.form-control(inputmode='text' name='text' type='text' placeholder='ММ')
+										input.sCabinet-body__input.form-control.two-number-code(inputmode='text' name='text' type='text' placeholder='ММ')
 										span / 
-										input.sCabinet-body__input.form-control(inputmode='text' name='text' type='text' placeholder='ГГ')
+										input.sCabinet-body__input.form-control.two-number-code(inputmode='text' name='text' type='text' placeholder='ГГ')
 									span.sCabinet-body__input-title Срок действия
 							.col-auto
-								+input('CVC', 'text', 'Код').cvc
+								+input('CVC', 'text', 'Код').cvc.cvv-mask
 						+e.btn.btn.btn-primary(type="submit") Сохранить карту
 	+parts('footer')
