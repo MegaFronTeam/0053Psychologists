@@ -26,9 +26,6 @@
         top: rem(14);
         right: rem(18);
       }
-      @include media-breakpoint-up(xl) {
-        top: rem(20);
-      }
     }
     img {
       height: rem(32);
