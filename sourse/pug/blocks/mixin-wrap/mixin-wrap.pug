@@ -104,7 +104,7 @@ mixin cardBody(img, title, text, hovered, badge)
 		if text
 			+e.text!= text
 mixin card(img, title, text, hovered, badge)
-	+b.card(href="#")&attributes(attributes)
+	+b.card(href="#about-psychologist" data-fancybox='modal')&attributes(attributes)
 		+cardBody(img, title, text, hovered, badge)
 
 mixin cardInput(img, title, text, hovered, badge)
