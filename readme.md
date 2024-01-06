@@ -21,9 +21,9 @@
 
 ### РЕГИСТРАЦИЯ ПСИХОЛОГА
 1. <https://megafronteam.github.io/0053Psychologists/10-reg>
-2. <https://megafronteam.github.io/0053Psychologists/10-reg-3>
-3. <https://megafronteam.github.io/0053Psychologists/10-reg-4>
-
+2. <https://megafronteam.github.io/0053Psychologists/10-reg-step-2>
+3. <https://megafronteam.github.io/0053Psychologists/10-reg-step-3>
+4. <https://megafronteam.github.io/0053Psychologists/10-reg-step-4>
 
 ### ЛК КЛИЕНТА
 1. <https://megafronteam.github.io/0053Psychologists/11-cabinet-client-1>
