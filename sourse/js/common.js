@@ -50,24 +50,45 @@ function eventHandler() {
 		watchOverflow: true
 	});
 
-	const swiper4 = new Swiper('.sBanners__slider--js', { // если не используешь методы swiper  - можно обращаться без нее к Swiper
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
+	// const swiper4 = new Swiper('.sBanners__slider--js', { // если не используешь методы swiper  - можно обращаться без нее к Swiper
+	// 	// slidesPerView: 5,
+	// 	...defaultSl,
+	// 	slidesPerView: 'auto',
+	// 	freeMode: true,
+	// 	loopFillGroupWithBlank: true,
+	// 	touchRatio: 0.2,
+	// 	slideToClickedSlide: true,
+	// 	freeModeMomentum: true,
 
-	});
-	new Swiper('.mobile-swiper--js', {
+	// });
+	// new Swiper('.mobile-swiper--js', {
+	// 	loop: false,
+	// 	slidesPerView: 1,
+	// 	spaceBetween: 10,
+	// 	navigation: {
+	// 		nextEl: '.swiper-button-next',
+	// 		prevEl: '.swiper-button-prev',
+	// 	},
+	// 	breakpoints: {
+	// 		768: {
+	// 			spaceBetween: 20,
+	// 			slidesPerView: 2,
+	// 		},
+	// 		992: {
+	// 			slidesPerView: 3,
+	// 		},
+	// 		1200: {
+	// 			slidesPerView: 4,
+	// 		},
+	// 	},
+	// })
+	const mobileSlider = new Swiper('.mobile-swiper--js', {
 		loop: false,
 		slidesPerView: 1,
 		spaceBetween: 10,
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.sCardsBlock__card-row .swiper-button-next',
+			prevEl: '.sCardsBlock__card-row .swiper-button-prev',
 		},
 		breakpoints: {
 			768: {
@@ -93,13 +114,14 @@ function eventHandler() {
 			},
 		},
 	})
-	new Swiper('.sReviews__swiper--js', {
+	
+	const reviewSlider = new Swiper('.sReviews__swiper--js', {
 		loop: false,
 		slidesPerView: 1,
 		spaceBetween: 20,
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.sReviews__review-row .swiper-button-next',
+			prevEl: '.sReviews__review-row .swiper-button-prev',
 		},
 	})
 
