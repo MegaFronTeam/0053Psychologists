@@ -2,7 +2,7 @@
 .sAboutUs {
   position: relative;
   --sPT: #{rem(110)};
-  --sPB: #{rem(0)};
+  --sPB: #{rem(2)};
   &::before{
     content: '';
     background: $gray-100;
@@ -50,6 +50,9 @@
       line-height: 133%;
     }
   }
+  .card-wrapper:not(:nth-child(2)) {
+    margin-bottom: rem(40);
+  }
   .person-card {
     max-width: rem(420);
     &__img-wrap{
@@ -81,6 +84,9 @@
     }
   }
   .squre {
+    p {
+      margin-bottom: 0;
+    }
     @include media-breakpoint-up(lg) {
       margin-top: rem(40);
     }
@@ -92,7 +98,7 @@
       }
       @include media-breakpoint-up(lg) {
         width: 90%;
-        margin-bottom: rem(42);
+        margin-bottom: rem(2);
       }
     }
     .person-card__img-wrap {
@@ -101,7 +107,10 @@
   }
   &__small {
     p {
-      margin-bottom: rem(24);
+      margin-bottom: rem(10);
+      @include media-breakpoint-up(md) {
+        margin-bottom: rem(24);
+      }
     }
     .person-card__caption {
       margin-bottom: rem(20);

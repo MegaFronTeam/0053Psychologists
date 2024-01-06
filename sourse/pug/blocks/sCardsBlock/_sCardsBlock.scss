@@ -46,6 +46,7 @@
 // end.sCardsBlock
 
 #sCardsBlock-1 {
+  --sPT: #{rem(5)};
   .sCardsBlock__card-row {
     position: relative;
   }
@@ -72,6 +73,10 @@
     @include media-breakpoint-up(sm) {
       display: flex;
     }
+  }
+  .swiper-button-disabled {
+    pointer-events: auto;
+    // opacity: 1;
   }
   .title-wrap {
     margin-bottom: 0;

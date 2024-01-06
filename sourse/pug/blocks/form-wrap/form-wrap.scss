@@ -144,7 +144,7 @@
   top: calc(var(--input-sp-top) - #{$input-padding-y});
   @include mt;
   .icon{
-    font-size: rem(24); 
+    font-size: rem(24);
   }
   &:hover{
     color: var(--bs-primary);

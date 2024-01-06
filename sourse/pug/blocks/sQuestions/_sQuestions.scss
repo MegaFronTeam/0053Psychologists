@@ -19,8 +19,10 @@
     margin: 0 auto;
     &__head {
       font-size: rem(18);
-      // padding-right: rem(10);
+      cursor: pointer;
       font-weight: 500;
+      padding-top: rem(20);
+      padding-bottom: rem(18);
       line-height: 111%;
       display: flex;
       gap: rem(10);
@@ -42,8 +44,6 @@
     }
     &__item {
       border-bottom: rem(1) solid $gray-300;
-      padding-bottom: rem(20);
-      padding-top: rem(19);
 			&:last-child {
 				margin-bottom: 0;
 			}
@@ -54,9 +54,9 @@
 			}
 		}
     &__content {
-      padding: rem(18) 0 0 rem(20);
+      padding: rem(18) 0 rem(20) rem(20);
       @include media-breakpoint-up(sm) {
-        padding: rem(18) rem(44) 0 rem(36);
+        padding: 0 rem(44) rem(22) rem(36);
       }
     }
     p {

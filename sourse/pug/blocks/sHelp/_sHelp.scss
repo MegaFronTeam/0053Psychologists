@@ -1,6 +1,6 @@
 // start .sHelp
 .sHelp {
-  --sPT: #{rem(98)};
+  --sPT: #{rem(100)};
   --sPB: #{rem(110)};
   .title-wrap {
     position: relative;
@@ -12,10 +12,15 @@
       gap: rem(12);
       margin-bottom: rem(8);
       position: relative;
+      h2 {
+        max-width: 55%;
+        @include media-breakpoint-up(sm) {
+          max-width: none;
+        }
+      }
     }
     &__link {
       margin-bottom: rem(8);
-      text-align: right;
       @include media-breakpoint-up(lg) {
         position: absolute;
         top: rem(14);
@@ -24,8 +29,6 @@
       @include media-breakpoint-up(xl) {
         top: rem(20);
       }
-
-
     }
     img {
       height: rem(32);
@@ -50,10 +53,13 @@
 		flex-wrap: nowrap;
 		@include media-breakpoint-up(lg) {
 			flex-wrap: wrap;
+      transform: none !important;
 		}
 	}
   &__col{
-		width: rem(220);
+		//width: rem(220);
+    width: rem(310);
+    max-width: 90%;
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(20);
 			width: calc((100% / 4) - 20px);
@@ -74,7 +80,6 @@
     }
     &__caption {
       font-size: rem(16);
-
       text-align: center;
       line-height: 133%;
       text-transform: uppercase;
@@ -83,8 +88,6 @@
       }
     }
   }
-
-
   &__btn-wrap {
     text-align: center !important;
     max-width: rem(420);

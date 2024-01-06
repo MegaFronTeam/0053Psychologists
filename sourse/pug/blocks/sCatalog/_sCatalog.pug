@@ -5,11 +5,6 @@ mixin sCatalog(data)
 			+e.input-wrap
 				p Сортировка:
 				+input("По-возрасту",'select','')
-				//- select(data-tags="true").floating-select.form-select
-				//- 	option По возрасту
-				//- 	option Сначала старые
-				//- 	option Популярные
-				//- 	option Еще какие-то
 			+e.row.row.sorting-row
 				+sortingItem(`ВСЕ`).active
 				+sortingItem(`БАЗОВАЯ КАТЕГОРИЯ`)
@@ -66,8 +61,6 @@ mixin sCatalog(data)
 					+card('prod-1.png', 'Андрей', 'Профессор психологии, психоаналитик, супервизор', true, 'Премиум').--hovered
 				+e.col(class= wrapClass)
 					+card('prod-3.png', 'Татьяна', 'Магистр психологии, супервизор, аккредитованный гештальт-терапевт', true, 'I категория').--hovered
-			
-			
 			a(href='#').btn.btn-link
 				+icon(`arrow-load-more`)
 				| Показать ещё
