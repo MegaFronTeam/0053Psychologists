@@ -245,7 +245,7 @@
 		font-size: rem(14);
 		line-height: 1.25;
 		color: $body-color;
-		margin-top: auto;
+		// margin-top: auto;
 		@include media-breakpoint-up(lg) {
 			font-size: rem(16);
 		}

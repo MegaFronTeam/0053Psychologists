@@ -1,8 +1,8 @@
 // start .sAboutUs
 .sAboutUs {
   position: relative;
-  --sPT: #{rem(110)};
-  --sPB: #{rem(2)};
+  --sPT: #{rem(114)};
+  --sPB: #{rem(0)};
   &::before{
     content: '';
     background: $gray-100;
