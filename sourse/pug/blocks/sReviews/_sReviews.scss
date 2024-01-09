@@ -70,7 +70,6 @@
   .swiper-button-prev,
   .swiper-button-next {
     background-color: $white;
-    color: $gray-600;
     display: none;
     box-shadow: none;
     @include media-breakpoint-up(md) {
