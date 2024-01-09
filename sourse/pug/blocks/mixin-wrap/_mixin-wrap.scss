@@ -7,14 +7,22 @@
 	z-index: 20;
 	border: none;
 	background-color: $gray-100;
+  &:hover {
+    @media (hover: hover) {
+      .icon {
+        stroke: $primary;
+      }
+    }
+  }
 	.icon {
 		fill: none;
-		stroke: $primary;
+		stroke: $gray-700;
 		width: rem(14);
 		height: rem(28);
 		stroke-width: 1;
 		stroke-linecap:round;
 		stroke-linejoin:round;
+    
 		// @include media-breakpoint-up(lg) {
 		// 	width: 12px;
 		// }
