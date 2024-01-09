@@ -112,6 +112,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(60 / #{$h} *1em );
 }
+.icon-paper-clip {
+	$h: 24;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
+}
 .icon-pencil {
 	$h: 20;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);

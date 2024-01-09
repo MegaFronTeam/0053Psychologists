@@ -32,7 +32,7 @@
 	}
 	&__btn-control{
 		cursor: pointer;
-		color: $gray-300;
+		color: $gray-600;
 		@include mt;
 		&:hover{
 			color: $primary;
@@ -121,7 +121,8 @@
 		font-weight: 300;
 	}
 	&__td--disabled-day &__number{
-		color: $gray-300;
+		color: $gray-600;
+		cursor: default;
 	}
 	&__td--body{
 		

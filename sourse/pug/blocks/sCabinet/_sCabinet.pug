@@ -26,11 +26,11 @@ mixin sCabinet(data)
 						ul
 							li
 								a(href="#") МОИ ДАННЫЕ
-									.smallest.text-secondary Ирина Снигач
 								
 							li
 								a(href="#").active МОЙ ПСИХОЛОГ
-									+e.status.smallest(style="--color:#FD2734 ") offline
+									.smallest.text-secondary Ирина Снигач
+									+e.status.smallest.text-danger offline
 							li
 								a(href="#") РАСПИСАНИЕ
 									.smallest.text-secondary Следующий сеанс:

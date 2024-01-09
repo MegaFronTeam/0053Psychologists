@@ -74,6 +74,7 @@
 	}
 	.card{
 		cursor: pointer;
+		flex-grow: 1;
 		--op: 0;
 		&__name{
 			display: flex;

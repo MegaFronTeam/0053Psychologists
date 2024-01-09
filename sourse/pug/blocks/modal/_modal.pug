@@ -51,13 +51,25 @@ mixin modal()
 	div(id="modal-policy"  style="display: none" )
 		+b.modal-win--policy
 			.h5.text-primary.text-center.fw-500 Политика конфиденциальности
-			p Настоящий документ «Политика конфиденциальности» (далее по тексту – «Политика») представляет собой правила использования /указать владельца сайта/ (далее – «мы» и/или «Администрация») данных интернет-пользователей (далее «вы» и/или «Пользователь»), собираемых с использованием сайта / указать URL сайта/ (далее – «сайт»).
-			p 1. Обрабатываемые данные
-			p 1.1. Мы не осуществляем сбор ваших персональных данных с использованием сайта.
-			p 1.2. Все данные, собираемые на сайте, предоставляются и принимаются в обезличенной форме (далее – «Обезличенные данные»).
-			p 1.3. Обезличенные данные включают следующие сведения, которые не позволяют вас идентифицировать:
-			p 1.3.1. Информацию, которую вы предоставляете о себе самостоятельно с использованием онлайн-форм и программных модулей сайта, включая имя и номер телефона и/или адрес электронной почты.1.3.2. Данные, которые передаются в обезличенном виде в автоматическом режиме в зависимости от настроек используемого вами программного обеспечения.
-			p 1.4. Администрация вправе устанавливать требования к составу Обезличенных данных Пользователя, которые собираются использованием сайта.
+			+e.scroll-block.custom-scroll
+				p Настоящий документ «Политика конфиденциальности» (далее по тексту – «Политика») представляет собой правила использования /указать владельца сайта/ (далее – «мы» и/или «Администрация») данных интернет-пользователей (далее «вы» и/или «Пользователь»), собираемых с использованием сайта / указать URL сайта/ (далее – «сайт»).
+				p 1. Обрабатываемые данные
+				p 1.1. Мы не осуществляем сбор ваших персональных данных с использованием сайта.
+				p 1.2. Все данные, собираемые на сайте, предоставляются и принимаются в обезличенной форме (далее – «Обезличенные данные»).
+				p 1.3. Обезличенные данные включают следующие сведения, которые не позволяют вас идентифицировать:
+				p 1.3.1. Информацию, которую вы предоставляете о себе самостоятельно с использованием онлайн-форм и программных модулей сайта, включая имя и номер телефона и/или адрес электронной почты.1.3.2. Данные, которые передаются в обезличенном виде в автоматическом режиме в зависимости от настроек используемого вами программного обеспечения.
+				p 1.4. Администрация вправе устанавливать требования к составу Обезличенных данных Пользователя, которые собираются использованием сайта.
+				
+				p 1. Обрабатываемые данные
+				p 1.1. Мы не осуществляем сбор ваших персональных данных с использованием сайта.
+				p 1.2. Все данные, собираемые на сайте, предоставляются и принимаются в обезличенной форме (далее – «Обезличенные данные»).
+				p 1.3. Обезличенные данные включают следующие сведения, которые не позволяют вас идентифицировать:
+				p 1.3.1. Информацию, которую вы предоставляете о себе самостоятельно с использованием онлайн-форм и программных модулей сайта, включая имя и номер телефона и/или адрес электронной почты.1.3.2. Данные, которые передаются в обезличенном виде в автоматическом режиме в зависимости от настроек используемого вами программного обеспечения.
+				p 1.4. Администрация вправе устанавливать требования к составу Обезличенных данных Пользователя, которые собираются использованием сайта.
+
+			.row.justify-content-center
+				.col-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Согласен
+				.col-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Не согласен
 	// /#modal-policy
 	//  #modal-successful2
 	div(id="modal-successful2"  style="display: none" )
@@ -104,8 +116,8 @@ mixin modal()
 					+input("Введите текст", 'text', 'Тема')
 					+input('Введите текст', 'textarea', 'Сообщение')
 				.row.justify-content-center
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Отправить
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+					.col-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Отправить
+					.col-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
 	// #modal-question
 
 	div(id="modal-rescheduling"  style="display: none" )
@@ -114,8 +126,8 @@ mixin modal()
 				+e.title.h4.fw-500 Перенос сеанса
 				p Вы не можете перенести сессию самостоятельно, т.к до сессии осталось менее 24 часов, #[a(href="#") в соответствии с условиями сервиса]. Вы можете связаться с  #[a(href="#") Техподдержкой] либо с Психологом
 				.row.justify-content-center
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Связаться с психологом
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+					.col-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Связаться с психологом
+					.col-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
 	// #modal-rescheduling
 	
 
@@ -138,8 +150,8 @@ mixin modal()
 						+e.data 16:00
 				p.text-secondary Необходимо договариваться о следующей сессии с Психологом на предыдущей сессии
 				.row.justify-content-center
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Подтвердить
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+					.col-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Подтвердить
+					.col-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
 	// #modal-rescheduling2
 	
 
@@ -149,7 +161,7 @@ mixin modal()
 				+e.title.h4.fw-500 Перенос сеанса
 				p Мы отправили заявку Вашему психологу. Ожидайте подтверждение.
 				.row.justify-content-center
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Понятно
+					.col-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Понятно
 	// #modal-rescheduling3
 	
 
@@ -170,8 +182,8 @@ mixin modal()
 						+in-c('radio','Другая причина','why')
 					+input('Укажите причину', 'textarea', '')
 				.row.justify-content-center
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Подтвердить
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+					.col-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Подтвердить
+					.col-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
 	// #modal-shutdown
 	
 	div(id="modal-rew"  style="display: none" )
@@ -181,8 +193,8 @@ mixin modal()
 				+e.wrap
 					+input('Введите текст', 'textarea', '')
 				.row.justify-content-center
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Отправить
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+					.col-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Отправить
+					.col-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
 	// #modal-rew
 	
 	
@@ -193,8 +205,8 @@ mixin modal()
 				+e.wrap
 					+input('Введите текст', 'textarea', '')
 				.row.justify-content-center
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Отправить
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+					.col-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Отправить
+					.col-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
 	// #modal-rew2
 	
 	//- +b.modal-win--question
@@ -204,8 +216,8 @@ mixin modal()
 	//- 				+input("Введите текст", 'text', 'Тема')
 	//- 				+input('Введите текст', 'textarea', 'Сообщение')
 	//- 			.row.justify-content-center
-	//- 				.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Отправить
-	//- 				.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+	//- 				.col-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Отправить
+	//- 				.col-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
 
 	div(id="modal-shutdown2"  style="display: none" )
 		+b.modal-win--md.--rescheduling.--question
@@ -216,11 +228,12 @@ mixin modal()
 						+in-c('radio','Плановое завершение терапии','why2')
 					+e.input-wrap
 						+in-c('radio','Перенаправлен к другому специалисту','why2')
+					+e.input-wrap
 						+in-c('radio','Другая причина','why2')
 					+input('Укажите причину', 'textarea', '')
 				.row.justify-content-center
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Подтвердить
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+					.col-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Подтвердить
+					.col-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
 	// #modal-shutdown2
 	
 	div(id="modal-alert"  style="display: none" )
@@ -228,7 +241,7 @@ mixin modal()
 			+b.form-wrap
 				p.text-center.mb-3 Вы не можете поставить выходной, т.к на этот день у Вас есть действующие сеансы. Обратитесь в техподдержку.
 				.row.justify-content-center 
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="button").mt-0 Понятно
+					.col-auto: +e.BUTTON.btn.btn.btn-primary(type="button").mt-0 Понятно
 	// #modal-alert
 
 	div(id="modal-add-session"  style="display: none" )
@@ -304,8 +317,8 @@ mixin modal()
 						+input("Не выбрано",'select','')
 
 				.row.justify-content-center
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Сохранить 
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+					.col-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Сохранить 
+					.col-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
 	// #modal-add-session
 	
 	div(id="modal-delete-session"  style="display: none" )
@@ -313,8 +326,8 @@ mixin modal()
 			+b.form-wrap.text-center 
 				p Вы действительно хотите удалить запись?
 				.row.justify-content-center
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Удалить
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+					.col-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Удалить
+					.col-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
 	// #modal-delete-session
 	
 
@@ -337,8 +350,8 @@ mixin modal()
 						+e.data 16:00
 				p.text-secondary Марина Лиончикова просит перенести сеанс
 				.row.justify-content-center
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Подтвердить
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+					.col-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Подтвердить
+					.col-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
 	// #modal-rescheduling-doc-1
 	
 
@@ -354,8 +367,8 @@ mixin modal()
 						+e.data 16:00  
 				p.text-secondary Новый клиент Карина Светлова
 				.row.justify-content-center
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Подтвердить
-					.col-sm-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
+					.col-auto: +e.BUTTON.btn.btn.btn-primary(type="submit") Подтвердить
+					.col-auto: +e.BUTTON.btn.btn.btn-outline-primary(type="button") Отмена
 	// #modal-new-session
 
 	//  #about-psychologist
