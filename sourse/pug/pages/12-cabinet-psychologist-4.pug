@@ -17,7 +17,7 @@ block pagecontent
 	+parts('header')
 	main
 		+page-head('','','Личный кабинет')
-		+sCabinet
+		+sCabinet(true)
 			+b.sCabinet-body
 				+e.client-row.row
 					+e.date-col.col-sm-auto: +input("по дате",'select','Сортировка:') 

@@ -228,6 +228,30 @@ function eventHandler() {
 		})
 	})
 
+	let addNote = document.querySelectorAll('.client-item__note');
+
+	if (addNote.length > 0) {
+		addNote.forEach((el) => {
+			el.addEventListener('click', () => {
+				el.classList.add('active');
+				el.nextElementSibling.classList.add('active');
+			});
+		});
+	
+		document.addEventListener('click', (e) => {
+			let addNoteTarget = e.target.closest('.client-item__note');
+			let noteTarget = e.target.closest('.client-item__add-note');
+	
+			let addNote = document.querySelectorAll('.client-item__note');
+			let note = document.querySelectorAll('.client-item__add-note');
+	
+			if (!addNoteTarget && !noteTarget) {
+				addNote.forEach((el) => el.classList.remove('active'));
+				note.forEach((el) => el.classList.remove('active'));
+			}
+		});
+	}
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

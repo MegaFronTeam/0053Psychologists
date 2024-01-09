@@ -113,11 +113,12 @@ mixin cardInput(img, title, text, hovered, badge)
 		+b.card()&attributes(attributes)
 			+cardBody(img, title, text, hovered, badge)
 
-mixin note()
+mixin note(active)
 	+b.note
 		+e.date 11.05.2023 16:00
 		p В&nbsp;отличии от&nbsp;lorem ipsum, текст рыба на&nbsp;русском языке наполнит любой макет непонятным смыслом и&nbsp;придаст неповторимый колорит советских времён. Вы&nbsp;посещали эту страницу несколько раз
-		+e.favorite(href='#'): +icon('star')
+		+e.favorite(href='#' class=(active ? 'active' : '')): +icon('star')
+
 mixin cardInputCheck(img, title, text, hovered, badge)
 	label.card-label
 		input(type="checkbox", name="psi")
@@ -141,3 +142,8 @@ mixin document(empty)
 					p 1.4. Администрация вправе устанавливать требования к составу Обезличенных данных Пользователя, которые собираются использованием сайта.
 	if !empty
 		+in-c('checkbox','Ознакомлен и согласен с политикой конфиденциальности')
+
+
+mixin chat()
+	+b.chat(href='#'): span Связаться с нами
+		

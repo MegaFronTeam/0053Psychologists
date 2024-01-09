@@ -1,4 +1,4 @@
-mixin sCabinet(data)
+mixin sCabinet(pshology)
 	// start sCabinet
 	+b.sCabinet.section#sCabinet&attributes(attributes)
 		.container
@@ -22,26 +22,42 @@ mixin sCabinet(data)
 				+e.col-main.col
 					block
 				+e.col-aside.order-lg-first
-					+b.sCabinet-aside
-						ul
-							li
-								a(href="#") МОИ ДАННЫЕ
-									.smallest.text-secondary Ирина Снигач
-								
-							li
-								a(href="#").active МОЙ ПСИХОЛОГ
-									+e.status.smallest(style="--color:#FD2734 ") offline
-							li
-								a(href="#") РАСПИСАНИЕ
-									.smallest.text-secondary Следующий сеанс:
-										br
-										| Чт. 08.01.23 в 16:00
-							li
-								a(href="#") ЧАТ И ВИДЕОЧАТ
-									.smallest.text-secondary Проведённых сессий: 17
-							li
-								a(href="#") МОИ ЗАМЕТКИ
-							li
-								a(href="#") РАССЫЛКА
+					if pshology
+						+b.sCabinet-aside
+							ul
+								li
+									a(href="#") МОИ ДАННЫЕ
+									
+								li
+									a(href="#").active МОЙ КЛИЕНТЫ
+								li
+									a(href="#") РАСПИСАНИЕ
+										.smallest.text-secondary Следующий сеанс:
+											br
+											| Чт. 08.01.23 в 16:00
+								li
+									a(href="#") ЧАТ И ВИДЕОЧАТ
+					else
+						+b.sCabinet-aside
+							ul
+								li
+									a(href="#") МОИ ДАННЫЕ
+									
+								li
+									a(href="#").active МОЙ ПСИХОЛОГ
+										.smallest.text-secondary Ирина Снигач
+										+e.status.smallest(style="--color:#FD2734 ") offline
+								li
+									a(href="#") РАСПИСАНИЕ
+										.smallest.text-secondary Следующий сеанс:
+											br
+											| Чт. 08.01.23 в 16:00
+								li
+									a(href="#") ЧАТ И ВИДЕОЧАТ
+										.smallest.text-secondary Проведённых сессий: 17
+								li
+									a(href="#") МОИ ЗАМЕТКИ
+								li
+									a(href="#") РАССЫЛКА
 
 	// end sCabinet

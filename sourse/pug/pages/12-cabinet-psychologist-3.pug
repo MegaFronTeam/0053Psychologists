@@ -17,7 +17,7 @@ block pagecontent
 	+parts('header')
 	main
 		+page-head('','','Личный кабинет')
-		+sCabinet
+		+sCabinet(true)
 			+b.sCabinet-body
 				mixin item(img, name, status)
 					+b.client-item&attributes(attributes)
@@ -25,10 +25,13 @@ block pagecontent
 						+e.img-wrap
 							+img(`img/${img}`, 'bg')
 							+e.info i
-						div
+						+e.wrap
 							+e.name!= name
 							+e.status(class=(status == 'offline' ? 'offline' : 'online'))!= status
-							+e.note(href='#') + Заметка о клиенте
+							+e.note + Заметка о клиенте
+							+e.add-note
+								input(type='text')
+								button.btn.btn-primary(type='button') сохранить
 						+e.more-info
 							.h6 Елена Филлипова
 							+e.item

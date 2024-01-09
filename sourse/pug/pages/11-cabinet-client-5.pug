@@ -22,6 +22,8 @@ block pagecontent
 				+in-c('checkbox', 'Только важные', 'importnat')
 				+e.notes--full-list.custom-scroll
 					-for(let i = 0; i < 8; i++)
+						- if(i == 0)
+							+note('true')
 						+note()
 				+b.send-message
 					+input('Введите сообщение', 'text', '')

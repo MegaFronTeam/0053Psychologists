@@ -17,7 +17,7 @@ block pagecontent
 	+parts('header')
 	main
 		+page-head('','','Личный кабинет')
-		+sCabinet
+		+sCabinet(true)
 			+b.schedule
 				+e.back(href='#'): +icon('chevron-left-2')
 				+e.wrap
