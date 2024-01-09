@@ -36,6 +36,7 @@
 		}
 	}
 	&__item {
+    display: block;
 		--bs-Color: #{$blue-900};
 		position: relative;
 		text-align: center;
