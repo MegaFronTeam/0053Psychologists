@@ -1,9 +1,9 @@
 // start .sReg
 .sReg {
+	--sPT: #{rem(40)};
 	@include media-breakpoint-up(md) {
 
-		--sPT: #{rem(60)};
-		--sPB: #{rem(60)};
+		--sPB: #{rem(110)};
 	}
 	.sCatalog{
 		
@@ -70,6 +70,7 @@
 	position: relative;
 	overflow: hidden;
 	margin-inline: auto;
+	--sPB: 40px;
 	margin-bottom: var(--sPB);
 	&--doc{
 		max-width: rem(480 + 34);
@@ -191,6 +192,10 @@
 }
 
 .regTerms{
+	&__head{
+		margin: 0 auto 40px;
+		max-width: 860px; 
+	}
 	.sCabinet-aside{
 		max-width: rem(640);
 	}
@@ -252,4 +257,46 @@
 		}
 	}
 	
+}
+
+.add-sert-file{
+	input{
+		@extend .invisible;
+
+	}
+	font-size: 12px;
+	@include mt;
+	display: inline-block;
+	cursor: pointer;
+	vertical-align: middle;
+	color: var(--Gray-dark, #6B6F89);
+	margin-bottom: rem(10);
+	.icon{
+		stroke: currentColor;
+		fill: none;
+		// margin-right: 8px;
+	}
+}
+
+.slider-sert{
+	--swiperArrowPosition: 0;
+	margin-bottom: 24px;
+	.swiper-button-next, .swiper-button-prev{
+		--swiperArrowSize: 40px;
+		.icon{
+			// font-size: 24px;
+			height: 18px;
+			width: 10px;
+		}
+	}
+	img{
+		aspect-ratio: 20/14;
+		object-fit: cover;
+		max-width: 100%;
+		border-radius: 5px;
+		@include mt;
+		&:hover{
+			opacity: 0.8;
+		}
+	}
 }

@@ -17,11 +17,12 @@
 		padding-inline: rem(30);
 	}
 	// min-height: 100%; 
+	--sp-inline: 20px;
 	@include media-breakpoint-up(sm) {
-
-		padding: 40px;
+		
+		--sp-inline: 40px;
 	}
-	padding: 40px 20px;
+	padding: 40px var(--sp-inline);
 
 	.modal-content {
 		// max-width: 485px;
@@ -215,6 +216,15 @@
 			margin-right: rem(-60);
 			margin-left: rem(-60);
 		}
+	}
+
+	&__scroll-block{
+		overflow-y: auto;
+		height: 552px;
+		max-height: calc(100vh - 230px);
+		margin-bottom: 30px;
+		margin-inline: calc(var(--sp-inline) * -1);
+		padding-inline: var(--sp-inline);
 	}
 }
 
@@ -667,4 +677,9 @@ a {
 	}
 
 	
+}
+
+
+.fancybox__container:not(.is-compact) .fancybox__slide.has-close-btn {
+	padding-top: 0px;
 }

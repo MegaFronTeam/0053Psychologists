@@ -1,47 +1,35 @@
 // mixin for bg
-@mixin bg($src, $media:xy, $path:xy) {
+@mixin bg($src, $media: xy, $path: xy) {
   @if $media==xy {
     @if $path==xy {
       background-image: url(#{$url}#{$path2}#{$src});
-    }
-
-    @else if $path==1 {
+    } @else if $path==1 {
       background-image: url(#{$url}#{$path1}#{$src});
-    }
-
-    @else {
+    } @else {
       background-image: url(#{$url}#{$path}/#{$src});
     }
-  }
-
-  @else {
+  } @else {
     @include media-breakpoint-up($media) {
-
       background-image: url(#{$url}#{$path2}#{$src});
     }
 
     background-image: url(#{$url}#{$path1}#{$src});
-
   }
 }
 
 // обсалютное центрирование
-@mixin a-cent($xy:xy) {
+@mixin a-cent($xy: xy) {
   position: absolute;
 
   @if $xy==xy {
     margin: auto;
-    inset:0;
-  }
-
-  @else if $xy==x {
+    inset: 0;
+  } @else if $xy==x {
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  @else if $xy==y {
+  } @else if $xy==y {
     top: 0;
     bottom: 0;
     margin-top: auto;
@@ -49,7 +37,7 @@
   }
 }
 
-@mixin a-cent1($xy:xy) {
+@mixin a-cent1($xy: xy) {
   @if $xy==xy {
     position: absolute;
     left: 50%;
@@ -57,58 +45,47 @@
     bottom: auto;
     right: auto;
     translate: -50% -50%;
-  }
-
-  @else if $xy==x {
+  } @else if $xy==x {
     position: absolute;
     left: 50%;
     right: auto;
-    translate:  -50% 0; 
-  }
-  
-  @else if $xy==y {
+    translate: -50% 0;
+  } @else if $xy==y {
     position: absolute;
     top: 50%;
     bottom: auto;
     translate: 0 -50%;
   }
 }
-@mixin gut($a:$grid-gutter-width,$b:0) {
+@mixin gut($a: $grid-gutter-width, $b: 0) {
   --bs-gutter-x: #{$a};
   --bs-gutter-y: #{$b};
 }
 
+@mixin roww($a: $grid-gutter-width, $b: 0, $m: p) {
+  @include gut($a, $b);
 
-
-@mixin roww($a:$grid-gutter-width,$b:0, $m:p) {
-  @include gut($a,$b);
-  
   margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-left: calc(-1 * var(--bs-gutter-x)/ 2);
-  margin-right: calc(-1 * var(--bs-gutter-x)/ 2);
+  margin-left: calc(-1 * var(--bs-gutter-x) / 2);
+  margin-right: calc(-1 * var(--bs-gutter-x) / 2);
 
-  >* {
+  > * {
     margin-top: calc(var(--bs-gutter-y));
     @if $m==m {
-      margin-left: calc(var(--bs-gutter-x)/2);
-      margin-right: calc(var(--bs-gutter-x)/2);
-    }
-
-    @else {
-
-      padding-left: calc(var(--bs-gutter-x)/2);
-      padding-right: calc(var(--bs-gutter-x)/2);
+      margin-left: calc(var(--bs-gutter-x) / 2);
+      margin-right: calc(var(--bs-gutter-x) / 2);
+    } @else {
+      padding-left: calc(var(--bs-gutter-x) / 2);
+      padding-right: calc(var(--bs-gutter-x) / 2);
     }
   }
 }
-
 
 @mixin center($w) {
   margin-left: auto;
   margin-right: auto;
   max-width: $w;
 }
-
 
 @mixin bgs($w: center, $h: center) {
   background-size: cover;
@@ -135,8 +112,6 @@
   }
 }
 
-
-
 @mixin bgsn($img, $w: center, $h: center) {
   background-size: cover;
   background-repeat: no-repeat;
@@ -144,12 +119,12 @@
   background-image: url($img);
 }
 
-@mixin mt($s: .36s) {
+@mixin mt($s: 0.36s) {
   --s: #{$s};
   transition: all var(--s) ease-in-out;
 }
 
-//  
+//
 @mixin ellips {
   white-space: nowrap;
   overflow: hidden;
@@ -159,23 +134,22 @@
   // display: inline-block;
 }
 
-
 @mixin input-placeholder {
   &.placeholder {
     @content;
   }
 }
 
-//  
+//
 @mixin ratio($w: 1, $h: 1) {
   display: block;
   position: relative;
-  --ratio: #{$h}/#{$w}; 
+  --ratio: #{$h}/#{$w};
   aspect-ratio: var(--ratio);
 }
-// 
+//
 @mixin block($w: 1, $h: 1) {
-  @include ratio($w, $h)
+  @include ratio($w, $h);
 }
 // @mixin block($w: 1, $h: 1) {
 //   display: block;
@@ -189,7 +163,6 @@
 //     padding-bottom: calc(var(--ratio) * 100%);
 //   }
 // }
-
 
 @mixin round($w) {
   --size: #{$w};
@@ -205,12 +178,10 @@
 
 // для анимации
 @mixin keyfr($name) {
-
   @keyframes #{$name} {
     @content;
   }
 }
-
 
 //tear container
 @mixin tear($width) {
@@ -235,17 +206,16 @@
   overflow: hidden;
 }
 
-@mixin lh($a,$b) {
-  line-height: math.div($a,$b);
+@mixin lh($a, $b) {
+  line-height: math.div($a, $b);
 }
-
 
 @mixin mh($m: var(--bs-gutter-x)) {
   min-height: calc(100% - #{$m});
   margin-bottom: $m;
 }
 
-@mixin col-sw(){ 
+@mixin col-sw() {
   @include make-col;
   @include make-col-ready;
   // padding: 0 calc(var(--bs-gutter-x)/2) !important;
@@ -253,52 +223,51 @@
   margin-right: 0 !important;
 }
 
-
-@mixin row-sw($x: $grid-gutter-width, $media: lg, $y:$x) {
+@mixin row-sw($x: $grid-gutter-width, $media: lg, $y: $x) {
   @include media-breakpoint-up($media) {
-
     @include make-row;
     --bs-gutter-x: #{$x};
     --bs-gutter-y: #{$y};
-    margin-top: calc(-1 * var(--bs-gutter-y)); 
-    transform: none!important;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    transform: none !important;
     width: calc(100% + var(--bs-gutter-x, 0px)) !important;
     max-width: calc(100% + var(--bs-gutter-x, 0px)) !important;
     height: auto;
-    & > .swiper-slide-duplicate{
-      display: none!important;
+    & > .swiper-slide-duplicate {
+      display: none !important;
     }
-    & > .swiper-slide{
-      @include col-sw(); 
+    & > .swiper-slide {
+      @include col-sw();
     }
   }
-  & > .swiper-slide{
+  & > .swiper-slide {
     height: auto;
   }
 }
 
-@mixin custom-scroll(){
-  	/* ===== Scrollbar CSS ===== */
+@mixin custom-scroll() {
+  /* ===== Scrollbar CSS ===== */
   /* Firefox */
-	// --bs-primary: #DEDEDE;
- 
-  & {
-    scrollbar-width: auto;
-    scrollbar-color: var(--bs-primary) transparent;
-  }
+  // --bs-primary: #DEDEDE;
+  @media (hover: hover) {
+    & {
+      scrollbar-width: auto;
+      scrollbar-color: var(--bs-primary) transparent;
+    }
 
-  /* Chrome, Edge, and Safari */
-  &::-webkit-scrollbar {
-    width: 4px;
-  }
+    /* Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
 
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
 
-  &::-webkit-scrollbar-thumb {
-    background-color: var(--bs-primary);
-    border-radius: 16px;
-    border: 0px solid transparent;
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--bs-primary);
+      border-radius: 16px;
+      border: 0px solid transparent;
+    }
   }
 }

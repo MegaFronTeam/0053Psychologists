@@ -153,15 +153,19 @@ mixin RegTerms()
 	+b.regTerms
 		+e.head.text-center
 			p Онлайн-сервис психотерапии «ДА» - это максимально удобный способ планирования сессий, исчерпывающий и комфортный интерфейс для проведения самих сессий. Пространство сообщества «ДА» позволяет психологам сконцентрироваться на своей работе, а не заниматься маркетингом и продвижением себя. Нацельтесь на собственное развитие с помощью продуманных инструментов «ДА» во благо себя и своих клиентов
-		.row.gy-4
+		.row.gy-4.tabs
 			.col-lg-7
 				+b.sCabinet-aside
-						ul
-							li: a(href="#").active Название документа
+						.tabs__caption
+							.tabs__btn.active Название документа
 							- for (var x = 0; x < 6; x++)
-								li: a(href="#") Название документа
+								.tabs__btn Название документа
 			.col-lg-5
-				+document()
+				.tabs__content.active
+					+document()
+				- for (var x = 0; x < 6; x++)
+					.tabs__content
+						+document()
 		.h5.text-center.strong ПРОЧИТАЙТЕ И ПОДТВЕРДИТЕ СВОЁ СОГЛАСИЕ
 		+b.documents-block.section
 				.row.gy-4
@@ -180,7 +184,23 @@ mixin ProveEducation()
 			.row
 				.col-md-6
 					+e.short-block: +input("Образование*") 
+
+
 				.col-12
+					+b.LABEL.add-sert-file
+						input(type="file", name="")
+						+e.text
+							+icon("paper-clip")
+							| Загрузите сканкопии документов
+					+b.slider-sert--js.swiper
+						+arrow
+						.swiper-wrapper
+							- for (var x = 1; x < 4; x++)
+								+e.slide.swiper-slide
+									a(href=`img/certif-0${x}.png` data-fancybox="gal"): +img(`img/certif-0${x}.png`)
+							- for (var x = 1; x < 4; x++)
+								+e.slide.swiper-slide
+									a(href=`img/certif-0${x}.png` data-fancybox="gal"): +img(`img/certif-0${x}.png`)
 				.col-md-6
 					+e.short-block: +input("Опыт работы*") 
 				.col-md-6
@@ -188,7 +208,7 @@ mixin ProveEducation()
 				.col-md-6
 					+e.short-block: +input("Налоговый статус*") 
 				.col-md-6
-					+e.short-block: +input('Выберите подходящий вариант','select',"Сколько времени можете уделять работе на сервисе")
+					+e.short-block: +input('Выберите подходящий вариант','select'," Сколько готовы работать на сервисе")
 				.col-lg-12
 					+e.input-wrap.form-group
 						+e.SPAN.input-title.smallest.d-block.position-static Личная терапия*
@@ -203,7 +223,7 @@ mixin ProveEducation()
 									input(type="radio" name="self").btn-check
 									span.btn.btn-outline-primary Нет
 				.col-lg-12
-					+e.text-field: +input('Введите текст','textarea',"Опыт работы*")
+					+e.text-field: +input('Введите текст','textarea',"Ваш терапевт и его контакты*")
 				.col-lg-12
 					+e.input-wrap.form-group
 						+e.SPAN.input-title.smallest.d-block.position-static Супервизия*

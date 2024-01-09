@@ -179,7 +179,7 @@ function eventHandler() {
 	})
 
 
-	$(document).on("click", '.sCalendar__td--body', function(e){
+	$(document).on("click", '.sCalendar__td--body:not(.sCalendar__td--disabled-day)', function(e){
 		const self =$(this); 
 		const order = window.getComputedStyle(self.parent()[0]).order
 		const activeCLass= 'active';
@@ -219,6 +219,9 @@ function eventHandler() {
 			slidesPerView: 1,
 			spaceBetween: 0,
 			observer: true,
+			mousewheel: {
+				invert: true,
+			},
 			direction: 'vertical',
 			speed: 300,
 			navigation: {
@@ -226,6 +229,17 @@ function eventHandler() {
 				prevEl: el.querySelector('.swiper-button-prev'),
 			},
 		})
+	})
+	new Swiper('.slider-sert--js', { 
+		slidesPerView: 4,
+		spaceBetween: 20, 
+		virtual: {
+      enabled: true,
+    },
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
 	})
 
 	let addNote = document.querySelectorAll('.client-item__note');

@@ -812,34 +812,39 @@ padding-inline: 15px;
 .sCabinet-aside{
 	ul{
 		list-style: none;
-		li:not(:first-child) a{
-			border-top: 1px solid var(--border-bottom, #{$gray-300});
+	}
+	.tabs__btn:not(:first-child),
+	li:not(:first-child) a{
+		border-top: 1px solid var(--border-bottom, #{$gray-300});
+	}
+	
+	.tabs__btn:not(:last-child),
+	li:not(:last-child) a{
+		border-bottom: 1px solid var(--border-bottom, #{$gray-300});
+	}
+	.tabs__btn{
+		@include mt;
+	}
+	.tabs__btn,
+	a{
+		display: block;
+		margin-top: -1px;
+		padding-left: rem(60);
+		display: flex;
+		flex-direction: column;
+		height: rem(80);
+		justify-content: center;
+		color: $body-color;
+		border-left: 2px solid var(--border-left, #{transparent});
+		position: relative;
+		&.active{ 
+			--border-left: #{$primary};
 		}
-		
-		li:not(:last-child) a{
-			border-bottom: 1px solid var(--border-bottom, #{$gray-300});
-		}
-
-		a{
-			display: block;
-			margin-top: -1px;
-			padding-left: rem(60);
-			display: flex;
-			flex-direction: column;
-			height: rem(80);
-			justify-content: center;
-			color: $body-color;
-			border-left: 2px solid var(--border-left, #{transparent});
-			position: relative;
-			&.active{ 
-				--border-left: #{$primary};
-			}
-			&:hover,
-			&.active{
-				z-index: 2;
-				background-color: #{$light};
-				--border-bottom: #{$light};
-			}
+		&:hover,
+		&.active{
+			z-index: 2;
+			background-color: #{$light};
+			--border-bottom: #{$light};
 		}
 	}
 	&__status{
