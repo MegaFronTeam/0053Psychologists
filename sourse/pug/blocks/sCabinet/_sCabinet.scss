@@ -975,9 +975,14 @@ padding-inline: 15px;
 		}
 	}
 	&__note {
+		@include mt;
+		cursor: pointer;
 		color: $gray-600;
 		font-size: rem(14);
 		line-height: 1.14;
+		&:hover {
+			color: $primary;
+		}
 	}
 	&__more-info {
 		@include mt;
@@ -1045,7 +1050,7 @@ padding-inline: 15px;
 	}
 	&__wrap {
 		position: relative;
-		flex-wrap: 1;
+		flex-grow: 1;
 	}
 	&__add-note {
 		position: absolute;
