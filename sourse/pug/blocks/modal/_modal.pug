@@ -35,6 +35,7 @@ mixin modal()
 				br
 				+e.BUTTON.btn.btn.btn-outline-primary(type="button"  ) Уже есть аккаунт
 	//  /#modal-welcome
+
 	//  #modal-kod
 	div(id="modal-kod"  style="display: none" )
 		+b.modal-win--sm
@@ -107,6 +108,50 @@ mixin modal()
 				.col-auto: +e.btn.btn.btn-primary(href='#') Удалить
 				.col-auto: +e.btn.btn.btn-outline-light(href='#') Отмена
 	// #modal-confrim
+
+	//  #modal-auth
+	div(id="modal-auth"  style="display: none" )
+		+b.modal-win--midd
+			.h1.text-center ВХОД В АККАУНТ
+			+form-wrap
+				+input("Электронная почта*",'email')
+				+input("Пароль*",'password')
+					+e.smallest.smallest.text-primary(href='#') Забыли пароль?
+				.btn-wrap
+					+e.BUTTON.btn.btn.btn-primary(type="button"  ) Войти
+					+e.BUTTON.btn.btn.btn-outline-primary(type="button"  ) Зарегистрироваться
+	//  #modal-auth
+
+	//#modal-passw-reset
+	div(id="modal-passw-reset"  style="display: none" )
+		+b.modal-win--midd.--passw
+			+form-wrap
+				+e.title-wrap.title-wrap.text-center
+					+e.title.h4.fw-500 Введите email
+					.text.small Электронную почту, которую указывали при регистрации
+				+input("Электронная почта*",'email')
+			.btn-wrap
+				+e.BUTTON.btn.btn.btn-primary(type="button"  ) Войти
+				.text.text-center.small Вам на почту мы отправим ссылку для восстановления пароля
+	//#modal-passw-reset
+
+	//#modal-passw-reset2
+	div(id="modal-passw-reset2"  style="display: none" )
+		+b.modal-win--midd.--passw2
+			+e.title-wrap.title-wrap.text-center
+				+e.title.h4.fw-500 Восстановление пароля
+				.text.small Вам на почту была отправлена ссылка для восстановления пароля, перейдите по ссылке и введите новый пароль
+			+form-wrap
+				+input("Пароль*",'password')
+					+b.btn-toggle-type-input--js
+						+icon("eye-off")
+					.smallest.text-primary Пароль должен содержать большие и маленькие буквы на английском языке, цифры и символы (не менее 10 знаков)
+				+input("Подтверждение пароля*",'text')
+					+b.btn-toggle-type-input--js
+						+icon("eye")
+			.btn-wrap
+				+e.BUTTON.btn.btn.btn-primary(type="button"  ) Войти
+	//#modal-passw-reset2
 
 	div(id="modal-question"  style="display: none" )
 		+b.modal-win--question

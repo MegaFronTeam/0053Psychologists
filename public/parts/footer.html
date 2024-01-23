@@ -232,6 +232,85 @@
 	</div>
 </div>
 <!-- #modal-confrim-->
+<!--  #modal-auth-->
+<div id="modal-auth" style="display: none">
+	<div class="modal-win modal-win--midd">
+		<div class="h1 text-center">ВХОД В АККАУНТ</div>
+		<div class="form-wrap">
+			<form>
+				<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="Электронная почта*"/><span class="form-wrap__input-title">Электронная почта*</span>
+				</div>
+				<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="password" name="password" type="password" placeholder="Пароль*"/><span class="form-wrap__input-title">Пароль*</span>
+					<a class="form-wrap__smallest smallest text-primary" href="#">Забыли пароль?
+					</a>
+				</div>
+				<div class="btn-wrap">
+					<button class="form-wrap__btn btn btn-primary" type="button">Войти
+					</button>
+					<button class="form-wrap__btn btn btn-outline-primary" type="button">Зарегистрироваться
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!--  #modal-auth-->
+<!--#modal-passw-reset-->
+<div id="modal-passw-reset" style="display: none">
+	<div class="modal-win modal-win--midd modal-win--passw">
+		<div class="form-wrap">
+			<form>
+				<div class="form-wrap__title-wrap title-wrap text-center">
+					<div class="form-wrap__title h4 fw-500">Введите email
+					</div>
+					<div class="text small">Электронную почту, которую указывали при регистрации</div>
+				</div>
+				<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="Электронная почта*"/><span class="form-wrap__input-title">Электронная почта*</span>
+				</div>
+			</form>
+		</div>
+		<div class="btn-wrap">
+			<button class="modal-win__btn btn btn-primary" type="button">Войти
+			</button>
+			<div class="text text-center small">Вам на почту мы отправим ссылку для восстановления пароля</div>
+		</div>
+	</div>
+</div>
+<!--#modal-passw-reset-->
+<!--#modal-passw-reset2-->
+<div id="modal-passw-reset2" style="display: none">
+	<div class="modal-win modal-win--midd modal-win--passw2">
+		<div class="modal-win__title-wrap title-wrap text-center">
+			<div class="modal-win__title h4 fw-500">Восстановление пароля
+			</div>
+			<div class="text small">Вам на почту была отправлена ссылка для восстановления пароля, перейдите по ссылке и введите новый пароль</div>
+		</div>
+		<div class="form-wrap">
+			<form>
+				<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="password" name="password" type="password" placeholder="Пароль*"/><span class="form-wrap__input-title">Пароль*</span>
+					<div class="btn-toggle-type-input btn-toggle-type-input--js">
+						<svg class="icon icon-eye-off ">
+							<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+						</svg>
+					</div>
+					<div class="smallest text-primary">Пароль должен содержать большие и маленькие буквы на английском языке, цифры и символы (не менее 10 знаков)</div>
+				</div>
+				<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Подтверждение пароля*"/><span class="form-wrap__input-title">Подтверждение пароля*</span>
+					<div class="btn-toggle-type-input btn-toggle-type-input--js">
+						<svg class="icon icon-eye ">
+							<use xlink:href="img/svg/sprite.svg#eye"></use>
+						</svg>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="btn-wrap">
+			<button class="modal-win__btn btn btn-primary" type="button">Войти
+			</button>
+		</div>
+	</div>
+</div>
+<!--#modal-passw-reset2-->
 <div id="modal-question" style="display: none">
 	<div class="modal-win modal-win--question">
 		<div class="form-wrap">
